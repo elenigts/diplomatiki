@@ -1,0 +1,1265 @@
+<?xml version="1.0" encoding="UTF-8"?><bpmn:definitions xmlns:bpmn="http://www.omg.org/spec/BPMN/20100524/MODEL" xmlns:bpmndi="http://www.omg.org/spec/BPMN/20100524/DI" xmlns:dc="http://www.omg.org/spec/DD/20100524/DC" xmlns:di="http://www.omg.org/spec/DD/20100524/DI" xmlns:camunda="http://camunda.org/schema/1.0/bpmn" id="Definitions_1" targetNamespace="http://bpmn.io/schema/bpmn" camunda:diagramRelationId="9681c146-de2e-49f0-81b5-579ab2a972cf" xmlns:qbp="http://www.qbp-simulator.com/Schema201212" xmlns:qbpapi="http://www.qbp-simulator.com/ApiSchema201212">
+  <bpmn:collaboration id="Collaboration_13askru">
+    <bpmn:participant id="Participant_1eh80v6" name="Λογιστικό Γραφείο" processRef="Process_1a3qvrs"/>
+    <bpmn:participant id="Participant_1hac7gb" name="ΠΕΛΑΤΗΣ Α"/>
+    <bpmn:participant id="Participant_1trpva6" name="ΔΟΥ Α"/>
+    <bpmn:participant id="Participant_006fc0e" name="ΓΕΜΗ"/>
+    <bpmn:participant id="Participant_1y7i07f" name="ΟΡΚΩΤΟΙ ΛΟΓΙΣΤΕΣ"/>
+    <bpmn:participant id="Participant_0smr6cx" name="ΕΦΚΑ"/>
+    <bpmn:participant id="Participant_1plrtby" name="ΠΕΡΙΦΕΡΕΙΑ Α"/>
+    <bpmn:participant id="Participant_1err209" name="ΠΕΛΑΤΗΣ Β"/>
+    <bpmn:participant id="Participant_0weq8dg" name="ΟΡΚΩΤΟΙ ΛΟΓΙΣΤΕΣ"/>
+    <bpmn:participant id="Participant_1lpvpa6" name="ΠΕΡΙΦΕΡΕΙΑ Β"/>
+    <bpmn:participant id="Participant_17noniv" name="ΔΟΥ Β"/>
+    <bpmn:messageFlow id="Flow_0opwwcd" sourceRef="Participant_1y7i07f" targetRef="Event_066qi95"/>
+    <bpmn:messageFlow id="Flow_15isugq" sourceRef="Participant_1hac7gb" targetRef="Event_19n5gbk"/>
+    <bpmn:messageFlow id="Flow_11zf8iy" sourceRef="Participant_006fc0e" targetRef="Event_0qin1qz"/>
+    <bpmn:messageFlow id="Flow_1aq5bbq" sourceRef="Participant_006fc0e" targetRef="Event_08ld7j4"/>
+    <bpmn:messageFlow id="Flow_085wgw0" sourceRef="Event_1srmw62" targetRef="Participant_1hac7gb"/>
+    <bpmn:messageFlow id="Flow_0t9txdx" sourceRef="Participant_006fc0e" targetRef="Event_1hbtlbe"/>
+    <bpmn:messageFlow id="Flow_1r5dmur" sourceRef="Participant_1trpva6" targetRef="Event_0yy9xsg"/>
+    <bpmn:messageFlow id="Flow_053a03n" sourceRef="Participant_0smr6cx" targetRef="Event_0neg5r8"/>
+    <bpmn:messageFlow id="Flow_115zx35" sourceRef="Participant_1plrtby" targetRef="Event_1vzypns"/>
+    <bpmn:messageFlow id="Flow_0pllqbc" sourceRef="Event_0da8l0w" targetRef="Participant_1hac7gb"/>
+    <bpmn:messageFlow id="Flow_0ixp21b" sourceRef="Participant_1err209" targetRef="Event_15pdo1b"/>
+    <bpmn:messageFlow id="Flow_0gv9ay7" sourceRef="Participant_0weq8dg" targetRef="Event_05952mf"/>
+    <bpmn:messageFlow id="Flow_0w7kyst" sourceRef="Participant_006fc0e" targetRef="Event_0wm1rl2"/>
+    <bpmn:messageFlow id="Flow_0bprntw" sourceRef="Participant_006fc0e" targetRef="Event_108xj3w"/>
+    <bpmn:messageFlow id="Flow_0umd8dz" sourceRef="Participant_1lpvpa6" targetRef="Event_1yr56d8"/>
+    <bpmn:messageFlow id="Flow_1ffs6qu" sourceRef="Event_1meqd55" targetRef="Participant_1err209"/>
+    <bpmn:messageFlow id="Flow_085l1lm" sourceRef="Participant_17noniv" targetRef="Event_0qwwahy"/>
+    <bpmn:messageFlow id="Flow_07hca81" sourceRef="Participant_006fc0e" targetRef="Event_1nmihm9"/>
+    <bpmn:messageFlow id="Flow_0cylml2" sourceRef="Event_11b0mst" targetRef="Participant_1err209"/>
+  </bpmn:collaboration>
+  <bpmn:process id="Process_1a3qvrs" isExecutable="false">
+    <bpmn:laneSet id="LaneSet_1uyruox">
+      <bpmn:lane id="Lane_0adbbls" name="Λογιστης Α">
+        <bpmn:flowNodeRef>Activity_0dkofr7</bpmn:flowNodeRef>
+        <bpmn:flowNodeRef>Event_19n5gbk</bpmn:flowNodeRef>
+        <bpmn:flowNodeRef>Gateway_0ivmbqa</bpmn:flowNodeRef>
+        <bpmn:flowNodeRef>Activity_0sn42kg</bpmn:flowNodeRef>
+        <bpmn:flowNodeRef>Gateway_1k37uhm</bpmn:flowNodeRef>
+        <bpmn:flowNodeRef>Activity_0kmlk37</bpmn:flowNodeRef>
+        <bpmn:flowNodeRef>Activity_1apz1th</bpmn:flowNodeRef>
+        <bpmn:flowNodeRef>Event_1hbtlbe</bpmn:flowNodeRef>
+        <bpmn:flowNodeRef>Activity_0hvicbh</bpmn:flowNodeRef>
+        <bpmn:flowNodeRef>Gateway_04kmqvy</bpmn:flowNodeRef>
+        <bpmn:flowNodeRef>Event_0qin1qz</bpmn:flowNodeRef>
+        <bpmn:flowNodeRef>Event_066qi95</bpmn:flowNodeRef>
+        <bpmn:flowNodeRef>Activity_1rchpbs</bpmn:flowNodeRef>
+        <bpmn:flowNodeRef>Gateway_0nz4wq6</bpmn:flowNodeRef>
+        <bpmn:flowNodeRef>Activity_1bp71fh</bpmn:flowNodeRef>
+        <bpmn:flowNodeRef>Event_0da8l0w</bpmn:flowNodeRef>
+        <bpmn:flowNodeRef>Gateway_0qdvw1m</bpmn:flowNodeRef>
+        <bpmn:flowNodeRef>Event_1vzypns</bpmn:flowNodeRef>
+        <bpmn:flowNodeRef>Gateway_0k8jz0l</bpmn:flowNodeRef>
+        <bpmn:flowNodeRef>Activity_0b6uf55</bpmn:flowNodeRef>
+        <bpmn:flowNodeRef>Activity_02pjofv</bpmn:flowNodeRef>
+        <bpmn:flowNodeRef>Event_1srmw62</bpmn:flowNodeRef>
+        <bpmn:flowNodeRef>Gateway_1rfqp7p</bpmn:flowNodeRef>
+        <bpmn:flowNodeRef>Event_08ld7j4</bpmn:flowNodeRef>
+        <bpmn:flowNodeRef>Activity_0pkpyy5</bpmn:flowNodeRef>
+        <bpmn:flowNodeRef>Activity_111pn93</bpmn:flowNodeRef>
+        <bpmn:flowNodeRef>Activity_01tt9ww</bpmn:flowNodeRef>
+        <bpmn:flowNodeRef>Event_0qwwahy</bpmn:flowNodeRef>
+        <bpmn:flowNodeRef>Activity_1j9n83y</bpmn:flowNodeRef>
+        <bpmn:flowNodeRef>Event_0neg5r8</bpmn:flowNodeRef>
+        <bpmn:flowNodeRef>Gateway_1doauf9</bpmn:flowNodeRef>
+        <bpmn:flowNodeRef>Activity_0c0v0lr</bpmn:flowNodeRef>
+        <bpmn:flowNodeRef>Event_0yy9xsg</bpmn:flowNodeRef>
+        <bpmn:flowNodeRef>Event_1s5j0x3</bpmn:flowNodeRef>
+        <bpmn:flowNodeRef>Event_0vunfap</bpmn:flowNodeRef>
+      </bpmn:lane>
+      <bpmn:lane id="Lane_0uuncgk" name="Συμβολαιογραφικό τμήμα">
+        <bpmn:flowNodeRef>Activity_0eoxfpj</bpmn:flowNodeRef>
+        <bpmn:flowNodeRef>Activity_086rtia</bpmn:flowNodeRef>
+        <bpmn:flowNodeRef>Activity_0c507hk</bpmn:flowNodeRef>
+        <bpmn:flowNodeRef>Activity_1oqa4fr</bpmn:flowNodeRef>
+        <bpmn:flowNodeRef>Activity_16mal6y</bpmn:flowNodeRef>
+        <bpmn:flowNodeRef>Gateway_0e7t67u</bpmn:flowNodeRef>
+        <bpmn:flowNodeRef>Gateway_07h8le4</bpmn:flowNodeRef>
+      </bpmn:lane>
+      <bpmn:lane id="Lane_1yr3pxe" name="Λογιστης Β">
+        <bpmn:flowNodeRef>Activity_1elehyw</bpmn:flowNodeRef>
+        <bpmn:flowNodeRef>Event_15pdo1b</bpmn:flowNodeRef>
+        <bpmn:flowNodeRef>Gateway_1nx2kw7</bpmn:flowNodeRef>
+        <bpmn:flowNodeRef>Activity_10ew83l</bpmn:flowNodeRef>
+        <bpmn:flowNodeRef>Gateway_0zbkq1l</bpmn:flowNodeRef>
+        <bpmn:flowNodeRef>Event_05952mf</bpmn:flowNodeRef>
+        <bpmn:flowNodeRef>Activity_1q9bvc7</bpmn:flowNodeRef>
+        <bpmn:flowNodeRef>Activity_07ymxj1</bpmn:flowNodeRef>
+        <bpmn:flowNodeRef>Gateway_1xcpyhr</bpmn:flowNodeRef>
+        <bpmn:flowNodeRef>Event_108xj3w</bpmn:flowNodeRef>
+        <bpmn:flowNodeRef>Activity_03gq038</bpmn:flowNodeRef>
+        <bpmn:flowNodeRef>Activity_11dt137</bpmn:flowNodeRef>
+        <bpmn:flowNodeRef>Event_0wm1rl2</bpmn:flowNodeRef>
+        <bpmn:flowNodeRef>Activity_0zqp78u</bpmn:flowNodeRef>
+        <bpmn:flowNodeRef>Event_1yr56d8</bpmn:flowNodeRef>
+        <bpmn:flowNodeRef>Gateway_0y58sjp</bpmn:flowNodeRef>
+        <bpmn:flowNodeRef>Event_1meqd55</bpmn:flowNodeRef>
+        <bpmn:flowNodeRef>Gateway_1kmn3oi</bpmn:flowNodeRef>
+        <bpmn:flowNodeRef>Activity_064zuro</bpmn:flowNodeRef>
+        <bpmn:flowNodeRef>Activity_0dr34sl</bpmn:flowNodeRef>
+        <bpmn:flowNodeRef>Gateway_15bzdnl</bpmn:flowNodeRef>
+        <bpmn:flowNodeRef>Event_1nmihm9</bpmn:flowNodeRef>
+        <bpmn:flowNodeRef>Activity_04n9kl2</bpmn:flowNodeRef>
+        <bpmn:flowNodeRef>Activity_05o2pw3</bpmn:flowNodeRef>
+        <bpmn:flowNodeRef>Event_11b0mst</bpmn:flowNodeRef>
+      </bpmn:lane>
+    </bpmn:laneSet>
+    <bpmn:sequenceFlow id="Flow_1sbtoe9" sourceRef="Gateway_0ivmbqa" targetRef="Activity_086rtia"/>
+    <bpmn:sequenceFlow id="Flow_0ldx6h3" sourceRef="Gateway_0ivmbqa" targetRef="Activity_0sn42kg"/>
+    <bpmn:sequenceFlow id="Flow_0qbekq7" sourceRef="Activity_0sn42kg" targetRef="Event_066qi95"/>
+    <bpmn:sequenceFlow id="Flow_0lnxslu" sourceRef="Event_066qi95" targetRef="Gateway_1k37uhm"/>
+    <bpmn:sequenceFlow id="Flow_03v1zxp" sourceRef="Activity_086rtia" targetRef="Activity_0eoxfpj"/>
+    <bpmn:sequenceFlow id="Flow_1h1drf6" sourceRef="Activity_0dkofr7" targetRef="Event_19n5gbk"/>
+    <bpmn:sequenceFlow id="Flow_1omsdhr" sourceRef="Event_19n5gbk" targetRef="Gateway_0ivmbqa"/>
+    <bpmn:sequenceFlow id="Flow_0qhkv0s" sourceRef="Activity_0eoxfpj" targetRef="Gateway_1k37uhm"/>
+    <bpmn:sequenceFlow id="Flow_0c7eyk5" sourceRef="Activity_1apz1th" targetRef="Activity_0kmlk37"/>
+    <bpmn:sequenceFlow id="Flow_1m4sc0z" sourceRef="Activity_0kmlk37" targetRef="Event_1hbtlbe"/>
+    <bpmn:sequenceFlow id="Flow_0pupdf4" sourceRef="Event_0qin1qz" targetRef="Gateway_04kmqvy"/>
+    <bpmn:sequenceFlow id="Flow_0opyk0z" name="ΟΧΙ" sourceRef="Gateway_04kmqvy" targetRef="Activity_1apz1th"/>
+    <bpmn:sequenceFlow id="Flow_033ff8c" sourceRef="Gateway_04kmqvy" targetRef="Activity_0hvicbh"/>
+    <bpmn:sequenceFlow id="Flow_0hno9u6" sourceRef="Gateway_1k37uhm" targetRef="Activity_0kmlk37"/>
+    <bpmn:sequenceFlow id="Flow_0a1pec6" sourceRef="Activity_02pjofv" targetRef="Activity_0b6uf55"/>
+    <bpmn:sequenceFlow id="Flow_0ozklnl" sourceRef="Event_08ld7j4" targetRef="Gateway_0k8jz0l"/>
+    <bpmn:sequenceFlow id="Flow_1x9b5kr" name="ΟΧΙ" sourceRef="Gateway_0k8jz0l" targetRef="Activity_02pjofv"/>
+    <bpmn:sequenceFlow id="Flow_1vkijt2" sourceRef="Activity_0b6uf55" targetRef="Event_1srmw62"/>
+    <bpmn:sequenceFlow id="Flow_08jhi4t" sourceRef="Activity_0c0v0lr" targetRef="Event_0yy9xsg"/>
+    <bpmn:sequenceFlow id="Flow_0h8awgh" sourceRef="Activity_1j9n83y" targetRef="Event_0neg5r8"/>
+    <bpmn:sequenceFlow id="Flow_033jmt4" sourceRef="Event_0neg5r8" targetRef="Event_1s5j0x3"/>
+    <bpmn:sequenceFlow id="Flow_0jlgaiu" sourceRef="Gateway_0ivmbqa" targetRef="Activity_1rchpbs"/>
+    <bpmn:sequenceFlow id="Flow_18ax5xy" sourceRef="Activity_1rchpbs" targetRef="Gateway_1k37uhm"/>
+    <bpmn:sequenceFlow id="Flow_0puholz" name="ΟΧΙ" sourceRef="Gateway_0nz4wq6" targetRef="Activity_1bp71fh"/>
+    <bpmn:sequenceFlow id="Flow_0xvc9fm" sourceRef="Activity_1bp71fh" targetRef="Event_1vzypns"/>
+    <bpmn:sequenceFlow id="Flow_0e8k6hg" sourceRef="Activity_0hvicbh" targetRef="Gateway_0nz4wq6"/>
+    <bpmn:sequenceFlow id="Flow_1lhfsrw" sourceRef="Gateway_0nz4wq6" targetRef="Event_0da8l0w"/>
+    <bpmn:sequenceFlow id="Flow_19yztv6" sourceRef="Event_1vzypns" targetRef="Gateway_0qdvw1m"/>
+    <bpmn:sequenceFlow id="Flow_03dna6e" sourceRef="Gateway_0qdvw1m" targetRef="Activity_0pkpyy5"/>
+    <bpmn:sequenceFlow id="Flow_1g0d2ac" sourceRef="Activity_0pkpyy5" targetRef="Activity_111pn93"/>
+    <bpmn:sequenceFlow id="Flow_04yiivk" sourceRef="Activity_01tt9ww" targetRef="Event_0qwwahy"/>
+    <bpmn:sequenceFlow id="Flow_0wxk9zd" sourceRef="Event_0yy9xsg" targetRef="Activity_01tt9ww"/>
+    <bpmn:sequenceFlow id="Flow_0wqgbyj" sourceRef="Event_0qwwahy" targetRef="Activity_1j9n83y"/>
+    <bpmn:task id="Activity_0dkofr7" name="Σύγκλιση συνέλευσης εταίρων Α">
+      <bpmn:incoming>Flow_1i1qmba</bpmn:incoming>
+      <bpmn:outgoing>Flow_1h1drf6</bpmn:outgoing>
+    </bpmn:task>
+    <bpmn:intermediateCatchEvent id="Event_19n5gbk" name="Απάντηση με απόφαση εταίρων Α">
+      <bpmn:incoming>Flow_1h1drf6</bpmn:incoming>
+      <bpmn:outgoing>Flow_1omsdhr</bpmn:outgoing>
+      <bpmn:messageEventDefinition id="MessageEventDefinition_05kvwx4"/>
+    </bpmn:intermediateCatchEvent>
+    <bpmn:parallelGateway id="Gateway_0ivmbqa">
+      <bpmn:incoming>Flow_1omsdhr</bpmn:incoming>
+      <bpmn:outgoing>Flow_1sbtoe9</bpmn:outgoing>
+      <bpmn:outgoing>Flow_0ldx6h3</bpmn:outgoing>
+      <bpmn:outgoing>Flow_0jlgaiu</bpmn:outgoing>
+    </bpmn:parallelGateway>
+    <bpmn:task id="Activity_0sn42kg" name="Ορισμός ορκωτών ελεγκτών εταιρείας Α">
+      <bpmn:incoming>Flow_0ldx6h3</bpmn:incoming>
+      <bpmn:outgoing>Flow_0qbekq7</bpmn:outgoing>
+    </bpmn:task>
+    <bpmn:parallelGateway id="Gateway_1k37uhm">
+      <bpmn:incoming>Flow_0lnxslu</bpmn:incoming>
+      <bpmn:incoming>Flow_0qhkv0s</bpmn:incoming>
+      <bpmn:incoming>Flow_18ax5xy</bpmn:incoming>
+      <bpmn:outgoing>Flow_0hno9u6</bpmn:outgoing>
+    </bpmn:parallelGateway>
+    <bpmn:task id="Activity_0kmlk37" name="Υποβολή δικαιολογητικών στο ΓΕΜΗ εταιρείας Α">
+      <bpmn:incoming>Flow_0c7eyk5</bpmn:incoming>
+      <bpmn:incoming>Flow_0hno9u6</bpmn:incoming>
+      <bpmn:outgoing>Flow_1m4sc0z</bpmn:outgoing>
+    </bpmn:task>
+    <bpmn:task id="Activity_1apz1th" name="Τροποποίηση έκθεσης εταιρείας Α">
+      <bpmn:incoming>Flow_0opyk0z</bpmn:incoming>
+      <bpmn:outgoing>Flow_0c7eyk5</bpmn:outgoing>
+    </bpmn:task>
+    <bpmn:intermediateCatchEvent id="Event_1hbtlbe" name="Παραλαβή παραβόλων προς πληρωμή εταιρείας Α">
+      <bpmn:incoming>Flow_1m4sc0z</bpmn:incoming>
+      <bpmn:outgoing>Flow_0mvax1u</bpmn:outgoing>
+      <bpmn:messageEventDefinition id="MessageEventDefinition_0yozxok"/>
+    </bpmn:intermediateCatchEvent>
+    <bpmn:task id="Activity_0hvicbh" name="Ενημέρωση των εταίρων, αποστολή έκθεσης και οικ. καταστάσεις εταιρείας Α">
+      <bpmn:incoming>Flow_033ff8c</bpmn:incoming>
+      <bpmn:outgoing>Flow_0e8k6hg</bpmn:outgoing>
+    </bpmn:task>
+    <bpmn:exclusiveGateway id="Gateway_04kmqvy" name="Απάντηση θετική εταιρείας Α;">
+      <bpmn:incoming>Flow_0pupdf4</bpmn:incoming>
+      <bpmn:outgoing>Flow_0opyk0z</bpmn:outgoing>
+      <bpmn:outgoing>Flow_033ff8c</bpmn:outgoing>
+    </bpmn:exclusiveGateway>
+    <bpmn:intermediateCatchEvent id="Event_0qin1qz" name="Παραλαβή απάντησης από ΓΕΜΗ εταιρείας Α">
+      <bpmn:incoming>Flow_0mvax1u</bpmn:incoming>
+      <bpmn:outgoing>Flow_0pupdf4</bpmn:outgoing>
+      <bpmn:messageEventDefinition id="MessageEventDefinition_0q1lzgl"/>
+    </bpmn:intermediateCatchEvent>
+    <bpmn:intermediateCatchEvent id="Event_066qi95" name="Απάντηση με σύνταξη έκθεσης εξακρίβωσης εταιρείας Α">
+      <bpmn:incoming>Flow_0qbekq7</bpmn:incoming>
+      <bpmn:outgoing>Flow_0lnxslu</bpmn:outgoing>
+      <bpmn:messageEventDefinition id="MessageEventDefinition_0dyrq2k"/>
+    </bpmn:intermediateCatchEvent>
+    <bpmn:task id="Activity_1rchpbs" name="Ισολογισμός μετασχ/σμού εταιρείας Α">
+      <bpmn:incoming>Flow_0jlgaiu</bpmn:incoming>
+      <bpmn:outgoing>Flow_18ax5xy</bpmn:outgoing>
+    </bpmn:task>
+    <bpmn:exclusiveGateway id="Gateway_0nz4wq6" name="Έλεγχος οφειλών προς περιφέρεια εταιρείας Α">
+      <bpmn:incoming>Flow_0e8k6hg</bpmn:incoming>
+      <bpmn:outgoing>Flow_0puholz</bpmn:outgoing>
+      <bpmn:outgoing>Flow_1lhfsrw</bpmn:outgoing>
+    </bpmn:exclusiveGateway>
+    <bpmn:task id="Activity_1bp71fh" name="Αίτηση έγκρισης περιφέρειας εταιρείας Α">
+      <bpmn:incoming>Flow_0puholz</bpmn:incoming>
+      <bpmn:outgoing>Flow_0xvc9fm</bpmn:outgoing>
+    </bpmn:task>
+    <bpmn:intermediateThrowEvent id="Event_0da8l0w" name="Ενημέρωση πληρωμής οφειλών εταιρείας Α">
+      <bpmn:incoming>Flow_1lhfsrw</bpmn:incoming>
+      <bpmn:outgoing>Flow_107ehs2</bpmn:outgoing>
+      <bpmn:messageEventDefinition id="MessageEventDefinition_0j2ep6g"/>
+    </bpmn:intermediateThrowEvent>
+    <bpmn:exclusiveGateway id="Gateway_0qdvw1m">
+      <bpmn:incoming>Flow_19yztv6</bpmn:incoming>
+      <bpmn:incoming>Flow_107ehs2</bpmn:incoming>
+      <bpmn:outgoing>Flow_03dna6e</bpmn:outgoing>
+    </bpmn:exclusiveGateway>
+    <bpmn:intermediateCatchEvent id="Event_1vzypns" name="Απάντηση από περιφέρεια σχεδίου συγχώνευσης εταιρείας Α">
+      <bpmn:incoming>Flow_0xvc9fm</bpmn:incoming>
+      <bpmn:outgoing>Flow_19yztv6</bpmn:outgoing>
+      <bpmn:messageEventDefinition id="MessageEventDefinition_0g2rpx8"/>
+    </bpmn:intermediateCatchEvent>
+    <bpmn:exclusiveGateway id="Gateway_0k8jz0l" name="Απάντηση θετική;">
+      <bpmn:incoming>Flow_0ozklnl</bpmn:incoming>
+      <bpmn:outgoing>Flow_1x9b5kr</bpmn:outgoing>
+      <bpmn:outgoing>Flow_0wi2pws</bpmn:outgoing>
+    </bpmn:exclusiveGateway>
+    <bpmn:task id="Activity_0b6uf55" name="Αίτηση συγχώνευσης στο ΓΕΜΗ">
+      <bpmn:incoming>Flow_0a1pec6</bpmn:incoming>
+      <bpmn:incoming>Flow_1untdmj</bpmn:incoming>
+      <bpmn:outgoing>Flow_1vkijt2</bpmn:outgoing>
+    </bpmn:task>
+    <bpmn:task id="Activity_02pjofv" name="Τροποποίηση αίτησης">
+      <bpmn:incoming>Flow_1x9b5kr</bpmn:incoming>
+      <bpmn:outgoing>Flow_0a1pec6</bpmn:outgoing>
+    </bpmn:task>
+    <bpmn:intermediateThrowEvent id="Event_1srmw62" name="Ενημέρωση πληρωμής παραβόλων">
+      <bpmn:incoming>Flow_1vkijt2</bpmn:incoming>
+      <bpmn:outgoing>Flow_1dpzh2u</bpmn:outgoing>
+      <bpmn:messageEventDefinition id="MessageEventDefinition_0jcbnvc"/>
+    </bpmn:intermediateThrowEvent>
+    <bpmn:sequenceFlow id="Flow_1o061dz" sourceRef="Event_0vunfap" targetRef="Gateway_1rfqp7p"/>
+    <bpmn:sequenceFlow id="Flow_1i1qmba" sourceRef="Gateway_1rfqp7p" targetRef="Activity_0dkofr7"/>
+    <bpmn:parallelGateway id="Gateway_1rfqp7p">
+      <bpmn:incoming>Flow_1o061dz</bpmn:incoming>
+      <bpmn:outgoing>Flow_1i1qmba</bpmn:outgoing>
+      <bpmn:outgoing>Flow_0bkjy8f</bpmn:outgoing>
+    </bpmn:parallelGateway>
+    <bpmn:sequenceFlow id="Flow_1s2fmej" sourceRef="Activity_1elehyw" targetRef="Event_15pdo1b"/>
+    <bpmn:sequenceFlow id="Flow_0bkjy8f" sourceRef="Gateway_1rfqp7p" targetRef="Activity_1elehyw"/>
+    <bpmn:task id="Activity_1elehyw" name="Σύγκλιση συνέλευσης εταίρων Β">
+      <bpmn:incoming>Flow_0bkjy8f</bpmn:incoming>
+      <bpmn:outgoing>Flow_1s2fmej</bpmn:outgoing>
+    </bpmn:task>
+    <bpmn:intermediateCatchEvent id="Event_15pdo1b" name="Απάντηση με απόφαση εταίρων Β">
+      <bpmn:incoming>Flow_1s2fmej</bpmn:incoming>
+      <bpmn:outgoing>Flow_13fxfsu</bpmn:outgoing>
+      <bpmn:messageEventDefinition id="MessageEventDefinition_1c16dfl"/>
+    </bpmn:intermediateCatchEvent>
+    <bpmn:task id="Activity_0eoxfpj" name="Σύνταξη έκθεσης εταίρων εταιρείας Α">
+      <bpmn:incoming>Flow_03v1zxp</bpmn:incoming>
+      <bpmn:outgoing>Flow_0qhkv0s</bpmn:outgoing>
+    </bpmn:task>
+    <bpmn:task id="Activity_086rtia" name="Πρακτικό ΔΣ εταιρείας Α">
+      <bpmn:incoming>Flow_1sbtoe9</bpmn:incoming>
+      <bpmn:outgoing>Flow_03v1zxp</bpmn:outgoing>
+    </bpmn:task>
+    <bpmn:parallelGateway id="Gateway_1nx2kw7">
+      <bpmn:incoming>Flow_13fxfsu</bpmn:incoming>
+      <bpmn:outgoing>Flow_0kp04dj</bpmn:outgoing>
+      <bpmn:outgoing>Flow_0gp5dwt</bpmn:outgoing>
+      <bpmn:outgoing>Flow_1c6wisx</bpmn:outgoing>
+    </bpmn:parallelGateway>
+    <bpmn:task id="Activity_10ew83l" name="Ορισμός ορκωτών ελεγκτών εταιρείας Β">
+      <bpmn:incoming>Flow_0gp5dwt</bpmn:incoming>
+      <bpmn:outgoing>Flow_0qxj3zo</bpmn:outgoing>
+    </bpmn:task>
+    <bpmn:parallelGateway id="Gateway_0zbkq1l">
+      <bpmn:incoming>Flow_04rlxqx</bpmn:incoming>
+      <bpmn:incoming>Flow_1fhc94r</bpmn:incoming>
+      <bpmn:incoming>Flow_08yx47j</bpmn:incoming>
+      <bpmn:outgoing>Flow_1ob998t</bpmn:outgoing>
+    </bpmn:parallelGateway>
+    <bpmn:intermediateCatchEvent id="Event_05952mf" name="Απάντηση με σύνταξη έκθεσης εξακρίβωσης εταιρείας Β">
+      <bpmn:incoming>Flow_0qxj3zo</bpmn:incoming>
+      <bpmn:outgoing>Flow_04rlxqx</bpmn:outgoing>
+      <bpmn:messageEventDefinition id="MessageEventDefinition_1gubcz6"/>
+    </bpmn:intermediateCatchEvent>
+    <bpmn:task id="Activity_1q9bvc7" name="Ισολογισμός μετασχ/σμού εταιρείας Β">
+      <bpmn:incoming>Flow_1c6wisx</bpmn:incoming>
+      <bpmn:outgoing>Flow_08yx47j</bpmn:outgoing>
+    </bpmn:task>
+    <bpmn:sequenceFlow id="Flow_0kp04dj" sourceRef="Gateway_1nx2kw7" targetRef="Activity_0c507hk"/>
+    <bpmn:sequenceFlow id="Flow_0gp5dwt" sourceRef="Gateway_1nx2kw7" targetRef="Activity_10ew83l"/>
+    <bpmn:sequenceFlow id="Flow_1c6wisx" sourceRef="Gateway_1nx2kw7" targetRef="Activity_1q9bvc7"/>
+    <bpmn:sequenceFlow id="Flow_0qxj3zo" sourceRef="Activity_10ew83l" targetRef="Event_05952mf"/>
+    <bpmn:sequenceFlow id="Flow_04rlxqx" sourceRef="Event_05952mf" targetRef="Gateway_0zbkq1l"/>
+    <bpmn:sequenceFlow id="Flow_1fhc94r" sourceRef="Activity_1oqa4fr" targetRef="Gateway_0zbkq1l"/>
+    <bpmn:sequenceFlow id="Flow_08yx47j" sourceRef="Activity_1q9bvc7" targetRef="Gateway_0zbkq1l"/>
+    <bpmn:sequenceFlow id="Flow_0xdjwr9" sourceRef="Activity_0c507hk" targetRef="Activity_1oqa4fr"/>
+    <bpmn:sequenceFlow id="Flow_13fxfsu" sourceRef="Event_15pdo1b" targetRef="Gateway_1nx2kw7"/>
+    <bpmn:task id="Activity_0c507hk" name="Πρακτικό ΔΣ εταιρείας Β">
+      <bpmn:incoming>Flow_0kp04dj</bpmn:incoming>
+      <bpmn:outgoing>Flow_0xdjwr9</bpmn:outgoing>
+    </bpmn:task>
+    <bpmn:task id="Activity_1oqa4fr" name="Σύνταξη έκθεσης εταίρων εταιρείας Β">
+      <bpmn:incoming>Flow_0xdjwr9</bpmn:incoming>
+      <bpmn:outgoing>Flow_1fhc94r</bpmn:outgoing>
+    </bpmn:task>
+    <bpmn:task id="Activity_07ymxj1" name="Ενημέρωση των εταίρων, αποστολή έκθεσης και οικ. καταστάσεις εταιρείας Β">
+      <bpmn:incoming>Flow_0pd76qz</bpmn:incoming>
+      <bpmn:outgoing>Flow_08y5ljo</bpmn:outgoing>
+    </bpmn:task>
+    <bpmn:exclusiveGateway id="Gateway_1xcpyhr" name="Απάντηση θετική εταιρείας Β;">
+      <bpmn:incoming>Flow_0669buy</bpmn:incoming>
+      <bpmn:outgoing>Flow_1boc1yf</bpmn:outgoing>
+      <bpmn:outgoing>Flow_0pd76qz</bpmn:outgoing>
+    </bpmn:exclusiveGateway>
+    <bpmn:intermediateCatchEvent id="Event_108xj3w" name="Παραλαβή απάντησης από ΓΕΜΗ εταιρείας Β">
+      <bpmn:incoming>Flow_1xp6oou</bpmn:incoming>
+      <bpmn:outgoing>Flow_0669buy</bpmn:outgoing>
+      <bpmn:messageEventDefinition id="MessageEventDefinition_1g1ulp0"/>
+    </bpmn:intermediateCatchEvent>
+    <bpmn:sequenceFlow id="Flow_1ahpsuk" sourceRef="Activity_03gq038" targetRef="Activity_11dt137"/>
+    <bpmn:sequenceFlow id="Flow_1vz1lqc" sourceRef="Activity_11dt137" targetRef="Event_0wm1rl2"/>
+    <bpmn:sequenceFlow id="Flow_1boc1yf" name="ΟΧΙ" sourceRef="Gateway_1xcpyhr" targetRef="Activity_03gq038"/>
+    <bpmn:sequenceFlow id="Flow_0pd76qz" sourceRef="Gateway_1xcpyhr" targetRef="Activity_07ymxj1"/>
+    <bpmn:sequenceFlow id="Flow_0669buy" sourceRef="Event_108xj3w" targetRef="Gateway_1xcpyhr"/>
+    <bpmn:sequenceFlow id="Flow_1ob998t" sourceRef="Gateway_0zbkq1l" targetRef="Activity_11dt137"/>
+    <bpmn:task id="Activity_03gq038" name="Τροποποίηση έκθεσης εταιρείας Β">
+      <bpmn:incoming>Flow_1boc1yf</bpmn:incoming>
+      <bpmn:outgoing>Flow_1ahpsuk</bpmn:outgoing>
+    </bpmn:task>
+    <bpmn:task id="Activity_11dt137" name="Υποβολή δικαιολογητικών στο ΓΕΜΗ εταιρείας Β">
+      <bpmn:incoming>Flow_1ahpsuk</bpmn:incoming>
+      <bpmn:incoming>Flow_1ob998t</bpmn:incoming>
+      <bpmn:outgoing>Flow_1vz1lqc</bpmn:outgoing>
+    </bpmn:task>
+    <bpmn:intermediateCatchEvent id="Event_0wm1rl2" name="Παραλαβή παραβόλων προς πληρωμή εταιρείας Β">
+      <bpmn:incoming>Flow_1vz1lqc</bpmn:incoming>
+      <bpmn:outgoing>Flow_1xp6oou</bpmn:outgoing>
+      <bpmn:messageEventDefinition id="MessageEventDefinition_1hg7f5l"/>
+    </bpmn:intermediateCatchEvent>
+    <bpmn:task id="Activity_0zqp78u" name="Αίτηση έγκρισης περιφέρειας εταιρείας Β">
+      <bpmn:incoming>Flow_1ncv0sl</bpmn:incoming>
+      <bpmn:outgoing>Flow_06ieue4</bpmn:outgoing>
+    </bpmn:task>
+    <bpmn:intermediateCatchEvent id="Event_1yr56d8" name="Απάντηση από περιφέρεια σχεδίου συγχώνευσης εταιρείας Β">
+      <bpmn:incoming>Flow_06ieue4</bpmn:incoming>
+      <bpmn:outgoing>Flow_1xztiz6</bpmn:outgoing>
+      <bpmn:messageEventDefinition id="MessageEventDefinition_1w9ftkl"/>
+    </bpmn:intermediateCatchEvent>
+    <bpmn:exclusiveGateway id="Gateway_0y58sjp" name="Έλεγχος οφειλών προς περιφέρεια εταιρείας Β">
+      <bpmn:incoming>Flow_08y5ljo</bpmn:incoming>
+      <bpmn:outgoing>Flow_1ncv0sl</bpmn:outgoing>
+      <bpmn:outgoing>Flow_1p09xgn</bpmn:outgoing>
+    </bpmn:exclusiveGateway>
+    <bpmn:intermediateThrowEvent id="Event_1meqd55" name="Ενημέρωση πληρωμής οφειλών εταιρείας Β">
+      <bpmn:incoming>Flow_1p09xgn</bpmn:incoming>
+      <bpmn:outgoing>Flow_01k4iyu</bpmn:outgoing>
+      <bpmn:messageEventDefinition id="MessageEventDefinition_08m8wxr"/>
+    </bpmn:intermediateThrowEvent>
+    <bpmn:exclusiveGateway id="Gateway_1kmn3oi">
+      <bpmn:incoming>Flow_1xztiz6</bpmn:incoming>
+      <bpmn:incoming>Flow_01k4iyu</bpmn:incoming>
+      <bpmn:outgoing>Flow_1mgccw4</bpmn:outgoing>
+    </bpmn:exclusiveGateway>
+    <bpmn:sequenceFlow id="Flow_1ncv0sl" name="ΟΧΙ" sourceRef="Gateway_0y58sjp" targetRef="Activity_0zqp78u"/>
+    <bpmn:sequenceFlow id="Flow_06ieue4" sourceRef="Activity_0zqp78u" targetRef="Event_1yr56d8"/>
+    <bpmn:sequenceFlow id="Flow_1xztiz6" sourceRef="Event_1yr56d8" targetRef="Gateway_1kmn3oi"/>
+    <bpmn:sequenceFlow id="Flow_1p09xgn" sourceRef="Gateway_0y58sjp" targetRef="Event_1meqd55"/>
+    <bpmn:sequenceFlow id="Flow_1mgccw4" sourceRef="Gateway_1kmn3oi" targetRef="Activity_064zuro"/>
+    <bpmn:sequenceFlow id="Flow_08y5ljo" sourceRef="Activity_07ymxj1" targetRef="Gateway_0y58sjp"/>
+    <bpmn:task id="Activity_064zuro" name="Δημοσίευση σχεδίου συγχώνευσης εταιρείας Β">
+      <bpmn:incoming>Flow_1mgccw4</bpmn:incoming>
+      <bpmn:outgoing>Flow_1mjph9t</bpmn:outgoing>
+    </bpmn:task>
+    <bpmn:task id="Activity_0dr34sl" name="Αποστολή δικαιολογητικών εταιρείας Β στον συμβολαιογράφο">
+      <bpmn:incoming>Flow_1mjph9t</bpmn:incoming>
+      <bpmn:outgoing>Flow_1ft81y2</bpmn:outgoing>
+    </bpmn:task>
+    <bpmn:sequenceFlow id="Flow_1mjph9t" sourceRef="Activity_064zuro" targetRef="Activity_0dr34sl"/>
+    <bpmn:task id="Activity_16mal6y" name="Σύνταξη εγγράφου συγχώνευσης">
+      <bpmn:incoming>Flow_0vkh607</bpmn:incoming>
+      <bpmn:outgoing>Flow_0kgc4zf</bpmn:outgoing>
+    </bpmn:task>
+    <bpmn:sequenceFlow id="Flow_13s90lu" sourceRef="Activity_111pn93" targetRef="Gateway_0e7t67u"/>
+    <bpmn:sequenceFlow id="Flow_1ft81y2" sourceRef="Activity_0dr34sl" targetRef="Gateway_0e7t67u"/>
+    <bpmn:sequenceFlow id="Flow_0vkh607" sourceRef="Gateway_0e7t67u" targetRef="Activity_16mal6y"/>
+    <bpmn:sequenceFlow id="Flow_0kgc4zf" sourceRef="Activity_16mal6y" targetRef="Gateway_07h8le4"/>
+    <bpmn:intermediateCatchEvent id="Event_08ld7j4" name="Παραλαβή βεβαίωσης συγχώνευσης από ΓΕΜΗ">
+      <bpmn:incoming>Flow_1dpzh2u</bpmn:incoming>
+      <bpmn:outgoing>Flow_0ozklnl</bpmn:outgoing>
+      <bpmn:messageEventDefinition id="MessageEventDefinition_1ge5a5p"/>
+    </bpmn:intermediateCatchEvent>
+    <bpmn:task id="Activity_0pkpyy5" name="Δημοσίευση σχεδίου συγχώνευσης εταιρίας Α">
+      <bpmn:incoming>Flow_03dna6e</bpmn:incoming>
+      <bpmn:outgoing>Flow_1g0d2ac</bpmn:outgoing>
+    </bpmn:task>
+    <bpmn:task id="Activity_111pn93" name="Αποστολή δικαιολογητικών εταιρείας Α στον συμβολαιογράφο">
+      <bpmn:incoming>Flow_1g0d2ac</bpmn:incoming>
+      <bpmn:outgoing>Flow_13s90lu</bpmn:outgoing>
+    </bpmn:task>
+    <bpmn:sequenceFlow id="Flow_1untdmj" sourceRef="Gateway_07h8le4" targetRef="Activity_0b6uf55"/>
+    <bpmn:task id="Activity_05o2pw3" name="Τροποποίηση αίτησης">
+      <bpmn:incoming>Flow_1osdcvu</bpmn:incoming>
+      <bpmn:outgoing>Flow_0oww4p5</bpmn:outgoing>
+    </bpmn:task>
+    <bpmn:task id="Activity_04n9kl2" name="Αίτηση διαγραφής στο ΓΕΜΗ">
+      <bpmn:incoming>Flow_01ba9vi</bpmn:incoming>
+      <bpmn:incoming>Flow_0oww4p5</bpmn:incoming>
+      <bpmn:outgoing>Flow_09unq84</bpmn:outgoing>
+    </bpmn:task>
+    <bpmn:sequenceFlow id="Flow_01ba9vi" sourceRef="Gateway_07h8le4" targetRef="Activity_04n9kl2"/>
+    <bpmn:sequenceFlow id="Flow_0oww4p5" sourceRef="Activity_05o2pw3" targetRef="Activity_04n9kl2"/>
+    <bpmn:intermediateCatchEvent id="Event_1nmihm9" name="Παραλαβή βεβαίωσης διαγραφής από ΓΕΜΗ">
+      <bpmn:incoming>Flow_1qj17ix</bpmn:incoming>
+      <bpmn:outgoing>Flow_1i70bkr</bpmn:outgoing>
+      <bpmn:messageEventDefinition id="MessageEventDefinition_0p9yiex"/>
+    </bpmn:intermediateCatchEvent>
+    <bpmn:sequenceFlow id="Flow_1i70bkr" sourceRef="Event_1nmihm9" targetRef="Gateway_15bzdnl"/>
+    <bpmn:sequenceFlow id="Flow_09unq84" sourceRef="Activity_04n9kl2" targetRef="Event_11b0mst"/>
+    <bpmn:exclusiveGateway id="Gateway_15bzdnl" name="Απάντηση θετική;">
+      <bpmn:incoming>Flow_1i70bkr</bpmn:incoming>
+      <bpmn:outgoing>Flow_1osdcvu</bpmn:outgoing>
+      <bpmn:outgoing>Flow_0ug6tvy</bpmn:outgoing>
+    </bpmn:exclusiveGateway>
+    <bpmn:sequenceFlow id="Flow_1osdcvu" name="ΟΧΙ" sourceRef="Gateway_15bzdnl" targetRef="Activity_05o2pw3"/>
+    <bpmn:intermediateThrowEvent id="Event_11b0mst" name="Ενημέρωση πληρωμής παραβόλων">
+      <bpmn:incoming>Flow_09unq84</bpmn:incoming>
+      <bpmn:outgoing>Flow_1qj17ix</bpmn:outgoing>
+      <bpmn:messageEventDefinition id="MessageEventDefinition_16rr9ny"/>
+    </bpmn:intermediateThrowEvent>
+    <bpmn:parallelGateway id="Gateway_0e7t67u">
+      <bpmn:incoming>Flow_1ft81y2</bpmn:incoming>
+      <bpmn:incoming>Flow_13s90lu</bpmn:incoming>
+      <bpmn:outgoing>Flow_0vkh607</bpmn:outgoing>
+    </bpmn:parallelGateway>
+    <bpmn:parallelGateway id="Gateway_07h8le4">
+      <bpmn:incoming>Flow_0kgc4zf</bpmn:incoming>
+      <bpmn:outgoing>Flow_1untdmj</bpmn:outgoing>
+      <bpmn:outgoing>Flow_01ba9vi</bpmn:outgoing>
+    </bpmn:parallelGateway>
+    <bpmn:task id="Activity_01tt9ww" name="Αποστολή δικαιολογητικών και βεβαίωση από ΔΟΥ Α στη ΔΟΥ Β">
+      <bpmn:incoming>Flow_0wxk9zd</bpmn:incoming>
+      <bpmn:outgoing>Flow_04yiivk</bpmn:outgoing>
+    </bpmn:task>
+    <bpmn:intermediateCatchEvent id="Event_0qwwahy" name="Παραλαβή βεβαίωσης διαγραφής από ΔΟΥ Β">
+      <bpmn:incoming>Flow_04yiivk</bpmn:incoming>
+      <bpmn:outgoing>Flow_0wqgbyj</bpmn:outgoing>
+      <bpmn:messageEventDefinition id="MessageEventDefinition_1b6a4ll"/>
+    </bpmn:intermediateCatchEvent>
+    <bpmn:task id="Activity_1j9n83y" name="Αποστολή δικαιολογητικών μετατροπής σε ΕΦΚΑ">
+      <bpmn:incoming>Flow_0wqgbyj</bpmn:incoming>
+      <bpmn:outgoing>Flow_0h8awgh</bpmn:outgoing>
+    </bpmn:task>
+    <bpmn:intermediateCatchEvent id="Event_0neg5r8" name="Παραλαβή βεβαίωσης μετατροπής από ΕΦΚΑ">
+      <bpmn:incoming>Flow_0h8awgh</bpmn:incoming>
+      <bpmn:outgoing>Flow_033jmt4</bpmn:outgoing>
+      <bpmn:messageEventDefinition id="MessageEventDefinition_0p9vvzp"/>
+    </bpmn:intermediateCatchEvent>
+    <bpmn:sequenceFlow id="Flow_0ug6tvy" name="ΝΑΙ" sourceRef="Gateway_15bzdnl" targetRef="Gateway_1doauf9"/>
+    <bpmn:parallelGateway id="Gateway_1doauf9">
+      <bpmn:incoming>Flow_0ug6tvy</bpmn:incoming>
+      <bpmn:incoming>Flow_0wi2pws</bpmn:incoming>
+      <bpmn:outgoing>Flow_1qa0s1r</bpmn:outgoing>
+    </bpmn:parallelGateway>
+    <bpmn:sequenceFlow id="Flow_0wi2pws" name="ΝΑΙ" sourceRef="Gateway_0k8jz0l" targetRef="Gateway_1doauf9"/>
+    <bpmn:sequenceFlow id="Flow_1qa0s1r" sourceRef="Gateway_1doauf9" targetRef="Activity_0c0v0lr"/>
+    <bpmn:task id="Activity_0c0v0lr" name="Αποστολή δικαιολογητικών μετατροπής στη ΔΟΥ Α">
+      <bpmn:incoming>Flow_1qa0s1r</bpmn:incoming>
+      <bpmn:outgoing>Flow_08jhi4t</bpmn:outgoing>
+    </bpmn:task>
+    <bpmn:intermediateCatchEvent id="Event_0yy9xsg" name="Παραλαβή βεβαίωσης συγχώνευσης από ΔΟΥ Α">
+      <bpmn:incoming>Flow_08jhi4t</bpmn:incoming>
+      <bpmn:outgoing>Flow_0wxk9zd</bpmn:outgoing>
+      <bpmn:messageEventDefinition id="MessageEventDefinition_1i1677m"/>
+    </bpmn:intermediateCatchEvent>
+    <bpmn:endEvent id="Event_1s5j0x3" name="Τέλος μετατροπής">
+      <bpmn:incoming>Flow_033jmt4</bpmn:incoming>
+    </bpmn:endEvent>
+    <bpmn:startEvent id="Event_0vunfap" name="Από γραμματεία">
+      <bpmn:outgoing>Flow_1o061dz</bpmn:outgoing>
+    </bpmn:startEvent>
+    <bpmn:sequenceFlow id="Flow_0mvax1u" sourceRef="Event_1hbtlbe" targetRef="Event_0qin1qz"/>
+    <bpmn:sequenceFlow id="Flow_107ehs2" sourceRef="Event_0da8l0w" targetRef="Gateway_0qdvw1m"/>
+    <bpmn:sequenceFlow id="Flow_1dpzh2u" sourceRef="Event_1srmw62" targetRef="Event_08ld7j4"/>
+    <bpmn:sequenceFlow id="Flow_1xp6oou" sourceRef="Event_0wm1rl2" targetRef="Event_108xj3w"/>
+    <bpmn:sequenceFlow id="Flow_01k4iyu" sourceRef="Event_1meqd55" targetRef="Gateway_1kmn3oi"/>
+    <bpmn:sequenceFlow id="Flow_1qj17ix" sourceRef="Event_11b0mst" targetRef="Event_1nmihm9"/>
+  </bpmn:process>
+  <bpmndi:BPMNDiagram id="BPMNDiagram_1">
+    <bpmndi:BPMNPlane id="BPMNPlane_1" bpmnElement="Collaboration_13askru">
+      <bpmndi:BPMNShape id="Participant_1eh80v6_di" bpmnElement="Participant_1eh80v6" isHorizontal="true">
+        <dc:Bounds x="58" y="400" width="4692" height="1000"/>
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="Lane_1yr3pxe_di" bpmnElement="Lane_1yr3pxe" isHorizontal="true">
+        <dc:Bounds x="88" y="1030" width="4662" height="370"/>
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="Lane_0uuncgk_di" bpmnElement="Lane_0uuncgk" isHorizontal="true">
+        <dc:Bounds x="88" y="840" width="4662" height="190"/>
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="Lane_0adbbls_di" bpmnElement="Lane_0adbbls" isHorizontal="true">
+        <dc:Bounds x="88" y="400" width="4662" height="440"/>
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNEdge id="Flow_1qa0s1r_di" bpmnElement="Flow_1qa0s1r">
+        <di:waypoint x="3625" y="470"/>
+        <di:waypoint x="3690" y="470"/>
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="Flow_0wi2pws_di" bpmnElement="Flow_0wi2pws">
+        <di:waypoint x="3455" y="470"/>
+        <di:waypoint x="3575" y="470"/>
+        <bpmndi:BPMNLabel>
+          <dc:Bounds x="3506" y="452" width="19" height="14"/>
+        </bpmndi:BPMNLabel>
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="Flow_0ug6tvy_di" bpmnElement="Flow_0ug6tvy">
+        <di:waypoint x="3465" y="1150"/>
+        <di:waypoint x="3600" y="1150"/>
+        <di:waypoint x="3600" y="495"/>
+        <bpmndi:BPMNLabel>
+          <dc:Bounds x="3523" y="1132" width="19" height="14"/>
+        </bpmndi:BPMNLabel>
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="Flow_1osdcvu_di" bpmnElement="Flow_1osdcvu">
+        <di:waypoint x="3440" y="1175"/>
+        <di:waypoint x="3440" y="1280"/>
+        <di:waypoint x="3150" y="1280"/>
+        <bpmndi:BPMNLabel>
+          <dc:Bounds x="3446" y="1225" width="19" height="14"/>
+        </bpmndi:BPMNLabel>
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="Flow_09unq84_di" bpmnElement="Flow_09unq84">
+        <di:waypoint x="3050" y="1150"/>
+        <di:waypoint x="3152" y="1150"/>
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="Flow_1i70bkr_di" bpmnElement="Flow_1i70bkr">
+        <di:waypoint x="3368" y="1150"/>
+        <di:waypoint x="3415" y="1150"/>
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="Flow_0oww4p5_di" bpmnElement="Flow_0oww4p5">
+        <di:waypoint x="3050" y="1280"/>
+        <di:waypoint x="3000" y="1280"/>
+        <di:waypoint x="3000" y="1190"/>
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="Flow_01ba9vi_di" bpmnElement="Flow_01ba9vi">
+        <di:waypoint x="2920" y="935"/>
+        <di:waypoint x="2920" y="1150"/>
+        <di:waypoint x="2950" y="1150"/>
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="Flow_1untdmj_di" bpmnElement="Flow_1untdmj">
+        <di:waypoint x="2920" y="885"/>
+        <di:waypoint x="2920" y="470"/>
+        <di:waypoint x="2940" y="470"/>
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="Flow_0kgc4zf_di" bpmnElement="Flow_0kgc4zf">
+        <di:waypoint x="2820" y="910"/>
+        <di:waypoint x="2895" y="910"/>
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="Flow_0vkh607_di" bpmnElement="Flow_0vkh607">
+        <di:waypoint x="2645" y="910"/>
+        <di:waypoint x="2720" y="910"/>
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="Flow_1ft81y2_di" bpmnElement="Flow_1ft81y2">
+        <di:waypoint x="2620" y="1070"/>
+        <di:waypoint x="2620" y="935"/>
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="Flow_13s90lu_di" bpmnElement="Flow_13s90lu">
+        <di:waypoint x="2620" y="510"/>
+        <di:waypoint x="2620" y="885"/>
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="Flow_1mjph9t_di" bpmnElement="Flow_1mjph9t">
+        <di:waypoint x="2520" y="1110"/>
+        <di:waypoint x="2570" y="1110"/>
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="Flow_08y5ljo_di" bpmnElement="Flow_08y5ljo">
+        <di:waypoint x="1830" y="1110"/>
+        <di:waypoint x="1885" y="1110"/>
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="Flow_1mgccw4_di" bpmnElement="Flow_1mgccw4">
+        <di:waypoint x="2395" y="1110"/>
+        <di:waypoint x="2420" y="1110"/>
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="Flow_1p09xgn_di" bpmnElement="Flow_1p09xgn">
+        <di:waypoint x="1910" y="1135"/>
+        <di:waypoint x="1910" y="1220"/>
+        <di:waypoint x="1962" y="1220"/>
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="Flow_1xztiz6_di" bpmnElement="Flow_1xztiz6">
+        <di:waypoint x="2258" y="1110"/>
+        <di:waypoint x="2345" y="1110"/>
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="Flow_06ieue4_di" bpmnElement="Flow_06ieue4">
+        <di:waypoint x="2100" y="1110"/>
+        <di:waypoint x="2222" y="1110"/>
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="Flow_1ncv0sl_di" bpmnElement="Flow_1ncv0sl">
+        <di:waypoint x="1935" y="1110"/>
+        <di:waypoint x="2000" y="1110"/>
+        <bpmndi:BPMNLabel>
+          <dc:Bounds x="1958" y="1092" width="19" height="14"/>
+        </bpmndi:BPMNLabel>
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="Flow_1ob998t_di" bpmnElement="Flow_1ob998t">
+        <di:waypoint x="1055" y="1110"/>
+        <di:waypoint x="1100" y="1110"/>
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="Flow_0669buy_di" bpmnElement="Flow_0669buy">
+        <di:waypoint x="1578" y="1110"/>
+        <di:waypoint x="1635" y="1110"/>
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="Flow_0pd76qz_di" bpmnElement="Flow_0pd76qz">
+        <di:waypoint x="1685" y="1110"/>
+        <di:waypoint x="1730" y="1110"/>
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="Flow_1boc1yf_di" bpmnElement="Flow_1boc1yf">
+        <di:waypoint x="1660" y="1135"/>
+        <di:waypoint x="1660" y="1230"/>
+        <di:waypoint x="1270" y="1230"/>
+        <bpmndi:BPMNLabel>
+          <dc:Bounds x="1666" y="1179" width="19" height="14"/>
+        </bpmndi:BPMNLabel>
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="Flow_1vz1lqc_di" bpmnElement="Flow_1vz1lqc">
+        <di:waypoint x="1200" y="1110"/>
+        <di:waypoint x="1342" y="1110"/>
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="Flow_1ahpsuk_di" bpmnElement="Flow_1ahpsuk">
+        <di:waypoint x="1170" y="1230"/>
+        <di:waypoint x="1150" y="1230"/>
+        <di:waypoint x="1150" y="1150"/>
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="Flow_13fxfsu_di" bpmnElement="Flow_13fxfsu">
+        <di:waypoint x="468" y="1110"/>
+        <di:waypoint x="515" y="1110"/>
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="Flow_0xdjwr9_di" bpmnElement="Flow_0xdjwr9">
+        <di:waypoint x="670" y="980"/>
+        <di:waypoint x="740" y="980"/>
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="Flow_08yx47j_di" bpmnElement="Flow_08yx47j">
+        <di:waypoint x="730" y="1260"/>
+        <di:waypoint x="1030" y="1260"/>
+        <di:waypoint x="1030" y="1135"/>
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="Flow_1fhc94r_di" bpmnElement="Flow_1fhc94r">
+        <di:waypoint x="840" y="980"/>
+        <di:waypoint x="1030" y="980"/>
+        <di:waypoint x="1030" y="1085"/>
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="Flow_04rlxqx_di" bpmnElement="Flow_04rlxqx">
+        <di:waypoint x="868" y="1110"/>
+        <di:waypoint x="1005" y="1110"/>
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="Flow_0qxj3zo_di" bpmnElement="Flow_0qxj3zo">
+        <di:waypoint x="730" y="1110"/>
+        <di:waypoint x="832" y="1110"/>
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="Flow_1c6wisx_di" bpmnElement="Flow_1c6wisx">
+        <di:waypoint x="540" y="1135"/>
+        <di:waypoint x="540" y="1260"/>
+        <di:waypoint x="630" y="1260"/>
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="Flow_0gp5dwt_di" bpmnElement="Flow_0gp5dwt">
+        <di:waypoint x="565" y="1110"/>
+        <di:waypoint x="630" y="1110"/>
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="Flow_0kp04dj_di" bpmnElement="Flow_0kp04dj">
+        <di:waypoint x="540" y="1085"/>
+        <di:waypoint x="540" y="980"/>
+        <di:waypoint x="570" y="980"/>
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="Flow_0bkjy8f_di" bpmnElement="Flow_0bkjy8f">
+        <di:waypoint x="220" y="495"/>
+        <di:waypoint x="220" y="1110"/>
+        <di:waypoint x="290" y="1110"/>
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="Flow_1s2fmej_di" bpmnElement="Flow_1s2fmej">
+        <di:waypoint x="390" y="1110"/>
+        <di:waypoint x="432" y="1110"/>
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="Flow_1i1qmba_di" bpmnElement="Flow_1i1qmba">
+        <di:waypoint x="245" y="470"/>
+        <di:waypoint x="290" y="470"/>
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="Flow_1o061dz_di" bpmnElement="Flow_1o061dz">
+        <di:waypoint x="158" y="470"/>
+        <di:waypoint x="195" y="470"/>
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="Flow_0wqgbyj_di" bpmnElement="Flow_0wqgbyj">
+        <di:waypoint x="4178" y="470"/>
+        <di:waypoint x="4240" y="470"/>
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="Flow_0wxk9zd_di" bpmnElement="Flow_0wxk9zd">
+        <di:waypoint x="3878" y="470"/>
+        <di:waypoint x="3980" y="470"/>
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="Flow_04yiivk_di" bpmnElement="Flow_04yiivk">
+        <di:waypoint x="4080" y="470"/>
+        <di:waypoint x="4142" y="470"/>
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="Flow_1g0d2ac_di" bpmnElement="Flow_1g0d2ac">
+        <di:waypoint x="2480" y="470"/>
+        <di:waypoint x="2570" y="470"/>
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="Flow_03dna6e_di" bpmnElement="Flow_03dna6e">
+        <di:waypoint x="2325" y="470"/>
+        <di:waypoint x="2380" y="470"/>
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="Flow_19yztv6_di" bpmnElement="Flow_19yztv6">
+        <di:waypoint x="2188" y="470"/>
+        <di:waypoint x="2275" y="470"/>
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="Flow_1lhfsrw_di" bpmnElement="Flow_1lhfsrw">
+        <di:waypoint x="1840" y="495"/>
+        <di:waypoint x="1840" y="580"/>
+        <di:waypoint x="1892" y="580"/>
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="Flow_0e8k6hg_di" bpmnElement="Flow_0e8k6hg">
+        <di:waypoint x="1740" y="470"/>
+        <di:waypoint x="1815" y="470"/>
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="Flow_0xvc9fm_di" bpmnElement="Flow_0xvc9fm">
+        <di:waypoint x="2030" y="470"/>
+        <di:waypoint x="2152" y="470"/>
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="Flow_0puholz_di" bpmnElement="Flow_0puholz">
+        <di:waypoint x="1865" y="470"/>
+        <di:waypoint x="1930" y="470"/>
+        <bpmndi:BPMNLabel>
+          <dc:Bounds x="1888" y="452" width="19" height="14"/>
+        </bpmndi:BPMNLabel>
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="Flow_18ax5xy_di" bpmnElement="Flow_18ax5xy">
+        <di:waypoint x="730" y="620"/>
+        <di:waypoint x="1030" y="620"/>
+        <di:waypoint x="1030" y="495"/>
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="Flow_0jlgaiu_di" bpmnElement="Flow_0jlgaiu">
+        <di:waypoint x="540" y="495"/>
+        <di:waypoint x="540" y="620"/>
+        <di:waypoint x="630" y="620"/>
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="Flow_033jmt4_di" bpmnElement="Flow_033jmt4">
+        <di:waypoint x="4428" y="470"/>
+        <di:waypoint x="4542" y="470"/>
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="Flow_0h8awgh_di" bpmnElement="Flow_0h8awgh">
+        <di:waypoint x="4340" y="470"/>
+        <di:waypoint x="4392" y="470"/>
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="Flow_08jhi4t_di" bpmnElement="Flow_08jhi4t">
+        <di:waypoint x="3790" y="470"/>
+        <di:waypoint x="3842" y="470"/>
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="Flow_1vkijt2_di" bpmnElement="Flow_1vkijt2">
+        <di:waypoint x="3040" y="470"/>
+        <di:waypoint x="3122" y="470"/>
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="Flow_1x9b5kr_di" bpmnElement="Flow_1x9b5kr">
+        <di:waypoint x="3430" y="495"/>
+        <di:waypoint x="3430" y="600"/>
+        <di:waypoint x="3140" y="600"/>
+        <bpmndi:BPMNLabel>
+          <dc:Bounds x="3436" y="545" width="19" height="14"/>
+        </bpmndi:BPMNLabel>
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="Flow_0ozklnl_di" bpmnElement="Flow_0ozklnl">
+        <di:waypoint x="3328" y="470"/>
+        <di:waypoint x="3405" y="470"/>
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="Flow_0a1pec6_di" bpmnElement="Flow_0a1pec6">
+        <di:waypoint x="3040" y="600"/>
+        <di:waypoint x="2990" y="600"/>
+        <di:waypoint x="2990" y="510"/>
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="Flow_0hno9u6_di" bpmnElement="Flow_0hno9u6">
+        <di:waypoint x="1055" y="470"/>
+        <di:waypoint x="1100" y="470"/>
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="Flow_033ff8c_di" bpmnElement="Flow_033ff8c">
+        <di:waypoint x="1595" y="470"/>
+        <di:waypoint x="1640" y="470"/>
+        <bpmndi:BPMNLabel>
+          <dc:Bounds x="1670" y="452" width="19" height="14"/>
+        </bpmndi:BPMNLabel>
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="Flow_0opyk0z_di" bpmnElement="Flow_0opyk0z">
+        <di:waypoint x="1570" y="495"/>
+        <di:waypoint x="1570" y="590"/>
+        <di:waypoint x="1270" y="590"/>
+        <bpmndi:BPMNLabel>
+          <dc:Bounds x="1576" y="539" width="19" height="14"/>
+        </bpmndi:BPMNLabel>
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="Flow_0pupdf4_di" bpmnElement="Flow_0pupdf4">
+        <di:waypoint x="1488" y="470"/>
+        <di:waypoint x="1545" y="470"/>
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="Flow_1m4sc0z_di" bpmnElement="Flow_1m4sc0z">
+        <di:waypoint x="1200" y="470"/>
+        <di:waypoint x="1282" y="470"/>
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="Flow_0c7eyk5_di" bpmnElement="Flow_0c7eyk5">
+        <di:waypoint x="1170" y="590"/>
+        <di:waypoint x="1150" y="590"/>
+        <di:waypoint x="1150" y="510"/>
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="Flow_0qhkv0s_di" bpmnElement="Flow_0qhkv0s">
+        <di:waypoint x="840" y="890"/>
+        <di:waypoint x="1030" y="890"/>
+        <di:waypoint x="1030" y="495"/>
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="Flow_1omsdhr_di" bpmnElement="Flow_1omsdhr">
+        <di:waypoint x="468" y="470"/>
+        <di:waypoint x="515" y="470"/>
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="Flow_1h1drf6_di" bpmnElement="Flow_1h1drf6">
+        <di:waypoint x="390" y="470"/>
+        <di:waypoint x="432" y="470"/>
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="Flow_03v1zxp_di" bpmnElement="Flow_03v1zxp">
+        <di:waypoint x="670" y="890"/>
+        <di:waypoint x="740" y="890"/>
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="Flow_0lnxslu_di" bpmnElement="Flow_0lnxslu">
+        <di:waypoint x="868" y="470"/>
+        <di:waypoint x="1005" y="470"/>
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="Flow_0qbekq7_di" bpmnElement="Flow_0qbekq7">
+        <di:waypoint x="730" y="470"/>
+        <di:waypoint x="832" y="470"/>
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="Flow_0ldx6h3_di" bpmnElement="Flow_0ldx6h3">
+        <di:waypoint x="565" y="470"/>
+        <di:waypoint x="630" y="470"/>
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="Flow_1sbtoe9_di" bpmnElement="Flow_1sbtoe9">
+        <di:waypoint x="540" y="495"/>
+        <di:waypoint x="540" y="890"/>
+        <di:waypoint x="570" y="890"/>
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="Flow_0mvax1u_di" bpmnElement="Flow_0mvax1u">
+        <di:waypoint x="1318" y="470"/>
+        <di:waypoint x="1452" y="470"/>
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="Flow_107ehs2_di" bpmnElement="Flow_107ehs2">
+        <di:waypoint x="1928" y="580"/>
+        <di:waypoint x="2300" y="580"/>
+        <di:waypoint x="2300" y="495"/>
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="Flow_1dpzh2u_di" bpmnElement="Flow_1dpzh2u">
+        <di:waypoint x="3158" y="470"/>
+        <di:waypoint x="3292" y="470"/>
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="Flow_1xp6oou_di" bpmnElement="Flow_1xp6oou">
+        <di:waypoint x="1378" y="1110"/>
+        <di:waypoint x="1542" y="1110"/>
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="Flow_01k4iyu_di" bpmnElement="Flow_01k4iyu">
+        <di:waypoint x="1998" y="1220"/>
+        <di:waypoint x="2370" y="1220"/>
+        <di:waypoint x="2370" y="1135"/>
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="Flow_1qj17ix_di" bpmnElement="Flow_1qj17ix">
+        <di:waypoint x="3188" y="1150"/>
+        <di:waypoint x="3332" y="1150"/>
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNShape id="Activity_0dkofr7_di" bpmnElement="Activity_0dkofr7">
+        <dc:Bounds x="290" y="430" width="100" height="80"/>
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="Event_19n5gbk_di" bpmnElement="Event_19n5gbk">
+        <dc:Bounds x="432" y="452" width="36" height="36"/>
+        <bpmndi:BPMNLabel>
+          <dc:Bounds x="407" y="495" width="88" height="40"/>
+        </bpmndi:BPMNLabel>
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="Gateway_0r2rihl_di" bpmnElement="Gateway_0ivmbqa">
+        <dc:Bounds x="515" y="445" width="50" height="50"/>
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="Activity_0sn42kg_di" bpmnElement="Activity_0sn42kg">
+        <dc:Bounds x="630" y="430" width="100" height="80"/>
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="Gateway_05eyg9a_di" bpmnElement="Gateway_1k37uhm">
+        <dc:Bounds x="1005" y="445" width="50" height="50"/>
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="Activity_0kmlk37_di" bpmnElement="Activity_0kmlk37">
+        <dc:Bounds x="1100" y="430" width="100" height="80"/>
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="Activity_1apz1th_di" bpmnElement="Activity_1apz1th">
+        <dc:Bounds x="1170" y="550" width="100" height="80"/>
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="Event_1hbtlbe_di" bpmnElement="Event_1hbtlbe">
+        <dc:Bounds x="1282" y="452" width="36" height="36"/>
+        <bpmndi:BPMNLabel>
+          <dc:Bounds x="1257" y="403" width="87" height="53"/>
+        </bpmndi:BPMNLabel>
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="Activity_0hvicbh_di" bpmnElement="Activity_0hvicbh">
+        <dc:Bounds x="1640" y="430" width="100" height="80"/>
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="Gateway_04kmqvy_di" bpmnElement="Gateway_04kmqvy" isMarkerVisible="true">
+        <dc:Bounds x="1545" y="445" width="50" height="50"/>
+        <bpmndi:BPMNLabel>
+          <dc:Bounds x="1528" y="414" width="83" height="27"/>
+        </bpmndi:BPMNLabel>
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="Event_0qin1qz_di" bpmnElement="Event_0qin1qz">
+        <dc:Bounds x="1452" y="452" width="36" height="36"/>
+        <bpmndi:BPMNLabel>
+          <dc:Bounds x="1427" y="408" width="87" height="40"/>
+        </bpmndi:BPMNLabel>
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="Event_066qi95_di" bpmnElement="Event_066qi95">
+        <dc:Bounds x="832" y="452" width="36" height="36"/>
+        <bpmndi:BPMNLabel>
+          <dc:Bounds x="810" y="495" width="83" height="53"/>
+        </bpmndi:BPMNLabel>
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="Activity_1rchpbs_di" bpmnElement="Activity_1rchpbs">
+        <dc:Bounds x="630" y="580" width="100" height="80"/>
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="Gateway_0nz4wq6_di" bpmnElement="Gateway_0nz4wq6" isMarkerVisible="true">
+        <dc:Bounds x="1815" y="445" width="50" height="50"/>
+        <bpmndi:BPMNLabel>
+          <dc:Bounds x="1798" y="410" width="85" height="40"/>
+        </bpmndi:BPMNLabel>
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="Activity_1bp71fh_di" bpmnElement="Activity_1bp71fh">
+        <dc:Bounds x="1930" y="430" width="100" height="80"/>
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="Event_0da8l0w_di" bpmnElement="Event_0da8l0w">
+        <dc:Bounds x="1892" y="562" width="36" height="36"/>
+        <bpmndi:BPMNLabel>
+          <dc:Bounds x="1868" y="605" width="87" height="53"/>
+        </bpmndi:BPMNLabel>
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="Gateway_0qdvw1m_di" bpmnElement="Gateway_0qdvw1m" isMarkerVisible="true">
+        <dc:Bounds x="2275" y="445" width="50" height="50"/>
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="Event_1vzypns_di" bpmnElement="Event_1vzypns">
+        <dc:Bounds x="2152" y="452" width="36" height="36"/>
+        <bpmndi:BPMNLabel>
+          <dc:Bounds x="2135" y="495" width="74" height="66"/>
+        </bpmndi:BPMNLabel>
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="Gateway_0k8jz0l_di" bpmnElement="Gateway_0k8jz0l" isMarkerVisible="true">
+        <dc:Bounds x="3405" y="445" width="50" height="50"/>
+        <bpmndi:BPMNLabel>
+          <dc:Bounds x="3387" y="421" width="86" height="14"/>
+        </bpmndi:BPMNLabel>
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="Activity_0b6uf55_di" bpmnElement="Activity_0b6uf55">
+        <dc:Bounds x="2940" y="430" width="100" height="80"/>
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="Activity_02pjofv_di" bpmnElement="Activity_02pjofv">
+        <dc:Bounds x="3040" y="560" width="100" height="80"/>
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="Event_1qtc7hv_di" bpmnElement="Event_1srmw62">
+        <dc:Bounds x="3122" y="452" width="36" height="36"/>
+        <bpmndi:BPMNLabel>
+          <dc:Bounds x="3111" y="495" width="59" height="40"/>
+        </bpmndi:BPMNLabel>
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="Gateway_1r1wj3j_di" bpmnElement="Gateway_1rfqp7p">
+        <dc:Bounds x="195" y="445" width="50" height="50"/>
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="Activity_1elehyw_di" bpmnElement="Activity_1elehyw">
+        <dc:Bounds x="290" y="1070" width="100" height="80"/>
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="Event_15pdo1b_di" bpmnElement="Event_15pdo1b">
+        <dc:Bounds x="432" y="1092" width="36" height="36"/>
+        <bpmndi:BPMNLabel>
+          <dc:Bounds x="406" y="1055" width="88" height="40"/>
+        </bpmndi:BPMNLabel>
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="Activity_0eoxfpj_di" bpmnElement="Activity_0eoxfpj">
+        <dc:Bounds x="740" y="850" width="100" height="80"/>
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="Activity_086rtia_di" bpmnElement="Activity_086rtia">
+        <dc:Bounds x="570" y="850" width="100" height="80"/>
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="Gateway_1nx2kw7_di" bpmnElement="Gateway_1nx2kw7">
+        <dc:Bounds x="515" y="1085" width="50" height="50"/>
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="Activity_10ew83l_di" bpmnElement="Activity_10ew83l">
+        <dc:Bounds x="630" y="1070" width="100" height="80"/>
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="Gateway_0zbkq1l_di" bpmnElement="Gateway_0zbkq1l">
+        <dc:Bounds x="1005" y="1085" width="50" height="50"/>
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="Event_05952mf_di" bpmnElement="Event_05952mf">
+        <dc:Bounds x="832" y="1092" width="36" height="36"/>
+        <bpmndi:BPMNLabel>
+          <dc:Bounds x="808" y="1042" width="83" height="53"/>
+        </bpmndi:BPMNLabel>
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="Activity_1q9bvc7_di" bpmnElement="Activity_1q9bvc7">
+        <dc:Bounds x="630" y="1220" width="100" height="80"/>
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="Activity_0c507hk_di" bpmnElement="Activity_0c507hk">
+        <dc:Bounds x="570" y="940" width="100" height="80"/>
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="Activity_1oqa4fr_di" bpmnElement="Activity_1oqa4fr">
+        <dc:Bounds x="740" y="940" width="100" height="80"/>
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="Activity_07ymxj1_di" bpmnElement="Activity_07ymxj1">
+        <dc:Bounds x="1730" y="1070" width="100" height="80"/>
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="Gateway_1xcpyhr_di" bpmnElement="Gateway_1xcpyhr" isMarkerVisible="true">
+        <dc:Bounds x="1635" y="1085" width="50" height="50"/>
+        <bpmndi:BPMNLabel>
+          <dc:Bounds x="1618" y="1055" width="83" height="27"/>
+        </bpmndi:BPMNLabel>
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="Event_108xj3w_di" bpmnElement="Event_108xj3w">
+        <dc:Bounds x="1542" y="1092" width="36" height="36"/>
+        <bpmndi:BPMNLabel>
+          <dc:Bounds x="1517" y="1048" width="88" height="40"/>
+        </bpmndi:BPMNLabel>
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="Activity_03gq038_di" bpmnElement="Activity_03gq038">
+        <dc:Bounds x="1170" y="1190" width="100" height="80"/>
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="Activity_11dt137_di" bpmnElement="Activity_11dt137">
+        <dc:Bounds x="1100" y="1070" width="100" height="80"/>
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="Event_0wm1rl2_di" bpmnElement="Event_0wm1rl2">
+        <dc:Bounds x="1342" y="1092" width="36" height="36"/>
+        <bpmndi:BPMNLabel>
+          <dc:Bounds x="1317" y="1033" width="87" height="53"/>
+        </bpmndi:BPMNLabel>
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="Activity_0zqp78u_di" bpmnElement="Activity_0zqp78u">
+        <dc:Bounds x="2000" y="1070" width="100" height="80"/>
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="Event_1yr56d8_di" bpmnElement="Event_1yr56d8">
+        <dc:Bounds x="2222" y="1092" width="36" height="36"/>
+        <bpmndi:BPMNLabel>
+          <dc:Bounds x="2203" y="1029" width="74" height="66"/>
+        </bpmndi:BPMNLabel>
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="Gateway_0y58sjp_di" bpmnElement="Gateway_0y58sjp" isMarkerVisible="true">
+        <dc:Bounds x="1885" y="1085" width="50" height="50"/>
+        <bpmndi:BPMNLabel>
+          <dc:Bounds x="1868" y="1040" width="85" height="40"/>
+        </bpmndi:BPMNLabel>
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="Event_1meqd55_di" bpmnElement="Event_1meqd55">
+        <dc:Bounds x="1962" y="1202" width="36" height="36"/>
+        <bpmndi:BPMNLabel>
+          <dc:Bounds x="1937" y="1152" width="87" height="53"/>
+        </bpmndi:BPMNLabel>
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="Gateway_1kmn3oi_di" bpmnElement="Gateway_1kmn3oi" isMarkerVisible="true">
+        <dc:Bounds x="2345" y="1085" width="50" height="50"/>
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="Activity_064zuro_di" bpmnElement="Activity_064zuro">
+        <dc:Bounds x="2420" y="1070" width="100" height="80"/>
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="Activity_0dr34sl_di" bpmnElement="Activity_0dr34sl">
+        <dc:Bounds x="2570" y="1070" width="100" height="80"/>
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="Activity_16mal6y_di" bpmnElement="Activity_16mal6y">
+        <dc:Bounds x="2720" y="870" width="100" height="80"/>
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="Event_08ld7j4_di" bpmnElement="Event_08ld7j4">
+        <dc:Bounds x="3292" y="452" width="36" height="36"/>
+        <bpmndi:BPMNLabel>
+          <dc:Bounds x="3277" y="401" width="67" height="53"/>
+        </bpmndi:BPMNLabel>
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="Activity_0pkpyy5_di" bpmnElement="Activity_0pkpyy5">
+        <dc:Bounds x="2380" y="430" width="100" height="80"/>
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="Activity_111pn93_di" bpmnElement="Activity_111pn93">
+        <dc:Bounds x="2570" y="430" width="100" height="80"/>
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="Activity_05o2pw3_di" bpmnElement="Activity_05o2pw3">
+        <dc:Bounds x="3050" y="1240" width="100" height="80"/>
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="Activity_04n9kl2_di" bpmnElement="Activity_04n9kl2">
+        <dc:Bounds x="2950" y="1110" width="100" height="80"/>
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="Event_1nmihm9_di" bpmnElement="Event_1nmihm9">
+        <dc:Bounds x="3332" y="1132" width="36" height="36"/>
+        <bpmndi:BPMNLabel>
+          <dc:Bounds x="3313" y="1072" width="75" height="53"/>
+        </bpmndi:BPMNLabel>
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="Gateway_15bzdnl_di" bpmnElement="Gateway_15bzdnl" isMarkerVisible="true">
+        <dc:Bounds x="3415" y="1125" width="50" height="50"/>
+        <bpmndi:BPMNLabel>
+          <dc:Bounds x="3397" y="1101" width="86" height="14"/>
+        </bpmndi:BPMNLabel>
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="Event_11b0mst_di" bpmnElement="Event_11b0mst">
+        <dc:Bounds x="3152" y="1132" width="36" height="36"/>
+        <bpmndi:BPMNLabel>
+          <dc:Bounds x="3140" y="1082" width="59" height="40"/>
+        </bpmndi:BPMNLabel>
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="Gateway_0wfflus_di" bpmnElement="Gateway_0e7t67u">
+        <dc:Bounds x="2595" y="885" width="50" height="50"/>
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="Gateway_1bhoz41_di" bpmnElement="Gateway_07h8le4">
+        <dc:Bounds x="2895" y="885" width="50" height="50"/>
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="Activity_01tt9ww_di" bpmnElement="Activity_01tt9ww">
+        <dc:Bounds x="3980" y="430" width="100" height="80"/>
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="Event_0qwwahy_di" bpmnElement="Event_0qwwahy">
+        <dc:Bounds x="4142" y="452" width="36" height="36"/>
+        <bpmndi:BPMNLabel>
+          <dc:Bounds x="4123" y="498" width="75" height="53"/>
+        </bpmndi:BPMNLabel>
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="Activity_1j9n83y_di" bpmnElement="Activity_1j9n83y">
+        <dc:Bounds x="4240" y="430" width="100" height="80"/>
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="Event_0eq3j83_di" bpmnElement="Event_0neg5r8">
+        <dc:Bounds x="4392" y="452" width="36" height="36"/>
+        <bpmndi:BPMNLabel>
+          <dc:Bounds x="4370" y="495" width="81" height="53"/>
+        </bpmndi:BPMNLabel>
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="Gateway_0ygb3gk_di" bpmnElement="Gateway_1doauf9">
+        <dc:Bounds x="3575" y="445" width="50" height="50"/>
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="Activity_0c0v0lr_di" bpmnElement="Activity_0c0v0lr">
+        <dc:Bounds x="3690" y="430" width="100" height="80"/>
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="Event_0b0ltqe_di" bpmnElement="Event_0yy9xsg">
+        <dc:Bounds x="3842" y="452" width="36" height="36"/>
+        <bpmndi:BPMNLabel>
+          <dc:Bounds x="3827" y="498" width="67" height="53"/>
+        </bpmndi:BPMNLabel>
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="Event_1s5j0x3_di" bpmnElement="Event_1s5j0x3">
+        <dc:Bounds x="4542" y="452" width="36" height="36"/>
+        <bpmndi:BPMNLabel>
+          <dc:Bounds x="4516" y="495" width="88" height="14"/>
+        </bpmndi:BPMNLabel>
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="Event_0mdwr13_di" bpmnElement="Event_0vunfap">
+        <dc:Bounds x="122" y="452" width="36" height="36"/>
+        <bpmndi:BPMNLabel>
+          <dc:Bounds x="100" y="495" width="80" height="14"/>
+        </bpmndi:BPMNLabel>
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="Participant_0nywjux_di" bpmnElement="Participant_1hac7gb" isHorizontal="true">
+        <dc:Bounds x="58" y="140" width="4692" height="60"/>
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="Participant_1trpva6_di" bpmnElement="Participant_1trpva6" isHorizontal="true">
+        <dc:Bounds x="3610" y="280" width="330" height="60"/>
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="Participant_0x85fmi_di" bpmnElement="Participant_006fc0e" isHorizontal="true">
+        <dc:Bounds x="1180" y="1520" width="3570" height="60"/>
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="Participant_1vw9109_di" bpmnElement="Participant_1y7i07f" isHorizontal="true">
+        <dc:Bounds x="670" y="250" width="380" height="60"/>
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="Participant_0smr6cx_di" bpmnElement="Participant_0smr6cx" isHorizontal="true">
+        <dc:Bounds x="4350" y="280" width="350" height="60"/>
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="Participant_1plrtby_di" bpmnElement="Participant_1plrtby" isHorizontal="true">
+        <dc:Bounds x="2080" y="260" width="300" height="60"/>
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="Participant_1gg6681_di" bpmnElement="Participant_1err209" isHorizontal="true">
+        <dc:Bounds x="50" y="1670" width="4700" height="60"/>
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="Participant_0weq8dg_di" bpmnElement="Participant_0weq8dg" isHorizontal="true">
+        <dc:Bounds x="630" y="1460" width="380" height="60"/>
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="Participant_1lpvpa6_di" bpmnElement="Participant_1lpvpa6" isHorizontal="true">
+        <dc:Bounds x="2100" y="1420" width="300" height="60"/>
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="Participant_17noniv_di" bpmnElement="Participant_17noniv" isHorizontal="true">
+        <dc:Bounds x="4000" y="280" width="300" height="60"/>
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNEdge id="Flow_0opwwcd_di" bpmnElement="Flow_0opwwcd">
+        <di:waypoint x="850" y="310"/>
+        <di:waypoint x="850" y="452"/>
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="Flow_15isugq_di" bpmnElement="Flow_15isugq">
+        <di:waypoint x="450" y="200"/>
+        <di:waypoint x="450" y="452"/>
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="Flow_11zf8iy_di" bpmnElement="Flow_11zf8iy">
+        <di:waypoint x="1470" y="1520"/>
+        <di:waypoint x="1470" y="488"/>
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="Flow_1aq5bbq_di" bpmnElement="Flow_1aq5bbq">
+        <di:waypoint x="3310" y="1520"/>
+        <di:waypoint x="3310" y="488"/>
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="Flow_085wgw0_di" bpmnElement="Flow_085wgw0">
+        <di:waypoint x="3140" y="452"/>
+        <di:waypoint x="3140" y="200"/>
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="Flow_0t9txdx_di" bpmnElement="Flow_0t9txdx">
+        <di:waypoint x="1300" y="1520"/>
+        <di:waypoint x="1300" y="488"/>
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="Flow_1r5dmur_di" bpmnElement="Flow_1r5dmur">
+        <di:waypoint x="3860" y="340"/>
+        <di:waypoint x="3860" y="452"/>
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="Flow_053a03n_di" bpmnElement="Flow_053a03n">
+        <di:waypoint x="4410" y="340"/>
+        <di:waypoint x="4410" y="452"/>
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="Flow_115zx35_di" bpmnElement="Flow_115zx35">
+        <di:waypoint x="2170" y="320"/>
+        <di:waypoint x="2170" y="452"/>
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="Flow_0pllqbc_di" bpmnElement="Flow_0pllqbc">
+        <di:waypoint x="1910" y="562"/>
+        <di:waypoint x="1910" y="200"/>
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="Flow_0ixp21b_di" bpmnElement="Flow_0ixp21b">
+        <di:waypoint x="450" y="1670"/>
+        <di:waypoint x="450" y="1128"/>
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="Flow_0gv9ay7_di" bpmnElement="Flow_0gv9ay7">
+        <di:waypoint x="850" y="1460"/>
+        <di:waypoint x="850" y="1128"/>
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="Flow_0w7kyst_di" bpmnElement="Flow_0w7kyst">
+        <di:waypoint x="1360" y="1520"/>
+        <di:waypoint x="1360" y="1128"/>
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="Flow_0bprntw_di" bpmnElement="Flow_0bprntw">
+        <di:waypoint x="1560" y="1520"/>
+        <di:waypoint x="1560" y="1128"/>
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="Flow_0umd8dz_di" bpmnElement="Flow_0umd8dz">
+        <di:waypoint x="2240" y="1420"/>
+        <di:waypoint x="2240" y="1128"/>
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="Flow_1ffs6qu_di" bpmnElement="Flow_1ffs6qu">
+        <di:waypoint x="1980" y="1238"/>
+        <di:waypoint x="1980" y="1670"/>
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="Flow_085l1lm_di" bpmnElement="Flow_085l1lm">
+        <di:waypoint x="4160" y="340"/>
+        <di:waypoint x="4160" y="452"/>
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="Flow_07hca81_di" bpmnElement="Flow_07hca81">
+        <di:waypoint x="3350" y="1520"/>
+        <di:waypoint x="3350" y="1168"/>
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="Flow_0cylml2_di" bpmnElement="Flow_0cylml2">
+        <di:waypoint x="3170" y="1168"/>
+        <di:waypoint x="3170" y="1670"/>
+      </bpmndi:BPMNEdge>
+    </bpmndi:BPMNPlane>
+  </bpmndi:BPMNDiagram>
+<qbp:processSimulationInfo xmlns:qbp="http://www.qbp-simulator.com/Schema201212" id="qbp_cf8f7a9a-c8cd-c0df-3964-5c668b4c1e31" processInstances="10" startDateTime="2022-06-05T06:00:00.000Z" currency="EUR"><qbp:arrivalRateDistribution type="FIXED" mean="60" arg1="NaN" arg2="NaN"><qbp:timeUnit>seconds</qbp:timeUnit></qbp:arrivalRateDistribution><qbp:timetables><qbp:timetable id="QBP_DEFAULT_TIMETABLE" default="true" name="Default"><qbp:rules><qbp:rule fromTime="09:00:00.000+00:00" toTime="17:00:00.000+00:00" fromWeekDay="MONDAY" toWeekDay="FRIDAY"/></qbp:rules></qbp:timetable><qbp:timetable id="QBP_247_TIMETABLE" default="false" name="24/7"><qbp:rules><qbp:rule fromTime="00:00:00.000+00:00" toTime="23:59:59.999+00:00" fromWeekDay="MONDAY" toWeekDay="SUNDAY"/></qbp:rules></qbp:timetable></qbp:timetables><qbp:resources><qbp:resource id="Lane_0adbbls" name="Λογιστης Α" totalAmount="4" costPerHour="9" timetableId="QBP_DEFAULT_TIMETABLE"/><qbp:resource id="Lane_0uuncgk" name="Συμβολαιογραφικό τμήμα" totalAmount="1" costPerHour="25" timetableId="QBP_DEFAULT_TIMETABLE"/><qbp:resource id="Lane_1yr3pxe" name="Λογιστης Β" totalAmount="4" costPerHour="9" timetableId="QBP_DEFAULT_TIMETABLE"/></qbp:resources><qbp:elements><qbp:element id="qbp_43b0b284-9e01-08c5-6458-bcce47f3627f" elementId="Event_1vzypns"><qbp:durationDistribution type="UNIFORM" mean="NaN" arg1="172800" arg2="432000"><qbp:timeUnit>days</qbp:timeUnit></qbp:durationDistribution></qbp:element><qbp:element id="qbp_9c208380-ec6c-0696-3951-d4447f20dfdb" elementId="Event_1yr56d8"><qbp:durationDistribution type="UNIFORM" mean="NaN" arg1="172800" arg2="432000"><qbp:timeUnit>days</qbp:timeUnit></qbp:durationDistribution></qbp:element><qbp:element id="qbp_ca97b1a1-6c0b-ae22-f8ac-695bcf89342b" elementId="Event_19n5gbk"><qbp:durationDistribution type="UNIFORM" mean="NaN" arg1="86400" arg2="259200"><qbp:timeUnit>days</qbp:timeUnit></qbp:durationDistribution></qbp:element><qbp:element id="qbp_d69c0327-668b-2011-7af8-7f121f07a1a7" elementId="Event_15pdo1b"><qbp:durationDistribution type="UNIFORM" mean="NaN" arg1="86400" arg2="259200"><qbp:timeUnit>days</qbp:timeUnit></qbp:durationDistribution></qbp:element><qbp:element id="qbp_91eb7920-cab9-7cea-89e3-668309cbd970" elementId="Event_066qi95"><qbp:durationDistribution type="UNIFORM" mean="NaN" arg1="259200" arg2="2592000"><qbp:timeUnit>days</qbp:timeUnit></qbp:durationDistribution></qbp:element><qbp:element id="qbp_f416aef8-994b-8bda-b07e-d226c67271b1" elementId="Event_05952mf"><qbp:durationDistribution type="UNIFORM" mean="NaN" arg1="259200" arg2="3456000"><qbp:timeUnit>days</qbp:timeUnit></qbp:durationDistribution></qbp:element><qbp:element id="qbp_2adb6d79-555b-c48f-3cae-813a6343e1ef" elementId="Event_0qin1qz"><qbp:durationDistribution type="UNIFORM" mean="NaN" arg1="86400" arg2="604800"><qbp:timeUnit>days</qbp:timeUnit></qbp:durationDistribution></qbp:element><qbp:element id="qbp_792784d0-aac2-c655-aa5e-900864fbfce4" elementId="Event_108xj3w"><qbp:durationDistribution type="UNIFORM" mean="NaN" arg1="86400" arg2="604800"><qbp:timeUnit>days</qbp:timeUnit></qbp:durationDistribution></qbp:element><qbp:element id="qbp_54c5e511-4ca0-f1bf-1626-b02c57faba8b" elementId="Event_1nmihm9"><qbp:durationDistribution type="UNIFORM" mean="NaN" arg1="259200" arg2="604800"><qbp:timeUnit>days</qbp:timeUnit></qbp:durationDistribution></qbp:element><qbp:element id="qbp_97e194a4-f025-32b8-8b14-2840da8a88dc" elementId="Event_0qwwahy"><qbp:durationDistribution type="UNIFORM" mean="NaN" arg1="172800" arg2="2592000"><qbp:timeUnit>days</qbp:timeUnit></qbp:durationDistribution></qbp:element><qbp:element id="qbp_07fe1b62-0c41-2276-0307-4d973854b733" elementId="Event_0neg5r8"><qbp:durationDistribution type="UNIFORM" mean="NaN" arg1="432000" arg2="5184000"><qbp:timeUnit>days</qbp:timeUnit></qbp:durationDistribution></qbp:element><qbp:element id="qbp_9f9622dc-e7e1-21c6-d790-aba24cbefdce" elementId="Event_08ld7j4"><qbp:durationDistribution type="UNIFORM" mean="NaN" arg1="86400" arg2="604800"><qbp:timeUnit>days</qbp:timeUnit></qbp:durationDistribution></qbp:element><qbp:element id="qbp_7fa705cc-5560-a306-adfa-3a618942860f" elementId="Event_0yy9xsg"><qbp:durationDistribution type="UNIFORM" mean="NaN" arg1="172800" arg2="2592000"><qbp:timeUnit>days</qbp:timeUnit></qbp:durationDistribution></qbp:element><qbp:element id="qbp_684e5ec4-8c1e-17a0-7ad1-fe72c23fdbba" elementId="Event_1hbtlbe"><qbp:durationDistribution type="UNIFORM" mean="NaN" arg1="1800" arg2="10800"><qbp:timeUnit>minutes</qbp:timeUnit></qbp:durationDistribution></qbp:element><qbp:element id="qbp_be3a05e9-448c-714f-bc4b-d8fb1da3698e" elementId="Event_0wm1rl2"><qbp:durationDistribution type="UNIFORM" mean="NaN" arg1="1800" arg2="10800"><qbp:timeUnit>minutes</qbp:timeUnit></qbp:durationDistribution></qbp:element><qbp:element id="qbp_3db575e9-babb-b952-8c6b-1de7687a526f" elementId="Activity_1bp71fh"><qbp:durationDistribution type="UNIFORM" mean="NaN" arg1="3600" arg2="10800"><qbp:timeUnit>hours</qbp:timeUnit></qbp:durationDistribution><qbp:resourceIds><qbp:resourceId>Lane_0adbbls</qbp:resourceId></qbp:resourceIds></qbp:element><qbp:element id="qbp_44f4866f-c7e0-983a-ce5e-0dc5ee120a59" elementId="Activity_0zqp78u"><qbp:durationDistribution type="UNIFORM" mean="NaN" arg1="3600" arg2="10800"><qbp:timeUnit>hours</qbp:timeUnit></qbp:durationDistribution><qbp:resourceIds><qbp:resourceId>Lane_1yr3pxe</qbp:resourceId></qbp:resourceIds></qbp:element><qbp:element id="qbp_5628abff-8a1d-25b5-2c4e-80498a12c16e" elementId="Activity_04n9kl2"><qbp:durationDistribution type="UNIFORM" mean="NaN" arg1="10800" arg2="28800"><qbp:timeUnit>hours</qbp:timeUnit></qbp:durationDistribution><qbp:resourceIds><qbp:resourceId>Lane_1yr3pxe</qbp:resourceId></qbp:resourceIds></qbp:element><qbp:element id="qbp_6e536b32-8518-2235-6a12-022b813d8632" elementId="Activity_0b6uf55"><qbp:durationDistribution type="UNIFORM" mean="NaN" arg1="10800" arg2="28800"><qbp:timeUnit>hours</qbp:timeUnit></qbp:durationDistribution><qbp:resourceIds><qbp:resourceId>Lane_0adbbls</qbp:resourceId></qbp:resourceIds></qbp:element><qbp:element id="qbp_a3223611-735b-a26a-15f4-2e131923218f" elementId="Activity_111pn93"><qbp:durationDistribution type="UNIFORM" mean="NaN" arg1="10800" arg2="36000"><qbp:timeUnit>hours</qbp:timeUnit></qbp:durationDistribution><qbp:resourceIds><qbp:resourceId>Lane_0adbbls</qbp:resourceId></qbp:resourceIds></qbp:element><qbp:element id="qbp_50f28e35-3088-abec-2941-750d83ca9bce" elementId="Activity_0dr34sl"><qbp:durationDistribution type="UNIFORM" mean="NaN" arg1="10800" arg2="36000"><qbp:timeUnit>hours</qbp:timeUnit></qbp:durationDistribution><qbp:resourceIds><qbp:resourceId>Lane_1yr3pxe</qbp:resourceId></qbp:resourceIds></qbp:element><qbp:element id="qbp_c2c32669-be02-c35e-9586-b897d8b5d1cf" elementId="Activity_01tt9ww"><qbp:durationDistribution type="UNIFORM" mean="NaN" arg1="3600" arg2="10800"><qbp:timeUnit>hours</qbp:timeUnit></qbp:durationDistribution><qbp:resourceIds><qbp:resourceId>Lane_0adbbls</qbp:resourceId></qbp:resourceIds></qbp:element><qbp:element id="qbp_ff5d8147-5df6-7c15-c639-619b4344377d" elementId="Activity_1j9n83y"><qbp:durationDistribution type="UNIFORM" mean="NaN" arg1="7200" arg2="36000"><qbp:timeUnit>hours</qbp:timeUnit></qbp:durationDistribution><qbp:resourceIds><qbp:resourceId>Lane_0adbbls</qbp:resourceId></qbp:resourceIds></qbp:element><qbp:element id="qbp_35bcba8d-630e-b4a7-6c5a-76618f2d6e6a" elementId="Activity_0c0v0lr"><qbp:durationDistribution type="UNIFORM" mean="NaN" arg1="3600" arg2="28800"><qbp:timeUnit>hours</qbp:timeUnit></qbp:durationDistribution><qbp:resourceIds><qbp:resourceId>Lane_0adbbls</qbp:resourceId></qbp:resourceIds></qbp:element><qbp:element id="qbp_a06614b7-f0fd-c676-522d-4beade050d54" elementId="Activity_0pkpyy5"><qbp:durationDistribution type="UNIFORM" mean="NaN" arg1="3600" arg2="25200"><qbp:timeUnit>hours</qbp:timeUnit></qbp:durationDistribution><qbp:resourceIds><qbp:resourceId>Lane_0adbbls</qbp:resourceId></qbp:resourceIds></qbp:element><qbp:element id="qbp_e19bfd33-05f8-e513-5bf1-c23e9975251e" elementId="Activity_064zuro"><qbp:durationDistribution type="UNIFORM" mean="NaN" arg1="3600" arg2="25200"><qbp:timeUnit>hours</qbp:timeUnit></qbp:durationDistribution><qbp:resourceIds><qbp:resourceId>Lane_1yr3pxe</qbp:resourceId></qbp:resourceIds></qbp:element><qbp:element id="qbp_b984faeb-0f1a-c496-04ca-b5bb2977ff1d" elementId="Activity_0hvicbh"><qbp:durationDistribution type="UNIFORM" mean="NaN" arg1="7200" arg2="36000"><qbp:timeUnit>hours</qbp:timeUnit></qbp:durationDistribution><qbp:resourceIds><qbp:resourceId>Lane_0adbbls</qbp:resourceId></qbp:resourceIds></qbp:element><qbp:element id="qbp_d6d2722d-bef3-0300-6da6-18d500930733" elementId="Activity_07ymxj1"><qbp:durationDistribution type="UNIFORM" mean="NaN" arg1="7200" arg2="36000"><qbp:timeUnit>hours</qbp:timeUnit></qbp:durationDistribution><qbp:resourceIds><qbp:resourceId>Lane_1yr3pxe</qbp:resourceId></qbp:resourceIds></qbp:element><qbp:element id="qbp_d83df83c-b706-af0a-4c68-21d198c4c10d" elementId="Activity_1rchpbs"><qbp:durationDistribution type="UNIFORM" mean="NaN" arg1="86400" arg2="691200"><qbp:timeUnit>days</qbp:timeUnit></qbp:durationDistribution><qbp:resourceIds><qbp:resourceId>Lane_0adbbls</qbp:resourceId></qbp:resourceIds></qbp:element><qbp:element id="qbp_ef29ea6c-2baf-58c1-2517-2733aa8448df" elementId="Activity_1q9bvc7"><qbp:durationDistribution type="UNIFORM" mean="NaN" arg1="86400" arg2="691200"><qbp:timeUnit>days</qbp:timeUnit></qbp:durationDistribution><qbp:resourceIds><qbp:resourceId>Lane_1yr3pxe</qbp:resourceId></qbp:resourceIds></qbp:element><qbp:element id="qbp_285f119c-a1ba-674c-080a-6754ed93ae95" elementId="Activity_0sn42kg"><qbp:durationDistribution type="UNIFORM" mean="NaN" arg1="3600" arg2="14400"><qbp:timeUnit>hours</qbp:timeUnit></qbp:durationDistribution><qbp:resourceIds><qbp:resourceId>Lane_0adbbls</qbp:resourceId></qbp:resourceIds></qbp:element><qbp:element id="qbp_7d1c084c-efbd-3d83-1d77-4a5f59923313" elementId="Activity_10ew83l"><qbp:durationDistribution type="UNIFORM" mean="NaN" arg1="3600" arg2="14400"><qbp:timeUnit>hours</qbp:timeUnit></qbp:durationDistribution><qbp:resourceIds><qbp:resourceId>Lane_1yr3pxe</qbp:resourceId></qbp:resourceIds></qbp:element><qbp:element id="qbp_889424c3-bcdf-011b-e989-ef5f9b70c81a" elementId="Activity_086rtia"><qbp:durationDistribution type="UNIFORM" mean="NaN" arg1="14400" arg2="57600"><qbp:timeUnit>hours</qbp:timeUnit></qbp:durationDistribution><qbp:resourceIds><qbp:resourceId>Lane_0uuncgk</qbp:resourceId></qbp:resourceIds></qbp:element><qbp:element id="qbp_f243c9ad-ebd9-7c2b-6b4b-ab38cf2dc064" elementId="Activity_0c507hk"><qbp:durationDistribution type="UNIFORM" mean="NaN" arg1="14400" arg2="57600"><qbp:timeUnit>hours</qbp:timeUnit></qbp:durationDistribution><qbp:resourceIds><qbp:resourceId>Lane_0uuncgk</qbp:resourceId></qbp:resourceIds></qbp:element><qbp:element id="qbp_6083afbe-2a73-6fb9-5e20-fd25cafdee52" elementId="Activity_0dkofr7"><qbp:durationDistribution type="UNIFORM" mean="NaN" arg1="86400" arg2="345600"><qbp:timeUnit>days</qbp:timeUnit></qbp:durationDistribution><qbp:resourceIds><qbp:resourceId>Lane_0adbbls</qbp:resourceId></qbp:resourceIds></qbp:element><qbp:element id="qbp_bc588a8b-a0b8-3c80-9e07-42497cd2fa2a" elementId="Activity_1elehyw"><qbp:durationDistribution type="UNIFORM" mean="NaN" arg1="86400" arg2="345600"><qbp:timeUnit>days</qbp:timeUnit></qbp:durationDistribution><qbp:resourceIds><qbp:resourceId>Lane_1yr3pxe</qbp:resourceId></qbp:resourceIds></qbp:element><qbp:element id="qbp_12249446-bb89-7c4b-6b83-cc5e0603ecd4" elementId="Activity_0eoxfpj"><qbp:durationDistribution type="UNIFORM" mean="NaN" arg1="86400" arg2="259200"><qbp:timeUnit>days</qbp:timeUnit></qbp:durationDistribution><qbp:resourceIds><qbp:resourceId>Lane_0uuncgk</qbp:resourceId></qbp:resourceIds></qbp:element><qbp:element id="qbp_d8d06439-cede-9001-a049-1294bcae9e6f" elementId="Activity_1oqa4fr"><qbp:durationDistribution type="UNIFORM" mean="NaN" arg1="86400" arg2="259200"><qbp:timeUnit>days</qbp:timeUnit></qbp:durationDistribution><qbp:resourceIds><qbp:resourceId>Lane_0uuncgk</qbp:resourceId></qbp:resourceIds></qbp:element><qbp:element id="qbp_dd88c8c3-da08-83e4-b94c-a5dd2397f378" elementId="Activity_16mal6y"><qbp:durationDistribution type="UNIFORM" mean="NaN" arg1="345600" arg2="1036800"><qbp:timeUnit>days</qbp:timeUnit></qbp:durationDistribution><qbp:resourceIds><qbp:resourceId>Lane_0uuncgk</qbp:resourceId></qbp:resourceIds></qbp:element><qbp:element id="qbp_40f9897f-ab0a-4d35-8007-bec0794727ab" elementId="Activity_1apz1th"><qbp:durationDistribution type="UNIFORM" mean="NaN" arg1="7200" arg2="28800"><qbp:timeUnit>hours</qbp:timeUnit></qbp:durationDistribution><qbp:resourceIds><qbp:resourceId>Lane_0adbbls</qbp:resourceId></qbp:resourceIds></qbp:element><qbp:element id="qbp_6e46559b-de30-32c3-97d8-89675a5b3d7c" elementId="Activity_03gq038"><qbp:durationDistribution type="UNIFORM" mean="NaN" arg1="7200" arg2="28800"><qbp:timeUnit>hours</qbp:timeUnit></qbp:durationDistribution><qbp:resourceIds><qbp:resourceId>Lane_1yr3pxe</qbp:resourceId></qbp:resourceIds></qbp:element><qbp:element id="qbp_68ef88ae-de5a-999c-b3fd-3b6bd1051604" elementId="Activity_02pjofv"><qbp:durationDistribution type="UNIFORM" mean="NaN" arg1="3600" arg2="21600"><qbp:timeUnit>hours</qbp:timeUnit></qbp:durationDistribution><qbp:resourceIds><qbp:resourceId>Lane_0adbbls</qbp:resourceId></qbp:resourceIds></qbp:element><qbp:element id="qbp_a39eecc4-15a5-eb0b-d4d1-115d17516a82" elementId="Activity_05o2pw3"><qbp:durationDistribution type="UNIFORM" mean="NaN" arg1="3600" arg2="21600"><qbp:timeUnit>hours</qbp:timeUnit></qbp:durationDistribution><qbp:resourceIds><qbp:resourceId>Lane_1yr3pxe</qbp:resourceId></qbp:resourceIds></qbp:element><qbp:element id="qbp_a1f37511-7ae7-0f1f-bfb2-8ad97e3cad2d" elementId="Activity_0kmlk37"><qbp:durationDistribution type="UNIFORM" mean="NaN" arg1="3600" arg2="18000"><qbp:timeUnit>hours</qbp:timeUnit></qbp:durationDistribution><qbp:resourceIds><qbp:resourceId>Lane_0adbbls</qbp:resourceId></qbp:resourceIds></qbp:element><qbp:element id="qbp_ebe60072-9a6d-6147-b6a8-a5db9068028a" elementId="Activity_11dt137"><qbp:durationDistribution type="UNIFORM" mean="NaN" arg1="3600" arg2="18000"><qbp:timeUnit>hours</qbp:timeUnit></qbp:durationDistribution><qbp:resourceIds><qbp:resourceId>Lane_1yr3pxe</qbp:resourceId></qbp:resourceIds></qbp:element></qbp:elements><qbp:sequenceFlows><qbp:sequenceFlow elementId="Flow_0puholz" executionProbability="0.56"/><qbp:sequenceFlow elementId="Flow_1lhfsrw" executionProbability="0.44"/><qbp:sequenceFlow elementId="Flow_0opyk0z" executionProbability="0.4"/><qbp:sequenceFlow elementId="Flow_033ff8c" executionProbability="0.6"/><qbp:sequenceFlow elementId="Flow_1ncv0sl" executionProbability="0.56"/><qbp:sequenceFlow elementId="Flow_1p09xgn" executionProbability="0.44"/><qbp:sequenceFlow elementId="Flow_1boc1yf" executionProbability="0.4"/><qbp:sequenceFlow elementId="Flow_0pd76qz" executionProbability="0.6"/><qbp:sequenceFlow elementId="Flow_1x9b5kr" executionProbability="0.35"/><qbp:sequenceFlow elementId="Flow_0wi2pws" executionProbability="0.65"/><qbp:sequenceFlow elementId="Flow_1osdcvu" executionProbability="0.4"/><qbp:sequenceFlow elementId="Flow_0ug6tvy" executionProbability="0.6"/></qbp:sequenceFlows><qbp:statsOptions/></qbp:processSimulationInfo><qbpapi:Results xmlns:qbpapi="http://www.qbp-simulator.com/ApiSchema201212"><qbpapi:Results version="1.4"><qbpapi:process><qbpapi:minCycleTime>24619196.336</qbpapi:minCycleTime><qbpapi:averageCycleTime>38126580.2134</qbpapi:averageCycleTime><qbpapi:maxCycleTime>49506587.332</qbpapi:maxCycleTime><qbpapi:totalCycleTime>49507127.332</qbpapi:totalCycleTime><qbpapi:minCost>8846.256056388884</qbpapi:minCost><qbpapi:averageCost>11061.987887194444</qbpapi:averageCost><qbpapi:maxCost>14825.483822777778</qbpapi:maxCost><qbpapi:totalCost>110619.87887194444</qbpapi:totalCost><qbpapi:minDuration>8001365.609000001</qbpapi:minDuration><qbpapi:averageDuration>10376558.329200001</qbpapi:averageDuration><qbpapi:maxDuration>13643175.353</qbpapi:maxDuration><qbpapi:processInstances>10</qbpapi:processInstances></qbpapi:process><qbpapi:elements><qbpapi:element id="Process_1a3qvrs.Gateway_0qdvw1m" name="GATEWAY 17 XOR"><qbpapi:duration><qbpapi:min>0</qbpapi:min><qbpapi:max>0</qbpapi:max><qbpapi:average>0</qbpapi:average></qbpapi:duration><qbpapi:cost><qbpapi:min>0</qbpapi:min><qbpapi:max>0</qbpapi:max><qbpapi:average>0</qbpapi:average></qbpapi:cost><qbpapi:waitingTime><qbpapi:min>0</qbpapi:min><qbpapi:max>0</qbpapi:max><qbpapi:average>0</qbpapi:average></qbpapi:waitingTime><qbpapi:idleTime><qbpapi:min>0</qbpapi:min><qbpapi:max>0</qbpapi:max><qbpapi:average>0</qbpapi:average></qbpapi:idleTime><qbpapi:costOverThreshold><qbpapi:min>0</qbpapi:min><qbpapi:max>0</qbpapi:max><qbpapi:average>0</qbpapi:average></qbpapi:costOverThreshold><qbpapi:durationOverThreshold><qbpapi:min>0</qbpapi:min><qbpapi:max>0</qbpapi:max><qbpapi:average>0</qbpapi:average></qbpapi:durationOverThreshold><qbpapi:count>10</qbpapi:count></qbpapi:element><qbpapi:element id="Process_1a3qvrs.Gateway_1rfqp7p" name="GATEWAY 23 AND"><qbpapi:duration><qbpapi:min>0</qbpapi:min><qbpapi:max>0</qbpapi:max><qbpapi:average>0</qbpapi:average></qbpapi:duration><qbpapi:cost><qbpapi:min>0</qbpapi:min><qbpapi:max>0</qbpapi:max><qbpapi:average>0</qbpapi:average></qbpapi:cost><qbpapi:waitingTime><qbpapi:min>0</qbpapi:min><qbpapi:max>0</qbpapi:max><qbpapi:average>0</qbpapi:average></qbpapi:waitingTime><qbpapi:idleTime><qbpapi:min>0</qbpapi:min><qbpapi:max>0</qbpapi:max><qbpapi:average>0</qbpapi:average></qbpapi:idleTime><qbpapi:costOverThreshold><qbpapi:min>0</qbpapi:min><qbpapi:max>0</qbpapi:max><qbpapi:average>0</qbpapi:average></qbpapi:costOverThreshold><qbpapi:durationOverThreshold><qbpapi:min>0</qbpapi:min><qbpapi:max>0</qbpapi:max><qbpapi:average>0</qbpapi:average></qbpapi:durationOverThreshold><qbpapi:count>10</qbpapi:count></qbpapi:element><qbpapi:element id="Process_1a3qvrs.Gateway_1nx2kw7" name="GATEWAY 28 AND"><qbpapi:duration><qbpapi:min>0</qbpapi:min><qbpapi:max>0</qbpapi:max><qbpapi:average>0</qbpapi:average></qbpapi:duration><qbpapi:cost><qbpapi:min>0</qbpapi:min><qbpapi:max>0</qbpapi:max><qbpapi:average>0</qbpapi:average></qbpapi:cost><qbpapi:waitingTime><qbpapi:min>0</qbpapi:min><qbpapi:max>0</qbpapi:max><qbpapi:average>0</qbpapi:average></qbpapi:waitingTime><qbpapi:idleTime><qbpapi:min>0</qbpapi:min><qbpapi:max>0</qbpapi:max><qbpapi:average>0</qbpapi:average></qbpapi:idleTime><qbpapi:costOverThreshold><qbpapi:min>0</qbpapi:min><qbpapi:max>0</qbpapi:max><qbpapi:average>0</qbpapi:average></qbpapi:costOverThreshold><qbpapi:durationOverThreshold><qbpapi:min>0</qbpapi:min><qbpapi:max>0</qbpapi:max><qbpapi:average>0</qbpapi:average></qbpapi:durationOverThreshold><qbpapi:count>10</qbpapi:count></qbpapi:element><qbpapi:element id="Process_1a3qvrs.Gateway_0ivmbqa" name="GATEWAY 3 AND"><qbpapi:duration><qbpapi:min>0</qbpapi:min><qbpapi:max>0</qbpapi:max><qbpapi:average>0</qbpapi:average></qbpapi:duration><qbpapi:cost><qbpapi:min>0</qbpapi:min><qbpapi:max>0</qbpapi:max><qbpapi:average>0</qbpapi:average></qbpapi:cost><qbpapi:waitingTime><qbpapi:min>0</qbpapi:min><qbpapi:max>0</qbpapi:max><qbpapi:average>0</qbpapi:average></qbpapi:waitingTime><qbpapi:idleTime><qbpapi:min>0</qbpapi:min><qbpapi:max>0</qbpapi:max><qbpapi:average>0</qbpapi:average></qbpapi:idleTime><qbpapi:costOverThreshold><qbpapi:min>0</qbpapi:min><qbpapi:max>0</qbpapi:max><qbpapi:average>0</qbpapi:average></qbpapi:costOverThreshold><qbpapi:durationOverThreshold><qbpapi:min>0</qbpapi:min><qbpapi:max>0</qbpapi:max><qbpapi:average>0</qbpapi:average></qbpapi:durationOverThreshold><qbpapi:count>10</qbpapi:count></qbpapi:element><qbpapi:element id="Process_1a3qvrs.Gateway_0zbkq1l" name="GATEWAY 30 AND"><qbpapi:duration><qbpapi:min>0</qbpapi:min><qbpapi:max>0</qbpapi:max><qbpapi:average>0</qbpapi:average></qbpapi:duration><qbpapi:cost><qbpapi:min>0</qbpapi:min><qbpapi:max>0</qbpapi:max><qbpapi:average>0</qbpapi:average></qbpapi:cost><qbpapi:waitingTime><qbpapi:min>0</qbpapi:min><qbpapi:max>0</qbpapi:max><qbpapi:average>0</qbpapi:average></qbpapi:waitingTime><qbpapi:idleTime><qbpapi:min>0</qbpapi:min><qbpapi:max>0</qbpapi:max><qbpapi:average>0</qbpapi:average></qbpapi:idleTime><qbpapi:costOverThreshold><qbpapi:min>0</qbpapi:min><qbpapi:max>0</qbpapi:max><qbpapi:average>0</qbpapi:average></qbpapi:costOverThreshold><qbpapi:durationOverThreshold><qbpapi:min>0</qbpapi:min><qbpapi:max>0</qbpapi:max><qbpapi:average>0</qbpapi:average></qbpapi:durationOverThreshold><qbpapi:count>10</qbpapi:count></qbpapi:element><qbpapi:element id="Process_1a3qvrs.Gateway_1kmn3oi" name="GATEWAY 45 XOR"><qbpapi:duration><qbpapi:min>0</qbpapi:min><qbpapi:max>0</qbpapi:max><qbpapi:average>0</qbpapi:average></qbpapi:duration><qbpapi:cost><qbpapi:min>0</qbpapi:min><qbpapi:max>0</qbpapi:max><qbpapi:average>0</qbpapi:average></qbpapi:cost><qbpapi:waitingTime><qbpapi:min>0</qbpapi:min><qbpapi:max>0</qbpapi:max><qbpapi:average>0</qbpapi:average></qbpapi:waitingTime><qbpapi:idleTime><qbpapi:min>0</qbpapi:min><qbpapi:max>0</qbpapi:max><qbpapi:average>0</qbpapi:average></qbpapi:idleTime><qbpapi:costOverThreshold><qbpapi:min>0</qbpapi:min><qbpapi:max>0</qbpapi:max><qbpapi:average>0</qbpapi:average></qbpapi:costOverThreshold><qbpapi:durationOverThreshold><qbpapi:min>0</qbpapi:min><qbpapi:max>0</qbpapi:max><qbpapi:average>0</qbpapi:average></qbpapi:durationOverThreshold><qbpapi:count>10</qbpapi:count></qbpapi:element><qbpapi:element id="Process_1a3qvrs.Gateway_1k37uhm" name="GATEWAY 5 AND"><qbpapi:duration><qbpapi:min>0</qbpapi:min><qbpapi:max>0</qbpapi:max><qbpapi:average>0</qbpapi:average></qbpapi:duration><qbpapi:cost><qbpapi:min>0</qbpapi:min><qbpapi:max>0</qbpapi:max><qbpapi:average>0</qbpapi:average></qbpapi:cost><qbpapi:waitingTime><qbpapi:min>0</qbpapi:min><qbpapi:max>0</qbpapi:max><qbpapi:average>0</qbpapi:average></qbpapi:waitingTime><qbpapi:idleTime><qbpapi:min>0</qbpapi:min><qbpapi:max>0</qbpapi:max><qbpapi:average>0</qbpapi:average></qbpapi:idleTime><qbpapi:costOverThreshold><qbpapi:min>0</qbpapi:min><qbpapi:max>0</qbpapi:max><qbpapi:average>0</qbpapi:average></qbpapi:costOverThreshold><qbpapi:durationOverThreshold><qbpapi:min>0</qbpapi:min><qbpapi:max>0</qbpapi:max><qbpapi:average>0</qbpapi:average></qbpapi:durationOverThreshold><qbpapi:count>10</qbpapi:count></qbpapi:element><qbpapi:element id="Process_1a3qvrs.Gateway_0e7t67u" name="GATEWAY 57 AND"><qbpapi:duration><qbpapi:min>0</qbpapi:min><qbpapi:max>0</qbpapi:max><qbpapi:average>0</qbpapi:average></qbpapi:duration><qbpapi:cost><qbpapi:min>0</qbpapi:min><qbpapi:max>0</qbpapi:max><qbpapi:average>0</qbpapi:average></qbpapi:cost><qbpapi:waitingTime><qbpapi:min>0</qbpapi:min><qbpapi:max>0</qbpapi:max><qbpapi:average>0</qbpapi:average></qbpapi:waitingTime><qbpapi:idleTime><qbpapi:min>0</qbpapi:min><qbpapi:max>0</qbpapi:max><qbpapi:average>0</qbpapi:average></qbpapi:idleTime><qbpapi:costOverThreshold><qbpapi:min>0</qbpapi:min><qbpapi:max>0</qbpapi:max><qbpapi:average>0</qbpapi:average></qbpapi:costOverThreshold><qbpapi:durationOverThreshold><qbpapi:min>0</qbpapi:min><qbpapi:max>0</qbpapi:max><qbpapi:average>0</qbpapi:average></qbpapi:durationOverThreshold><qbpapi:count>10</qbpapi:count></qbpapi:element><qbpapi:element id="Process_1a3qvrs.Gateway_07h8le4" name="GATEWAY 58 AND"><qbpapi:duration><qbpapi:min>0</qbpapi:min><qbpapi:max>0</qbpapi:max><qbpapi:average>0</qbpapi:average></qbpapi:duration><qbpapi:cost><qbpapi:min>0</qbpapi:min><qbpapi:max>0</qbpapi:max><qbpapi:average>0</qbpapi:average></qbpapi:cost><qbpapi:waitingTime><qbpapi:min>0</qbpapi:min><qbpapi:max>0</qbpapi:max><qbpapi:average>0</qbpapi:average></qbpapi:waitingTime><qbpapi:idleTime><qbpapi:min>0</qbpapi:min><qbpapi:max>0</qbpapi:max><qbpapi:average>0</qbpapi:average></qbpapi:idleTime><qbpapi:costOverThreshold><qbpapi:min>0</qbpapi:min><qbpapi:max>0</qbpapi:max><qbpapi:average>0</qbpapi:average></qbpapi:costOverThreshold><qbpapi:durationOverThreshold><qbpapi:min>0</qbpapi:min><qbpapi:max>0</qbpapi:max><qbpapi:average>0</qbpapi:average></qbpapi:durationOverThreshold><qbpapi:count>10</qbpapi:count></qbpapi:element><qbpapi:element id="Process_1a3qvrs.Gateway_1doauf9" name="GATEWAY 63 AND"><qbpapi:duration><qbpapi:min>0</qbpapi:min><qbpapi:max>0</qbpapi:max><qbpapi:average>0</qbpapi:average></qbpapi:duration><qbpapi:cost><qbpapi:min>0</qbpapi:min><qbpapi:max>0</qbpapi:max><qbpapi:average>0</qbpapi:average></qbpapi:cost><qbpapi:waitingTime><qbpapi:min>0</qbpapi:min><qbpapi:max>0</qbpapi:max><qbpapi:average>0</qbpapi:average></qbpapi:waitingTime><qbpapi:idleTime><qbpapi:min>0</qbpapi:min><qbpapi:max>0</qbpapi:max><qbpapi:average>0</qbpapi:average></qbpapi:idleTime><qbpapi:costOverThreshold><qbpapi:min>0</qbpapi:min><qbpapi:max>0</qbpapi:max><qbpapi:average>0</qbpapi:average></qbpapi:costOverThreshold><qbpapi:durationOverThreshold><qbpapi:min>0</qbpapi:min><qbpapi:max>0</qbpapi:max><qbpapi:average>0</qbpapi:average></qbpapi:durationOverThreshold><qbpapi:count>10</qbpapi:count></qbpapi:element><qbpapi:element id="Process_1a3qvrs.Gateway_0nz4wq6" name="Έλεγχος οφειλών προς περιφέρεια εταιρείας Α"><qbpapi:duration><qbpapi:min>0</qbpapi:min><qbpapi:max>0</qbpapi:max><qbpapi:average>0</qbpapi:average></qbpapi:duration><qbpapi:cost><qbpapi:min>0</qbpapi:min><qbpapi:max>0</qbpapi:max><qbpapi:average>0</qbpapi:average></qbpapi:cost><qbpapi:waitingTime><qbpapi:min>0</qbpapi:min><qbpapi:max>0</qbpapi:max><qbpapi:average>0</qbpapi:average></qbpapi:waitingTime><qbpapi:idleTime><qbpapi:min>0</qbpapi:min><qbpapi:max>0</qbpapi:max><qbpapi:average>0</qbpapi:average></qbpapi:idleTime><qbpapi:costOverThreshold><qbpapi:min>0</qbpapi:min><qbpapi:max>0</qbpapi:max><qbpapi:average>0</qbpapi:average></qbpapi:costOverThreshold><qbpapi:durationOverThreshold><qbpapi:min>0</qbpapi:min><qbpapi:max>0</qbpapi:max><qbpapi:average>0</qbpapi:average></qbpapi:durationOverThreshold><qbpapi:count>10</qbpapi:count></qbpapi:element><qbpapi:element id="Process_1a3qvrs.Gateway_0y58sjp" name="Έλεγχος οφειλών προς περιφέρεια εταιρείας Β"><qbpapi:duration><qbpapi:min>0</qbpapi:min><qbpapi:max>0</qbpapi:max><qbpapi:average>0</qbpapi:average></qbpapi:duration><qbpapi:cost><qbpapi:min>0</qbpapi:min><qbpapi:max>0</qbpapi:max><qbpapi:average>0</qbpapi:average></qbpapi:cost><qbpapi:waitingTime><qbpapi:min>0</qbpapi:min><qbpapi:max>0</qbpapi:max><qbpapi:average>0</qbpapi:average></qbpapi:waitingTime><qbpapi:idleTime><qbpapi:min>0</qbpapi:min><qbpapi:max>0</qbpapi:max><qbpapi:average>0</qbpapi:average></qbpapi:idleTime><qbpapi:costOverThreshold><qbpapi:min>0</qbpapi:min><qbpapi:max>0</qbpapi:max><qbpapi:average>0</qbpapi:average></qbpapi:costOverThreshold><qbpapi:durationOverThreshold><qbpapi:min>0</qbpapi:min><qbpapi:max>0</qbpapi:max><qbpapi:average>0</qbpapi:average></qbpapi:durationOverThreshold><qbpapi:count>10</qbpapi:count></qbpapi:element><qbpapi:element id="Process_1a3qvrs.Activity_1bp71fh" name="Αίτηση έγκρισης περιφέρειας εταιρείας Α"><qbpapi:duration><qbpapi:min>5830.788</qbpapi:min><qbpapi:max>10576.157</qbpapi:max><qbpapi:average>7775.2925000000005</qbpapi:average></qbpapi:duration><qbpapi:cost><qbpapi:min>14.57697</qbpapi:min><qbpapi:max>26.4403925</qbpapi:max><qbpapi:average>19.43823125</qbpapi:average></qbpapi:cost><qbpapi:waitingTime><qbpapi:min>0</qbpapi:min><qbpapi:max>0</qbpapi:max><qbpapi:average>0</qbpapi:average></qbpapi:waitingTime><qbpapi:idleTime><qbpapi:min>0</qbpapi:min><qbpapi:max>57600</qbpapi:max><qbpapi:average>9600</qbpapi:average></qbpapi:idleTime><qbpapi:costOverThreshold><qbpapi:min>0</qbpapi:min><qbpapi:max>0</qbpapi:max><qbpapi:average>0</qbpapi:average></qbpapi:costOverThreshold><qbpapi:durationOverThreshold><qbpapi:min>0</qbpapi:min><qbpapi:max>0</qbpapi:max><qbpapi:average>0</qbpapi:average></qbpapi:durationOverThreshold><qbpapi:count>6</qbpapi:count></qbpapi:element><qbpapi:element id="Process_1a3qvrs.Activity_0zqp78u" name="Αίτηση έγκρισης περιφέρειας εταιρείας Β"><qbpapi:duration><qbpapi:min>4082.038</qbpapi:min><qbpapi:max>10117.389</qbpapi:max><qbpapi:average>8416.618499999999</qbpapi:average></qbpapi:duration><qbpapi:cost><qbpapi:min>10.205095</qbpapi:min><qbpapi:max>25.293472499999996</qbpapi:max><qbpapi:average>21.041546250000003</qbpapi:average></qbpapi:cost><qbpapi:waitingTime><qbpapi:min>0</qbpapi:min><qbpapi:max>0</qbpapi:max><qbpapi:average>0</qbpapi:average></qbpapi:waitingTime><qbpapi:idleTime><qbpapi:min>0</qbpapi:min><qbpapi:max>230400</qbpapi:max><qbpapi:average>43200</qbpapi:average></qbpapi:idleTime><qbpapi:costOverThreshold><qbpapi:min>0</qbpapi:min><qbpapi:max>0</qbpapi:max><qbpapi:average>0</qbpapi:average></qbpapi:costOverThreshold><qbpapi:durationOverThreshold><qbpapi:min>0</qbpapi:min><qbpapi:max>0</qbpapi:max><qbpapi:average>0</qbpapi:average></qbpapi:durationOverThreshold><qbpapi:count>8</qbpapi:count></qbpapi:element><qbpapi:element id="Process_1a3qvrs.Activity_04n9kl2" name="Αίτηση διαγραφής στο ΓΕΜΗ"><qbpapi:duration><qbpapi:min>11036.354000000007</qbpapi:min><qbpapi:max>28549.823999999993</qbpapi:max><qbpapi:average>20333.822062500003</qbpapi:average></qbpapi:duration><qbpapi:cost><qbpapi:min>27.590884999999997</qbpapi:min><qbpapi:max>71.37456</qbpapi:max><qbpapi:average>50.834555156250005</qbpapi:average></qbpapi:cost><qbpapi:waitingTime><qbpapi:min>0</qbpapi:min><qbpapi:max>0</qbpapi:max><qbpapi:average>0</qbpapi:average></qbpapi:waitingTime><qbpapi:idleTime><qbpapi:min>0</qbpapi:min><qbpapi:max>230400</qbpapi:max><qbpapi:average>54000</qbpapi:average></qbpapi:idleTime><qbpapi:costOverThreshold><qbpapi:min>0</qbpapi:min><qbpapi:max>0</qbpapi:max><qbpapi:average>0</qbpapi:average></qbpapi:costOverThreshold><qbpapi:durationOverThreshold><qbpapi:min>0</qbpapi:min><qbpapi:max>0</qbpapi:max><qbpapi:average>0</qbpapi:average></qbpapi:durationOverThreshold><qbpapi:count>16</qbpapi:count></qbpapi:element><qbpapi:element id="Process_1a3qvrs.Activity_0b6uf55" name="Αίτηση συγχώνευσης στο ΓΕΜΗ"><qbpapi:duration><qbpapi:min>11020.958</qbpapi:min><qbpapi:max>27897.729999999996</qbpapi:max><qbpapi:average>21236.349052631576</qbpapi:average></qbpapi:duration><qbpapi:cost><qbpapi:min>27.552395</qbpapi:min><qbpapi:max>69.744325</qbpapi:max><qbpapi:average>53.090872631578954</qbpapi:average></qbpapi:cost><qbpapi:waitingTime><qbpapi:min>0</qbpapi:min><qbpapi:max>0</qbpapi:max><qbpapi:average>0</qbpapi:average></qbpapi:waitingTime><qbpapi:idleTime><qbpapi:min>0</qbpapi:min><qbpapi:max>230400</qbpapi:max><qbpapi:average>54568.42105263158</qbpapi:average></qbpapi:idleTime><qbpapi:costOverThreshold><qbpapi:min>0</qbpapi:min><qbpapi:max>0</qbpapi:max><qbpapi:average>0</qbpapi:average></qbpapi:costOverThreshold><qbpapi:durationOverThreshold><qbpapi:min>0</qbpapi:min><qbpapi:max>0</qbpapi:max><qbpapi:average>0</qbpapi:average></qbpapi:durationOverThreshold><qbpapi:count>19</qbpapi:count></qbpapi:element><qbpapi:element id="Process_1a3qvrs.Event_1vzypns" name="Απάντηση από περιφέρεια σχεδίου συγχώνευσης εταιρείας Α"><qbpapi:duration><qbpapi:min>219352.829</qbpapi:min><qbpapi:max>408365.293</qbpapi:max><qbpapi:average>311436.7098333333</qbpapi:average></qbpapi:duration><qbpapi:cost><qbpapi:min>0</qbpapi:min><qbpapi:max>0</qbpapi:max><qbpapi:average>0</qbpapi:average></qbpapi:cost><qbpapi:waitingTime><qbpapi:min>0</qbpapi:min><qbpapi:max>0</qbpapi:max><qbpapi:average>0</qbpapi:average></qbpapi:waitingTime><qbpapi:idleTime><qbpapi:min>0</qbpapi:min><qbpapi:max>0</qbpapi:max><qbpapi:average>0</qbpapi:average></qbpapi:idleTime><qbpapi:costOverThreshold><qbpapi:min>0</qbpapi:min><qbpapi:max>0</qbpapi:max><qbpapi:average>0</qbpapi:average></qbpapi:costOverThreshold><qbpapi:durationOverThreshold><qbpapi:min>0</qbpapi:min><qbpapi:max>0</qbpapi:max><qbpapi:average>0</qbpapi:average></qbpapi:durationOverThreshold><qbpapi:count>6</qbpapi:count></qbpapi:element><qbpapi:element id="Process_1a3qvrs.Event_1yr56d8" name="Απάντηση από περιφέρεια σχεδίου συγχώνευσης εταιρείας Β"><qbpapi:duration><qbpapi:min>198193.165</qbpapi:min><qbpapi:max>412054.372</qbpapi:max><qbpapi:average>297975.99925</qbpapi:average></qbpapi:duration><qbpapi:cost><qbpapi:min>0</qbpapi:min><qbpapi:max>0</qbpapi:max><qbpapi:average>0</qbpapi:average></qbpapi:cost><qbpapi:waitingTime><qbpapi:min>0</qbpapi:min><qbpapi:max>0</qbpapi:max><qbpapi:average>0</qbpapi:average></qbpapi:waitingTime><qbpapi:idleTime><qbpapi:min>0</qbpapi:min><qbpapi:max>0</qbpapi:max><qbpapi:average>0</qbpapi:average></qbpapi:idleTime><qbpapi:costOverThreshold><qbpapi:min>0</qbpapi:min><qbpapi:max>0</qbpapi:max><qbpapi:average>0</qbpapi:average></qbpapi:costOverThreshold><qbpapi:durationOverThreshold><qbpapi:min>0</qbpapi:min><qbpapi:max>0</qbpapi:max><qbpapi:average>0</qbpapi:average></qbpapi:durationOverThreshold><qbpapi:count>8</qbpapi:count></qbpapi:element><qbpapi:element id="Process_1a3qvrs.Gateway_04kmqvy" name="Απάντηση θετική εταιρείας Α;"><qbpapi:duration><qbpapi:min>0</qbpapi:min><qbpapi:max>0</qbpapi:max><qbpapi:average>0</qbpapi:average></qbpapi:duration><qbpapi:cost><qbpapi:min>0</qbpapi:min><qbpapi:max>0</qbpapi:max><qbpapi:average>0</qbpapi:average></qbpapi:cost><qbpapi:waitingTime><qbpapi:min>0</qbpapi:min><qbpapi:max>0</qbpapi:max><qbpapi:average>0</qbpapi:average></qbpapi:waitingTime><qbpapi:idleTime><qbpapi:min>0</qbpapi:min><qbpapi:max>0</qbpapi:max><qbpapi:average>0</qbpapi:average></qbpapi:idleTime><qbpapi:costOverThreshold><qbpapi:min>0</qbpapi:min><qbpapi:max>0</qbpapi:max><qbpapi:average>0</qbpapi:average></qbpapi:costOverThreshold><qbpapi:durationOverThreshold><qbpapi:min>0</qbpapi:min><qbpapi:max>0</qbpapi:max><qbpapi:average>0</qbpapi:average></qbpapi:durationOverThreshold><qbpapi:count>15</qbpapi:count></qbpapi:element><qbpapi:element id="Process_1a3qvrs.Gateway_1xcpyhr" name="Απάντηση θετική εταιρείας Β;"><qbpapi:duration><qbpapi:min>0</qbpapi:min><qbpapi:max>0</qbpapi:max><qbpapi:average>0</qbpapi:average></qbpapi:duration><qbpapi:cost><qbpapi:min>0</qbpapi:min><qbpapi:max>0</qbpapi:max><qbpapi:average>0</qbpapi:average></qbpapi:cost><qbpapi:waitingTime><qbpapi:min>0</qbpapi:min><qbpapi:max>0</qbpapi:max><qbpapi:average>0</qbpapi:average></qbpapi:waitingTime><qbpapi:idleTime><qbpapi:min>0</qbpapi:min><qbpapi:max>0</qbpapi:max><qbpapi:average>0</qbpapi:average></qbpapi:idleTime><qbpapi:costOverThreshold><qbpapi:min>0</qbpapi:min><qbpapi:max>0</qbpapi:max><qbpapi:average>0</qbpapi:average></qbpapi:costOverThreshold><qbpapi:durationOverThreshold><qbpapi:min>0</qbpapi:min><qbpapi:max>0</qbpapi:max><qbpapi:average>0</qbpapi:average></qbpapi:durationOverThreshold><qbpapi:count>19</qbpapi:count></qbpapi:element><qbpapi:element id="Process_1a3qvrs.Gateway_0k8jz0l" name="Απάντηση θετική;"><qbpapi:duration><qbpapi:min>0</qbpapi:min><qbpapi:max>0</qbpapi:max><qbpapi:average>0</qbpapi:average></qbpapi:duration><qbpapi:cost><qbpapi:min>0</qbpapi:min><qbpapi:max>0</qbpapi:max><qbpapi:average>0</qbpapi:average></qbpapi:cost><qbpapi:waitingTime><qbpapi:min>0</qbpapi:min><qbpapi:max>0</qbpapi:max><qbpapi:average>0</qbpapi:average></qbpapi:waitingTime><qbpapi:idleTime><qbpapi:min>0</qbpapi:min><qbpapi:max>0</qbpapi:max><qbpapi:average>0</qbpapi:average></qbpapi:idleTime><qbpapi:costOverThreshold><qbpapi:min>0</qbpapi:min><qbpapi:max>0</qbpapi:max><qbpapi:average>0</qbpapi:average></qbpapi:costOverThreshold><qbpapi:durationOverThreshold><qbpapi:min>0</qbpapi:min><qbpapi:max>0</qbpapi:max><qbpapi:average>0</qbpapi:average></qbpapi:durationOverThreshold><qbpapi:count>19</qbpapi:count></qbpapi:element><qbpapi:element id="Process_1a3qvrs.Gateway_15bzdnl" name="Απάντηση θετική;"><qbpapi:duration><qbpapi:min>0</qbpapi:min><qbpapi:max>0</qbpapi:max><qbpapi:average>0</qbpapi:average></qbpapi:duration><qbpapi:cost><qbpapi:min>0</qbpapi:min><qbpapi:max>0</qbpapi:max><qbpapi:average>0</qbpapi:average></qbpapi:cost><qbpapi:waitingTime><qbpapi:min>0</qbpapi:min><qbpapi:max>0</qbpapi:max><qbpapi:average>0</qbpapi:average></qbpapi:waitingTime><qbpapi:idleTime><qbpapi:min>0</qbpapi:min><qbpapi:max>0</qbpapi:max><qbpapi:average>0</qbpapi:average></qbpapi:idleTime><qbpapi:costOverThreshold><qbpapi:min>0</qbpapi:min><qbpapi:max>0</qbpapi:max><qbpapi:average>0</qbpapi:average></qbpapi:costOverThreshold><qbpapi:durationOverThreshold><qbpapi:min>0</qbpapi:min><qbpapi:max>0</qbpapi:max><qbpapi:average>0</qbpapi:average></qbpapi:durationOverThreshold><qbpapi:count>16</qbpapi:count></qbpapi:element><qbpapi:element id="Process_1a3qvrs.Event_19n5gbk" name="Απάντηση με απόφαση εταίρων Α"><qbpapi:duration><qbpapi:min>110852.312</qbpapi:min><qbpapi:max>224336.417</qbpapi:max><qbpapi:average>157164.1249</qbpapi:average></qbpapi:duration><qbpapi:cost><qbpapi:min>0</qbpapi:min><qbpapi:max>0</qbpapi:max><qbpapi:average>0</qbpapi:average></qbpapi:cost><qbpapi:waitingTime><qbpapi:min>0</qbpapi:min><qbpapi:max>0</qbpapi:max><qbpapi:average>0</qbpapi:average></qbpapi:waitingTime><qbpapi:idleTime><qbpapi:min>0</qbpapi:min><qbpapi:max>0</qbpapi:max><qbpapi:average>0</qbpapi:average></qbpapi:idleTime><qbpapi:costOverThreshold><qbpapi:min>0</qbpapi:min><qbpapi:max>0</qbpapi:max><qbpapi:average>0</qbpapi:average></qbpapi:costOverThreshold><qbpapi:durationOverThreshold><qbpapi:min>0</qbpapi:min><qbpapi:max>0</qbpapi:max><qbpapi:average>0</qbpapi:average></qbpapi:durationOverThreshold><qbpapi:count>10</qbpapi:count></qbpapi:element><qbpapi:element id="Process_1a3qvrs.Event_15pdo1b" name="Απάντηση με απόφαση εταίρων Β"><qbpapi:duration><qbpapi:min>120255.853</qbpapi:min><qbpapi:max>254223.867</qbpapi:max><qbpapi:average>186373.98839999997</qbpapi:average></qbpapi:duration><qbpapi:cost><qbpapi:min>0</qbpapi:min><qbpapi:max>0</qbpapi:max><qbpapi:average>0</qbpapi:average></qbpapi:cost><qbpapi:waitingTime><qbpapi:min>0</qbpapi:min><qbpapi:max>0</qbpapi:max><qbpapi:average>0</qbpapi:average></qbpapi:waitingTime><qbpapi:idleTime><qbpapi:min>0</qbpapi:min><qbpapi:max>0</qbpapi:max><qbpapi:average>0</qbpapi:average></qbpapi:idleTime><qbpapi:costOverThreshold><qbpapi:min>0</qbpapi:min><qbpapi:max>0</qbpapi:max><qbpapi:average>0</qbpapi:average></qbpapi:costOverThreshold><qbpapi:durationOverThreshold><qbpapi:min>0</qbpapi:min><qbpapi:max>0</qbpapi:max><qbpapi:average>0</qbpapi:average></qbpapi:durationOverThreshold><qbpapi:count>10</qbpapi:count></qbpapi:element><qbpapi:element id="Process_1a3qvrs.Event_066qi95" name="Απάντηση με σύνταξη έκθεσης εξακρίβωσης εταιρείας Α"><qbpapi:duration><qbpapi:min>665563.243</qbpapi:min><qbpapi:max>2538429.287</qbpapi:max><qbpapi:average>1445789.9188</qbpapi:average></qbpapi:duration><qbpapi:cost><qbpapi:min>0</qbpapi:min><qbpapi:max>0</qbpapi:max><qbpapi:average>0</qbpapi:average></qbpapi:cost><qbpapi:waitingTime><qbpapi:min>0</qbpapi:min><qbpapi:max>0</qbpapi:max><qbpapi:average>0</qbpapi:average></qbpapi:waitingTime><qbpapi:idleTime><qbpapi:min>0</qbpapi:min><qbpapi:max>0</qbpapi:max><qbpapi:average>0</qbpapi:average></qbpapi:idleTime><qbpapi:costOverThreshold><qbpapi:min>0</qbpapi:min><qbpapi:max>0</qbpapi:max><qbpapi:average>0</qbpapi:average></qbpapi:costOverThreshold><qbpapi:durationOverThreshold><qbpapi:min>0</qbpapi:min><qbpapi:max>0</qbpapi:max><qbpapi:average>0</qbpapi:average></qbpapi:durationOverThreshold><qbpapi:count>10</qbpapi:count></qbpapi:element><qbpapi:element id="Process_1a3qvrs.Event_05952mf" name="Απάντηση με σύνταξη έκθεσης εξακρίβωσης εταιρείας Β"><qbpapi:duration><qbpapi:min>756124.625</qbpapi:min><qbpapi:max>3055112.104</qbpapi:max><qbpapi:average>1922604.2503</qbpapi:average></qbpapi:duration><qbpapi:cost><qbpapi:min>0</qbpapi:min><qbpapi:max>0</qbpapi:max><qbpapi:average>0</qbpapi:average></qbpapi:cost><qbpapi:waitingTime><qbpapi:min>0</qbpapi:min><qbpapi:max>0</qbpapi:max><qbpapi:average>0</qbpapi:average></qbpapi:waitingTime><qbpapi:idleTime><qbpapi:min>0</qbpapi:min><qbpapi:max>0</qbpapi:max><qbpapi:average>0</qbpapi:average></qbpapi:idleTime><qbpapi:costOverThreshold><qbpapi:min>0</qbpapi:min><qbpapi:max>0</qbpapi:max><qbpapi:average>0</qbpapi:average></qbpapi:costOverThreshold><qbpapi:durationOverThreshold><qbpapi:min>0</qbpapi:min><qbpapi:max>0</qbpapi:max><qbpapi:average>0</qbpapi:average></qbpapi:durationOverThreshold><qbpapi:count>10</qbpapi:count></qbpapi:element><qbpapi:element id="Process_1a3qvrs.Activity_111pn93" name="Αποστολή δικαιολογητικών εταιρείας Α στον συμβολαιογράφο"><qbpapi:duration><qbpapi:min>13322.515</qbpapi:min><qbpapi:max>34335.314</qbpapi:max><qbpapi:average>23119.249700000004</qbpapi:average></qbpapi:duration><qbpapi:cost><qbpapi:min>33.306287499999996</qbpapi:min><qbpapi:max>85.838285</qbpapi:max><qbpapi:average>57.79812425</qbpapi:average></qbpapi:cost><qbpapi:waitingTime><qbpapi:min>0</qbpapi:min><qbpapi:max>0</qbpapi:max><qbpapi:average>0</qbpapi:average></qbpapi:waitingTime><qbpapi:idleTime><qbpapi:min>57600</qbpapi:min><qbpapi:max>230400</qbpapi:max><qbpapi:average>74880</qbpapi:average></qbpapi:idleTime><qbpapi:costOverThreshold><qbpapi:min>0</qbpapi:min><qbpapi:max>0</qbpapi:max><qbpapi:average>0</qbpapi:average></qbpapi:costOverThreshold><qbpapi:durationOverThreshold><qbpapi:min>0</qbpapi:min><qbpapi:max>0</qbpapi:max><qbpapi:average>0</qbpapi:average></qbpapi:durationOverThreshold><qbpapi:count>10</qbpapi:count></qbpapi:element><qbpapi:element id="Process_1a3qvrs.Activity_0dr34sl" name="Αποστολή δικαιολογητικών εταιρείας Β στον συμβολαιογράφο"><qbpapi:duration><qbpapi:min>12547.485</qbpapi:min><qbpapi:max>35223.73300000001</qbpapi:max><qbpapi:average>21217.452800000006</qbpapi:average></qbpapi:duration><qbpapi:cost><qbpapi:min>31.3687125</qbpapi:min><qbpapi:max>88.0593325</qbpapi:max><qbpapi:average>53.043632</qbpapi:average></qbpapi:cost><qbpapi:waitingTime><qbpapi:min>0</qbpapi:min><qbpapi:max>0</qbpapi:max><qbpapi:average>0</qbpapi:average></qbpapi:waitingTime><qbpapi:idleTime><qbpapi:min>0</qbpapi:min><qbpapi:max>288000</qbpapi:max><qbpapi:average>103680</qbpapi:average></qbpapi:idleTime><qbpapi:costOverThreshold><qbpapi:min>0</qbpapi:min><qbpapi:max>0</qbpapi:max><qbpapi:average>0</qbpapi:average></qbpapi:costOverThreshold><qbpapi:durationOverThreshold><qbpapi:min>0</qbpapi:min><qbpapi:max>0</qbpapi:max><qbpapi:average>0</qbpapi:average></qbpapi:durationOverThreshold><qbpapi:count>10</qbpapi:count></qbpapi:element><qbpapi:element id="Process_1a3qvrs.Activity_01tt9ww" name="Αποστολή δικαιολογητικών και βεβαίωση από ΔΟΥ Α στη ΔΟΥ Β"><qbpapi:duration><qbpapi:min>3910.8229999999967</qbpapi:min><qbpapi:max>10717.73</qbpapi:max><qbpapi:average>7946.059100000001</qbpapi:average></qbpapi:duration><qbpapi:cost><qbpapi:min>9.7770575</qbpapi:min><qbpapi:max>26.794324999999997</qbpapi:max><qbpapi:average>19.86514775</qbpapi:average></qbpapi:cost><qbpapi:waitingTime><qbpapi:min>0</qbpapi:min><qbpapi:max>0</qbpapi:max><qbpapi:average>0</qbpapi:average></qbpapi:waitingTime><qbpapi:idleTime><qbpapi:min>0</qbpapi:min><qbpapi:max>210286.639</qbpapi:max><qbpapi:average>82366.7224</qbpapi:average></qbpapi:idleTime><qbpapi:costOverThreshold><qbpapi:min>0</qbpapi:min><qbpapi:max>0</qbpapi:max><qbpapi:average>0</qbpapi:average></qbpapi:costOverThreshold><qbpapi:durationOverThreshold><qbpapi:min>0</qbpapi:min><qbpapi:max>0</qbpapi:max><qbpapi:average>0</qbpapi:average></qbpapi:durationOverThreshold><qbpapi:count>10</qbpapi:count></qbpapi:element><qbpapi:element id="Process_1a3qvrs.Activity_1j9n83y" name="Αποστολή δικαιολογητικών μετατροπής σε ΕΦΚΑ"><qbpapi:duration><qbpapi:min>8238.871</qbpapi:min><qbpapi:max>32099.23400000001</qbpapi:max><qbpapi:average>18938.4288</qbpapi:average></qbpapi:duration><qbpapi:cost><qbpapi:min>20.597177499999997</qbpapi:min><qbpapi:max>80.248085</qbpapi:max><qbpapi:average>47.34607200000001</qbpapi:average></qbpapi:cost><qbpapi:waitingTime><qbpapi:min>0</qbpapi:min><qbpapi:max>0</qbpapi:max><qbpapi:average>0</qbpapi:average></qbpapi:waitingTime><qbpapi:idleTime><qbpapi:min>0</qbpapi:min><qbpapi:max>217706.578</qbpapi:max><qbpapi:average>64774.69499999999</qbpapi:average></qbpapi:idleTime><qbpapi:costOverThreshold><qbpapi:min>0</qbpapi:min><qbpapi:max>0</qbpapi:max><qbpapi:average>0</qbpapi:average></qbpapi:costOverThreshold><qbpapi:durationOverThreshold><qbpapi:min>0</qbpapi:min><qbpapi:max>0</qbpapi:max><qbpapi:average>0</qbpapi:average></qbpapi:durationOverThreshold><qbpapi:count>10</qbpapi:count></qbpapi:element><qbpapi:element id="Process_1a3qvrs.Activity_0c0v0lr" name="Αποστολή δικαιολογητικών μετατροπής στη ΔΟΥ Α"><qbpapi:duration><qbpapi:min>7391.339</qbpapi:min><qbpapi:max>27698.430000000004</qbpapi:max><qbpapi:average>19646.582000000002</qbpapi:average></qbpapi:duration><qbpapi:cost><qbpapi:min>18.4783475</qbpapi:min><qbpapi:max>69.246075</qbpapi:max><qbpapi:average>49.116455</qbpapi:average></qbpapi:cost><qbpapi:waitingTime><qbpapi:min>0</qbpapi:min><qbpapi:max>0</qbpapi:max><qbpapi:average>0</qbpapi:average></qbpapi:waitingTime><qbpapi:idleTime><qbpapi:min>22703.584</qbpapi:min><qbpapi:max>109015.652</qbpapi:max><qbpapi:average>56728.614199999996</qbpapi:average></qbpapi:idleTime><qbpapi:costOverThreshold><qbpapi:min>0</qbpapi:min><qbpapi:max>0</qbpapi:max><qbpapi:average>0</qbpapi:average></qbpapi:costOverThreshold><qbpapi:durationOverThreshold><qbpapi:min>0</qbpapi:min><qbpapi:max>0</qbpapi:max><qbpapi:average>0</qbpapi:average></qbpapi:durationOverThreshold><qbpapi:count>10</qbpapi:count></qbpapi:element><qbpapi:element id="Process_1a3qvrs.Event_0vunfap" name="Από γραμματεία"><qbpapi:duration><qbpapi:min>0</qbpapi:min><qbpapi:max>0</qbpapi:max><qbpapi:average>0</qbpapi:average></qbpapi:duration><qbpapi:cost><qbpapi:min>0</qbpapi:min><qbpapi:max>0</qbpapi:max><qbpapi:average>0</qbpapi:average></qbpapi:cost><qbpapi:waitingTime><qbpapi:min>0</qbpapi:min><qbpapi:max>0</qbpapi:max><qbpapi:average>0</qbpapi:average></qbpapi:waitingTime><qbpapi:idleTime><qbpapi:min>0</qbpapi:min><qbpapi:max>0</qbpapi:max><qbpapi:average>0</qbpapi:average></qbpapi:idleTime><qbpapi:costOverThreshold><qbpapi:min>0</qbpapi:min><qbpapi:max>0</qbpapi:max><qbpapi:average>0</qbpapi:average></qbpapi:costOverThreshold><qbpapi:durationOverThreshold><qbpapi:min>0</qbpapi:min><qbpapi:max>0</qbpapi:max><qbpapi:average>0</qbpapi:average></qbpapi:durationOverThreshold><qbpapi:count>10</qbpapi:count></qbpapi:element><qbpapi:element id="Process_1a3qvrs.Activity_0pkpyy5" name="Δημοσίευση σχεδίου συγχώνευσης εταιρίας Α"><qbpapi:duration><qbpapi:min>8920.272</qbpapi:min><qbpapi:max>24988.178</qbpapi:max><qbpapi:average>17721.465300000003</qbpapi:average></qbpapi:duration><qbpapi:cost><qbpapi:min>22.30068</qbpapi:min><qbpapi:max>62.470445000000005</qbpapi:max><qbpapi:average>44.30366325</qbpapi:average></qbpapi:cost><qbpapi:waitingTime><qbpapi:min>0</qbpapi:min><qbpapi:max>0</qbpapi:max><qbpapi:average>0</qbpapi:average></qbpapi:waitingTime><qbpapi:idleTime><qbpapi:min>0</qbpapi:min><qbpapi:max>230400</qbpapi:max><qbpapi:average>113930.46729999999</qbpapi:average></qbpapi:idleTime><qbpapi:costOverThreshold><qbpapi:min>0</qbpapi:min><qbpapi:max>0</qbpapi:max><qbpapi:average>0</qbpapi:average></qbpapi:costOverThreshold><qbpapi:durationOverThreshold><qbpapi:min>0</qbpapi:min><qbpapi:max>0</qbpapi:max><qbpapi:average>0</qbpapi:average></qbpapi:durationOverThreshold><qbpapi:count>10</qbpapi:count></qbpapi:element><qbpapi:element id="Process_1a3qvrs.Activity_064zuro" name="Δημοσίευση σχεδίου συγχώνευσης εταιρείας Β"><qbpapi:duration><qbpapi:min>4142.0599999999995</qbpapi:min><qbpapi:max>25066.967000000004</qbpapi:max><qbpapi:average>16124.541099999997</qbpapi:average></qbpapi:duration><qbpapi:cost><qbpapi:min>10.35515</qbpapi:min><qbpapi:max>62.6674175</qbpapi:max><qbpapi:average>40.311352750000005</qbpapi:average></qbpapi:cost><qbpapi:waitingTime><qbpapi:min>0</qbpapi:min><qbpapi:max>0</qbpapi:max><qbpapi:average>0</qbpapi:average></qbpapi:waitingTime><qbpapi:idleTime><qbpapi:min>0</qbpapi:min><qbpapi:max>189310.089</qbpapi:max><qbpapi:average>55262.5013</qbpapi:average></qbpapi:idleTime><qbpapi:costOverThreshold><qbpapi:min>0</qbpapi:min><qbpapi:max>0</qbpapi:max><qbpapi:average>0</qbpapi:average></qbpapi:costOverThreshold><qbpapi:durationOverThreshold><qbpapi:min>0</qbpapi:min><qbpapi:max>0</qbpapi:max><qbpapi:average>0</qbpapi:average></qbpapi:durationOverThreshold><qbpapi:count>10</qbpapi:count></qbpapi:element><qbpapi:element id="Process_1a3qvrs.Event_0da8l0w" name="Ενημέρωση πληρωμής οφειλών εταιρείας Α"><qbpapi:duration><qbpapi:min>0</qbpapi:min><qbpapi:max>0</qbpapi:max><qbpapi:average>0</qbpapi:average></qbpapi:duration><qbpapi:cost><qbpapi:min>0</qbpapi:min><qbpapi:max>0</qbpapi:max><qbpapi:average>0</qbpapi:average></qbpapi:cost><qbpapi:waitingTime><qbpapi:min>0</qbpapi:min><qbpapi:max>0</qbpapi:max><qbpapi:average>0</qbpapi:average></qbpapi:waitingTime><qbpapi:idleTime><qbpapi:min>0</qbpapi:min><qbpapi:max>0</qbpapi:max><qbpapi:average>0</qbpapi:average></qbpapi:idleTime><qbpapi:costOverThreshold><qbpapi:min>0</qbpapi:min><qbpapi:max>0</qbpapi:max><qbpapi:average>0</qbpapi:average></qbpapi:costOverThreshold><qbpapi:durationOverThreshold><qbpapi:min>0</qbpapi:min><qbpapi:max>0</qbpapi:max><qbpapi:average>0</qbpapi:average></qbpapi:durationOverThreshold><qbpapi:count>4</qbpapi:count></qbpapi:element><qbpapi:element id="Process_1a3qvrs.Event_1meqd55" name="Ενημέρωση πληρωμής οφειλών εταιρείας Β"><qbpapi:duration><qbpapi:min>0</qbpapi:min><qbpapi:max>0</qbpapi:max><qbpapi:average>0</qbpapi:average></qbpapi:duration><qbpapi:cost><qbpapi:min>0</qbpapi:min><qbpapi:max>0</qbpapi:max><qbpapi:average>0</qbpapi:average></qbpapi:cost><qbpapi:waitingTime><qbpapi:min>0</qbpapi:min><qbpapi:max>0</qbpapi:max><qbpapi:average>0</qbpapi:average></qbpapi:waitingTime><qbpapi:idleTime><qbpapi:min>0</qbpapi:min><qbpapi:max>0</qbpapi:max><qbpapi:average>0</qbpapi:average></qbpapi:idleTime><qbpapi:costOverThreshold><qbpapi:min>0</qbpapi:min><qbpapi:max>0</qbpapi:max><qbpapi:average>0</qbpapi:average></qbpapi:costOverThreshold><qbpapi:durationOverThreshold><qbpapi:min>0</qbpapi:min><qbpapi:max>0</qbpapi:max><qbpapi:average>0</qbpapi:average></qbpapi:durationOverThreshold><qbpapi:count>2</qbpapi:count></qbpapi:element><qbpapi:element id="Process_1a3qvrs.Event_11b0mst" name="Ενημέρωση πληρωμής παραβόλων"><qbpapi:duration><qbpapi:min>0</qbpapi:min><qbpapi:max>0</qbpapi:max><qbpapi:average>0</qbpapi:average></qbpapi:duration><qbpapi:cost><qbpapi:min>0</qbpapi:min><qbpapi:max>0</qbpapi:max><qbpapi:average>0</qbpapi:average></qbpapi:cost><qbpapi:waitingTime><qbpapi:min>0</qbpapi:min><qbpapi:max>0</qbpapi:max><qbpapi:average>0</qbpapi:average></qbpapi:waitingTime><qbpapi:idleTime><qbpapi:min>0</qbpapi:min><qbpapi:max>0</qbpapi:max><qbpapi:average>0</qbpapi:average></qbpapi:idleTime><qbpapi:costOverThreshold><qbpapi:min>0</qbpapi:min><qbpapi:max>0</qbpapi:max><qbpapi:average>0</qbpapi:average></qbpapi:costOverThreshold><qbpapi:durationOverThreshold><qbpapi:min>0</qbpapi:min><qbpapi:max>0</qbpapi:max><qbpapi:average>0</qbpapi:average></qbpapi:durationOverThreshold><qbpapi:count>16</qbpapi:count></qbpapi:element><qbpapi:element id="Process_1a3qvrs.Event_1srmw62" name="Ενημέρωση πληρωμής παραβόλων"><qbpapi:duration><qbpapi:min>0</qbpapi:min><qbpapi:max>0</qbpapi:max><qbpapi:average>0</qbpapi:average></qbpapi:duration><qbpapi:cost><qbpapi:min>0</qbpapi:min><qbpapi:max>0</qbpapi:max><qbpapi:average>0</qbpapi:average></qbpapi:cost><qbpapi:waitingTime><qbpapi:min>0</qbpapi:min><qbpapi:max>0</qbpapi:max><qbpapi:average>0</qbpapi:average></qbpapi:waitingTime><qbpapi:idleTime><qbpapi:min>0</qbpapi:min><qbpapi:max>0</qbpapi:max><qbpapi:average>0</qbpapi:average></qbpapi:idleTime><qbpapi:costOverThreshold><qbpapi:min>0</qbpapi:min><qbpapi:max>0</qbpapi:max><qbpapi:average>0</qbpapi:average></qbpapi:costOverThreshold><qbpapi:durationOverThreshold><qbpapi:min>0</qbpapi:min><qbpapi:max>0</qbpapi:max><qbpapi:average>0</qbpapi:average></qbpapi:durationOverThreshold><qbpapi:count>19</qbpapi:count></qbpapi:element><qbpapi:element id="Process_1a3qvrs.Activity_0hvicbh" name="Ενημέρωση των εταίρων, αποστολή έκθεσης και οικ. καταστάσεις εταιρείας Α"><qbpapi:duration><qbpapi:min>8762.646999999999</qbpapi:min><qbpapi:max>32720.676000000036</qbpapi:max><qbpapi:average>18644.022900000004</qbpapi:average></qbpapi:duration><qbpapi:cost><qbpapi:min>21.9066175</qbpapi:min><qbpapi:max>81.80169</qbpapi:max><qbpapi:average>46.61005725</qbpapi:average></qbpapi:cost><qbpapi:waitingTime><qbpapi:min>0</qbpapi:min><qbpapi:max>0</qbpapi:max><qbpapi:average>0</qbpapi:average></qbpapi:waitingTime><qbpapi:idleTime><qbpapi:min>9922.993</qbpapi:min><qbpapi:max>277395.181</qbpapi:max><qbpapi:average>72884.99769999999</qbpapi:average></qbpapi:idleTime><qbpapi:costOverThreshold><qbpapi:min>0</qbpapi:min><qbpapi:max>0</qbpapi:max><qbpapi:average>0</qbpapi:average></qbpapi:costOverThreshold><qbpapi:durationOverThreshold><qbpapi:min>0</qbpapi:min><qbpapi:max>0</qbpapi:max><qbpapi:average>0</qbpapi:average></qbpapi:durationOverThreshold><qbpapi:count>10</qbpapi:count></qbpapi:element><qbpapi:element id="Process_1a3qvrs.Activity_07ymxj1" name="Ενημέρωση των εταίρων, αποστολή έκθεσης και οικ. καταστάσεις εταιρείας Β"><qbpapi:duration><qbpapi:min>9824.359</qbpapi:min><qbpapi:max>31219.319000000003</qbpapi:max><qbpapi:average>20923.2094</qbpapi:average></qbpapi:duration><qbpapi:cost><qbpapi:min>24.5608975</qbpapi:min><qbpapi:max>78.04829749999999</qbpapi:max><qbpapi:average>52.308023500000004</qbpapi:average></qbpapi:cost><qbpapi:waitingTime><qbpapi:min>0</qbpapi:min><qbpapi:max>0</qbpapi:max><qbpapi:average>0</qbpapi:average></qbpapi:waitingTime><qbpapi:idleTime><qbpapi:min>12521.61</qbpapi:min><qbpapi:max>203099.962</qbpapi:max><qbpapi:average>78357.2345</qbpapi:average></qbpapi:idleTime><qbpapi:costOverThreshold><qbpapi:min>0</qbpapi:min><qbpapi:max>0</qbpapi:max><qbpapi:average>0</qbpapi:average></qbpapi:costOverThreshold><qbpapi:durationOverThreshold><qbpapi:min>0</qbpapi:min><qbpapi:max>0</qbpapi:max><qbpapi:average>0</qbpapi:average></qbpapi:durationOverThreshold><qbpapi:count>10</qbpapi:count></qbpapi:element><qbpapi:element id="Process_1a3qvrs.Activity_1rchpbs" name="Ισολογισμός μετασχ/σμού εταιρείας Α"><qbpapi:duration><qbpapi:min>515439.13300000015</qbpapi:min><qbpapi:max>1177369.1570000001</qbpapi:max><qbpapi:average>855896.1541000002</qbpapi:average></qbpapi:duration><qbpapi:cost><qbpapi:min>236.38814</qbpapi:min><qbpapi:max>1598.8088774999999</qbpapi:max><qbpapi:average>1016.1019140000001</qbpapi:average></qbpapi:cost><qbpapi:waitingTime><qbpapi:min>172174.4460000801</qbpapi:min><qbpapi:max>797274.9639998721</qbpapi:max><qbpapi:average>449455.38850001467</qbpapi:average></qbpapi:waitingTime><qbpapi:idleTime><qbpapi:min>1704953.427</qbpapi:min><qbpapi:max>3734144.299</qbpapi:max><qbpapi:average>2759060.7261</qbpapi:average></qbpapi:idleTime><qbpapi:costOverThreshold><qbpapi:min>0</qbpapi:min><qbpapi:max>0</qbpapi:max><qbpapi:average>0</qbpapi:average></qbpapi:costOverThreshold><qbpapi:durationOverThreshold><qbpapi:min>0</qbpapi:min><qbpapi:max>0</qbpapi:max><qbpapi:average>0</qbpapi:average></qbpapi:durationOverThreshold><qbpapi:count>10</qbpapi:count></qbpapi:element><qbpapi:element id="Process_1a3qvrs.Activity_1q9bvc7" name="Ισολογισμός μετασχ/σμού εταιρείας Β"><qbpapi:duration><qbpapi:min>311860.3019999999</qbpapi:min><qbpapi:max>1284822.6140000003</qbpapi:max><qbpapi:average>860156.8255999999</qbpapi:average></qbpapi:duration><qbpapi:cost><qbpapi:min>250.18017749999999</qbpapi:min><qbpapi:max>1725.0952799999998</qbpapi:max><qbpapi:average>1128.55678725</qbpapi:average></qbpapi:cost><qbpapi:waitingTime><qbpapi:min>211788.2309999466</qbpapi:min><qbpapi:max>603025.9259998798</qbpapi:max><qbpapi:average>408734.11070004833</qbpapi:average></qbpapi:waitingTime><qbpapi:idleTime><qbpapi:min>979200</qbpapi:min><qbpapi:max>4023617.586</qbpapi:max><qbpapi:average>2756970.9962</qbpapi:average></qbpapi:idleTime><qbpapi:costOverThreshold><qbpapi:min>0</qbpapi:min><qbpapi:max>0</qbpapi:max><qbpapi:average>0</qbpapi:average></qbpapi:costOverThreshold><qbpapi:durationOverThreshold><qbpapi:min>0</qbpapi:min><qbpapi:max>0</qbpapi:max><qbpapi:average>0</qbpapi:average></qbpapi:durationOverThreshold><qbpapi:count>10</qbpapi:count></qbpapi:element><qbpapi:element id="Process_1a3qvrs.Activity_0sn42kg" name="Ορισμός ορκωτών ελεγκτών εταιρείας Α"><qbpapi:duration><qbpapi:min>172174.446</qbpapi:min><qbpapi:max>797274.9639999997</qbpapi:max><qbpapi:average>449455.3884999999</qbpapi:average></qbpapi:duration><qbpapi:cost><qbpapi:min>12.421647499999999</qbpapi:min><qbpapi:max>32.7438625</qbpapi:max><qbpapi:average>23.32937425</qbpapi:average></qbpapi:cost><qbpapi:waitingTime><qbpapi:min>159586.03599999426</qbpapi:min><qbpapi:max>786010.0179997729</qbpapi:max><qbpapi:average>440123.6387999691</qbpapi:average></qbpapi:waitingTime><qbpapi:idleTime><qbpapi:min>534623.591</qbpapi:min><qbpapi:max>2630304.12</qbpapi:max><qbpapi:average>1434260.7261</qbpapi:average></qbpapi:idleTime><qbpapi:costOverThreshold><qbpapi:min>0</qbpapi:min><qbpapi:max>0</qbpapi:max><qbpapi:average>0</qbpapi:average></qbpapi:costOverThreshold><qbpapi:durationOverThreshold><qbpapi:min>0</qbpapi:min><qbpapi:max>0</qbpapi:max><qbpapi:average>0</qbpapi:average></qbpapi:durationOverThreshold><qbpapi:count>10</qbpapi:count></qbpapi:element><qbpapi:element id="Process_1a3qvrs.Activity_10ew83l" name="Ορισμός ορκωτών ελεγκτών εταιρείας Β"><qbpapi:duration><qbpapi:min>246839.6910000001</qbpapi:min><qbpapi:max>782356.3299999996</qbpapi:max><qbpapi:average>506788.6412000001</qbpapi:average></qbpapi:duration><qbpapi:cost><qbpapi:min>10.068565000000001</qbpapi:min><qbpapi:max>33.045747500000004</qbpapi:max><qbpapi:average>20.868790500000003</qbpapi:average></qbpapi:cost><qbpapi:waitingTime><qbpapi:min>240218.74300003052</qbpapi:min><qbpapi:max>776451.0790000246</qbpapi:max><qbpapi:average>498441.1250000132</qbpapi:average></qbpapi:waitingTime><qbpapi:idleTime><qbpapi:min>864000</qbpapi:min><qbpapi:max>2489497.095</qbpapi:max><qbpapi:average>1633770.9962</qbpapi:average></qbpapi:idleTime><qbpapi:costOverThreshold><qbpapi:min>0</qbpapi:min><qbpapi:max>0</qbpapi:max><qbpapi:average>0</qbpapi:average></qbpapi:costOverThreshold><qbpapi:durationOverThreshold><qbpapi:min>0</qbpapi:min><qbpapi:max>0</qbpapi:max><qbpapi:average>0</qbpapi:average></qbpapi:durationOverThreshold><qbpapi:count>10</qbpapi:count></qbpapi:element><qbpapi:element id="Process_1a3qvrs.Event_0qin1qz" name="Παραλαβή απάντησης από ΓΕΜΗ εταιρείας Α"><qbpapi:duration><qbpapi:min>94550.228</qbpapi:min><qbpapi:max>553541.312</qbpapi:max><qbpapi:average>333326.40333333326</qbpapi:average></qbpapi:duration><qbpapi:cost><qbpapi:min>0</qbpapi:min><qbpapi:max>0</qbpapi:max><qbpapi:average>0</qbpapi:average></qbpapi:cost><qbpapi:waitingTime><qbpapi:min>0</qbpapi:min><qbpapi:max>0</qbpapi:max><qbpapi:average>0</qbpapi:average></qbpapi:waitingTime><qbpapi:idleTime><qbpapi:min>0</qbpapi:min><qbpapi:max>0</qbpapi:max><qbpapi:average>0</qbpapi:average></qbpapi:idleTime><qbpapi:costOverThreshold><qbpapi:min>0</qbpapi:min><qbpapi:max>0</qbpapi:max><qbpapi:average>0</qbpapi:average></qbpapi:costOverThreshold><qbpapi:durationOverThreshold><qbpapi:min>0</qbpapi:min><qbpapi:max>0</qbpapi:max><qbpapi:average>0</qbpapi:average></qbpapi:durationOverThreshold><qbpapi:count>15</qbpapi:count></qbpapi:element><qbpapi:element id="Process_1a3qvrs.Event_108xj3w" name="Παραλαβή απάντησης από ΓΕΜΗ εταιρείας Β"><qbpapi:duration><qbpapi:min>88375.456</qbpapi:min><qbpapi:max>598847.668</qbpapi:max><qbpapi:average>295014.44310526317</qbpapi:average></qbpapi:duration><qbpapi:cost><qbpapi:min>0</qbpapi:min><qbpapi:max>0</qbpapi:max><qbpapi:average>0</qbpapi:average></qbpapi:cost><qbpapi:waitingTime><qbpapi:min>0</qbpapi:min><qbpapi:max>0</qbpapi:max><qbpapi:average>0</qbpapi:average></qbpapi:waitingTime><qbpapi:idleTime><qbpapi:min>0</qbpapi:min><qbpapi:max>0</qbpapi:max><qbpapi:average>0</qbpapi:average></qbpapi:idleTime><qbpapi:costOverThreshold><qbpapi:min>0</qbpapi:min><qbpapi:max>0</qbpapi:max><qbpapi:average>0</qbpapi:average></qbpapi:costOverThreshold><qbpapi:durationOverThreshold><qbpapi:min>0</qbpapi:min><qbpapi:max>0</qbpapi:max><qbpapi:average>0</qbpapi:average></qbpapi:durationOverThreshold><qbpapi:count>19</qbpapi:count></qbpapi:element><qbpapi:element id="Process_1a3qvrs.Event_1nmihm9" name="Παραλαβή βεβαίωσης διαγραφής από ΓΕΜΗ"><qbpapi:duration><qbpapi:min>263732.687</qbpapi:min><qbpapi:max>544862.596</qbpapi:max><qbpapi:average>400931.6158125</qbpapi:average></qbpapi:duration><qbpapi:cost><qbpapi:min>0</qbpapi:min><qbpapi:max>0</qbpapi:max><qbpapi:average>0</qbpapi:average></qbpapi:cost><qbpapi:waitingTime><qbpapi:min>0</qbpapi:min><qbpapi:max>0</qbpapi:max><qbpapi:average>0</qbpapi:average></qbpapi:waitingTime><qbpapi:idleTime><qbpapi:min>0</qbpapi:min><qbpapi:max>0</qbpapi:max><qbpapi:average>0</qbpapi:average></qbpapi:idleTime><qbpapi:costOverThreshold><qbpapi:min>0</qbpapi:min><qbpapi:max>0</qbpapi:max><qbpapi:average>0</qbpapi:average></qbpapi:costOverThreshold><qbpapi:durationOverThreshold><qbpapi:min>0</qbpapi:min><qbpapi:max>0</qbpapi:max><qbpapi:average>0</qbpapi:average></qbpapi:durationOverThreshold><qbpapi:count>16</qbpapi:count></qbpapi:element><qbpapi:element id="Process_1a3qvrs.Event_0qwwahy" name="Παραλαβή βεβαίωσης διαγραφής από ΔΟΥ Β"><qbpapi:duration><qbpapi:min>222081.014</qbpapi:min><qbpapi:max>2373977.936</qbpapi:max><qbpapi:average>1171774.3800000001</qbpapi:average></qbpapi:duration><qbpapi:cost><qbpapi:min>0</qbpapi:min><qbpapi:max>0</qbpapi:max><qbpapi:average>0</qbpapi:average></qbpapi:cost><qbpapi:waitingTime><qbpapi:min>0</qbpapi:min><qbpapi:max>0</qbpapi:max><qbpapi:average>0</qbpapi:average></qbpapi:waitingTime><qbpapi:idleTime><qbpapi:min>0</qbpapi:min><qbpapi:max>0</qbpapi:max><qbpapi:average>0</qbpapi:average></qbpapi:idleTime><qbpapi:costOverThreshold><qbpapi:min>0</qbpapi:min><qbpapi:max>0</qbpapi:max><qbpapi:average>0</qbpapi:average></qbpapi:costOverThreshold><qbpapi:durationOverThreshold><qbpapi:min>0</qbpapi:min><qbpapi:max>0</qbpapi:max><qbpapi:average>0</qbpapi:average></qbpapi:durationOverThreshold><qbpapi:count>10</qbpapi:count></qbpapi:element><qbpapi:element id="Process_1a3qvrs.Event_0neg5r8" name="Παραλαβή βεβαίωσης μετατροπής από ΕΦΚΑ"><qbpapi:duration><qbpapi:min>1156272.52</qbpapi:min><qbpapi:max>4726582.465</qbpapi:max><qbpapi:average>2957370.4964999994</qbpapi:average></qbpapi:duration><qbpapi:cost><qbpapi:min>0</qbpapi:min><qbpapi:max>0</qbpapi:max><qbpapi:average>0</qbpapi:average></qbpapi:cost><qbpapi:waitingTime><qbpapi:min>0</qbpapi:min><qbpapi:max>0</qbpapi:max><qbpapi:average>0</qbpapi:average></qbpapi:waitingTime><qbpapi:idleTime><qbpapi:min>0</qbpapi:min><qbpapi:max>0</qbpapi:max><qbpapi:average>0</qbpapi:average></qbpapi:idleTime><qbpapi:costOverThreshold><qbpapi:min>0</qbpapi:min><qbpapi:max>0</qbpapi:max><qbpapi:average>0</qbpapi:average></qbpapi:costOverThreshold><qbpapi:durationOverThreshold><qbpapi:min>0</qbpapi:min><qbpapi:max>0</qbpapi:max><qbpapi:average>0</qbpapi:average></qbpapi:durationOverThreshold><qbpapi:count>10</qbpapi:count></qbpapi:element><qbpapi:element id="Process_1a3qvrs.Event_08ld7j4" name="Παραλαβή βεβαίωσης συγχώνευσης από ΓΕΜΗ"><qbpapi:duration><qbpapi:min>115956.813</qbpapi:min><qbpapi:max>580321.006</qbpapi:max><qbpapi:average>365639.1199473684</qbpapi:average></qbpapi:duration><qbpapi:cost><qbpapi:min>0</qbpapi:min><qbpapi:max>0</qbpapi:max><qbpapi:average>0</qbpapi:average></qbpapi:cost><qbpapi:waitingTime><qbpapi:min>0</qbpapi:min><qbpapi:max>0</qbpapi:max><qbpapi:average>0</qbpapi:average></qbpapi:waitingTime><qbpapi:idleTime><qbpapi:min>0</qbpapi:min><qbpapi:max>0</qbpapi:max><qbpapi:average>0</qbpapi:average></qbpapi:idleTime><qbpapi:costOverThreshold><qbpapi:min>0</qbpapi:min><qbpapi:max>0</qbpapi:max><qbpapi:average>0</qbpapi:average></qbpapi:costOverThreshold><qbpapi:durationOverThreshold><qbpapi:min>0</qbpapi:min><qbpapi:max>0</qbpapi:max><qbpapi:average>0</qbpapi:average></qbpapi:durationOverThreshold><qbpapi:count>19</qbpapi:count></qbpapi:element><qbpapi:element id="Process_1a3qvrs.Event_0yy9xsg" name="Παραλαβή βεβαίωσης συγχώνευσης από ΔΟΥ Α"><qbpapi:duration><qbpapi:min>403465.528</qbpapi:min><qbpapi:max>2236503.873</qbpapi:max><qbpapi:average>1257152.8495999998</qbpapi:average></qbpapi:duration><qbpapi:cost><qbpapi:min>0</qbpapi:min><qbpapi:max>0</qbpapi:max><qbpapi:average>0</qbpapi:average></qbpapi:cost><qbpapi:waitingTime><qbpapi:min>0</qbpapi:min><qbpapi:max>0</qbpapi:max><qbpapi:average>0</qbpapi:average></qbpapi:waitingTime><qbpapi:idleTime><qbpapi:min>0</qbpapi:min><qbpapi:max>0</qbpapi:max><qbpapi:average>0</qbpapi:average></qbpapi:idleTime><qbpapi:costOverThreshold><qbpapi:min>0</qbpapi:min><qbpapi:max>0</qbpapi:max><qbpapi:average>0</qbpapi:average></qbpapi:costOverThreshold><qbpapi:durationOverThreshold><qbpapi:min>0</qbpapi:min><qbpapi:max>0</qbpapi:max><qbpapi:average>0</qbpapi:average></qbpapi:durationOverThreshold><qbpapi:count>10</qbpapi:count></qbpapi:element><qbpapi:element id="Process_1a3qvrs.Event_1hbtlbe" name="Παραλαβή παραβόλων προς πληρωμή εταιρείας Α"><qbpapi:duration><qbpapi:min>2094.33</qbpapi:min><qbpapi:max>9836.227</qbpapi:max><qbpapi:average>5594.142666666667</qbpapi:average></qbpapi:duration><qbpapi:cost><qbpapi:min>0</qbpapi:min><qbpapi:max>0</qbpapi:max><qbpapi:average>0</qbpapi:average></qbpapi:cost><qbpapi:waitingTime><qbpapi:min>0</qbpapi:min><qbpapi:max>0</qbpapi:max><qbpapi:average>0</qbpapi:average></qbpapi:waitingTime><qbpapi:idleTime><qbpapi:min>0</qbpapi:min><qbpapi:max>0</qbpapi:max><qbpapi:average>0</qbpapi:average></qbpapi:idleTime><qbpapi:costOverThreshold><qbpapi:min>0</qbpapi:min><qbpapi:max>0</qbpapi:max><qbpapi:average>0</qbpapi:average></qbpapi:costOverThreshold><qbpapi:durationOverThreshold><qbpapi:min>0</qbpapi:min><qbpapi:max>0</qbpapi:max><qbpapi:average>0</qbpapi:average></qbpapi:durationOverThreshold><qbpapi:count>15</qbpapi:count></qbpapi:element><qbpapi:element id="Process_1a3qvrs.Event_0wm1rl2" name="Παραλαβή παραβόλων προς πληρωμή εταιρείας Β"><qbpapi:duration><qbpapi:min>3367.605</qbpapi:min><qbpapi:max>10404.819</qbpapi:max><qbpapi:average>6785.988578947368</qbpapi:average></qbpapi:duration><qbpapi:cost><qbpapi:min>0</qbpapi:min><qbpapi:max>0</qbpapi:max><qbpapi:average>0</qbpapi:average></qbpapi:cost><qbpapi:waitingTime><qbpapi:min>0</qbpapi:min><qbpapi:max>0</qbpapi:max><qbpapi:average>0</qbpapi:average></qbpapi:waitingTime><qbpapi:idleTime><qbpapi:min>0</qbpapi:min><qbpapi:max>0</qbpapi:max><qbpapi:average>0</qbpapi:average></qbpapi:idleTime><qbpapi:costOverThreshold><qbpapi:min>0</qbpapi:min><qbpapi:max>0</qbpapi:max><qbpapi:average>0</qbpapi:average></qbpapi:costOverThreshold><qbpapi:durationOverThreshold><qbpapi:min>0</qbpapi:min><qbpapi:max>0</qbpapi:max><qbpapi:average>0</qbpapi:average></qbpapi:durationOverThreshold><qbpapi:count>19</qbpapi:count></qbpapi:element><qbpapi:element id="Process_1a3qvrs.Activity_086rtia" name="Πρακτικό ΔΣ εταιρείας Α"><qbpapi:duration><qbpapi:min>16774.557999999997</qbpapi:min><qbpapi:max>712267.615</qbpapi:max><qbpapi:average>491994.3762</qbpapi:average></qbpapi:duration><qbpapi:cost><qbpapi:min>116.48998611111111</qbpapi:min><qbpapi:max>377.99128472222225</qbpapi:max><qbpapi:average>249.37313611111114</qbpapi:average></qbpapi:cost><qbpapi:waitingTime><qbpapi:min>0</qbpapi:min><qbpapi:max>682308.4939999657</qbpapi:max><qbpapi:average>456084.64460001065</qbpapi:average></qbpapi:waitingTime><qbpapi:idleTime><qbpapi:min>23030.669</qbpapi:min><qbpapi:max>2188800</qbpapi:max><qbpapi:average>1578260.7261</qbpapi:average></qbpapi:idleTime><qbpapi:costOverThreshold><qbpapi:min>0</qbpapi:min><qbpapi:max>0</qbpapi:max><qbpapi:average>0</qbpapi:average></qbpapi:costOverThreshold><qbpapi:durationOverThreshold><qbpapi:min>0</qbpapi:min><qbpapi:max>0</qbpapi:max><qbpapi:average>0</qbpapi:average></qbpapi:durationOverThreshold><qbpapi:count>10</qbpapi:count></qbpapi:element><qbpapi:element id="Process_1a3qvrs.Activity_0c507hk" name="Πρακτικό ΔΣ εταιρείας Β"><qbpapi:duration><qbpapi:min>444807.922</qbpapi:min><qbpapi:max>665048.5759999999</qbpapi:max><qbpapi:average>589355.5906</qbpapi:average></qbpapi:duration><qbpapi:cost><qbpapi:min>101.52644444444445</qbpapi:min><qbpapi:max>392.6814097222222</qbpapi:max><qbpapi:average>206.16634583333334</qbpapi:average></qbpapi:cost><qbpapi:waitingTime><qbpapi:min>419025.94999980927</qbpapi:min><qbpapi:max>629720.8770000935</qbpapi:max><qbpapi:average>559667.6367999685</qbpapi:average></qbpapi:waitingTime><qbpapi:idleTime><qbpapi:min>1497600</qbpapi:min><qbpapi:max>2188800</qbpapi:max><qbpapi:average>1939050.9961999997</qbpapi:average></qbpapi:idleTime><qbpapi:costOverThreshold><qbpapi:min>0</qbpapi:min><qbpapi:max>0</qbpapi:max><qbpapi:average>0</qbpapi:average></qbpapi:costOverThreshold><qbpapi:durationOverThreshold><qbpapi:min>0</qbpapi:min><qbpapi:max>0</qbpapi:max><qbpapi:average>0</qbpapi:average></qbpapi:durationOverThreshold><qbpapi:count>10</qbpapi:count></qbpapi:element><qbpapi:element id="Process_1a3qvrs.Activity_0dkofr7" name="Σύγκλιση συνέλευσης εταίρων Α"><qbpapi:duration><qbpapi:min>181688.06999999995</qbpapi:min><qbpapi:max>611186.1529999999</qbpapi:max><qbpapi:average>338659.374</qbpapi:average></qbpapi:duration><qbpapi:cost><qbpapi:min>227.52444500000001</qbpapi:min><qbpapi:max>701.80691</qbpapi:max><qbpapi:average>471.857023</qbpapi:average></qbpapi:cost><qbpapi:waitingTime><qbpapi:min>0</qbpapi:min><qbpapi:max>330463.38899993896</qbpapi:max><qbpapi:average>149916.5648000002</qbpapi:average></qbpapi:waitingTime><qbpapi:idleTime><qbpapi:min>518400</qbpapi:min><qbpapi:max>1900800</qbpapi:max><qbpapi:average>973440</qbpapi:average></qbpapi:idleTime><qbpapi:costOverThreshold><qbpapi:min>0</qbpapi:min><qbpapi:max>0</qbpapi:max><qbpapi:average>0</qbpapi:average></qbpapi:costOverThreshold><qbpapi:durationOverThreshold><qbpapi:min>0</qbpapi:min><qbpapi:max>0</qbpapi:max><qbpapi:average>0</qbpapi:average></qbpapi:durationOverThreshold><qbpapi:count>10</qbpapi:count></qbpapi:element><qbpapi:element id="Process_1a3qvrs.Activity_1elehyw" name="Σύγκλιση συνέλευσης εταίρων Β"><qbpapi:duration><qbpapi:min>223137.07499999995</qbpapi:min><qbpapi:max>701888.06</qbpapi:max><qbpapi:average>406610.7731</qbpapi:average></qbpapi:duration><qbpapi:cost><qbpapi:min>240.72321250000002</qbpapi:min><qbpapi:max>804.08093</qbpapi:max><qbpapi:average>578.748767</qbpapi:average></qbpapi:cost><qbpapi:waitingTime><qbpapi:min>0</qbpapi:min><qbpapi:max>380255.68799996376</qbpapi:max><qbpapi:average>175111.26630001067</qbpapi:average></qbpapi:waitingTime><qbpapi:idleTime><qbpapi:min>576000</qbpapi:min><qbpapi:max>2073600</qbpapi:max><qbpapi:average>1186560</qbpapi:average></qbpapi:idleTime><qbpapi:costOverThreshold><qbpapi:min>0</qbpapi:min><qbpapi:max>0</qbpapi:max><qbpapi:average>0</qbpapi:average></qbpapi:costOverThreshold><qbpapi:durationOverThreshold><qbpapi:min>0</qbpapi:min><qbpapi:max>0</qbpapi:max><qbpapi:average>0</qbpapi:average></qbpapi:durationOverThreshold><qbpapi:count>10</qbpapi:count></qbpapi:element><qbpapi:element id="Process_1a3qvrs.Activity_0eoxfpj" name="Σύνταξη έκθεσης εταίρων εταιρείας Α"><qbpapi:duration><qbpapi:min>226842.26399999997</qbpapi:min><qbpapi:max>2631929.931</qbpapi:max><qbpapi:average>1334704.4575999998</qbpapi:average></qbpapi:duration><qbpapi:cost><qbpapi:min>605.5810972222223</qbpapi:min><qbpapi:max>1635.9546666666665</qbpapi:max><qbpapi:average>1116.7028243055554</qbpapi:average></qbpapi:cost><qbpapi:waitingTime><qbpapi:min>31982.865000009537</qbpapi:min><qbpapi:max>2396352.4590001106</qbpapi:max><qbpapi:average>1173899.2509000301</qbpapi:average></qbpapi:waitingTime><qbpapi:idleTime><qbpapi:min>806400</qbpapi:min><qbpapi:max>8352000</qbpapi:max><qbpapi:average>4296960</qbpapi:average></qbpapi:idleTime><qbpapi:costOverThreshold><qbpapi:min>0</qbpapi:min><qbpapi:max>0</qbpapi:max><qbpapi:average>0</qbpapi:average></qbpapi:costOverThreshold><qbpapi:durationOverThreshold><qbpapi:min>0</qbpapi:min><qbpapi:max>0</qbpapi:max><qbpapi:average>0</qbpapi:average></qbpapi:durationOverThreshold><qbpapi:count>10</qbpapi:count></qbpapi:element><qbpapi:element id="Process_1a3qvrs.Activity_1oqa4fr" name="Σύνταξη έκθεσης εταίρων εταιρείας Β"><qbpapi:duration><qbpapi:min>686751.7749999999</qbpapi:min><qbpapi:max>2729548.5930000003</qbpapi:max><qbpapi:average>1695640.5599999998</qbpapi:average></qbpapi:duration><qbpapi:cost><qbpapi:min>666.3970763888889</qbpapi:min><qbpapi:max>1674.2519236111111</qbpapi:max><qbpapi:average>1075.791136111111</qbpapi:average></qbpapi:cost><qbpapi:waitingTime><qbpapi:min>581437.4589998722</qbpapi:min><qbpapi:max>2614390.003000021</qbpapi:max><qbpapi:average>1540726.636400008</qbpapi:average></qbpapi:waitingTime><qbpapi:idleTime><qbpapi:min>2073600</qbpapi:min><qbpapi:max>8755200</qbpapi:max><qbpapi:average>5402880</qbpapi:average></qbpapi:idleTime><qbpapi:costOverThreshold><qbpapi:min>0</qbpapi:min><qbpapi:max>0</qbpapi:max><qbpapi:average>0</qbpapi:average></qbpapi:costOverThreshold><qbpapi:durationOverThreshold><qbpapi:min>0</qbpapi:min><qbpapi:max>0</qbpapi:max><qbpapi:average>0</qbpapi:average></qbpapi:durationOverThreshold><qbpapi:count>10</qbpapi:count></qbpapi:element><qbpapi:element id="Process_1a3qvrs.Activity_16mal6y" name="Σύνταξη εγγράφου συγχώνευσης"><qbpapi:duration><qbpapi:min>2694950.1620000005</qbpapi:min><qbpapi:max>6102152.846000001</qbpapi:max><qbpapi:average>4376201.1625</qbpapi:average></qbpapi:duration><qbpapi:cost><qbpapi:min>2637.3578749999997</qbpapi:min><qbpapi:max>6930.637506944444</qbpapi:max><qbpapi:average>4353.182720833333</qbpapi:average></qbpapi:cost><qbpapi:waitingTime><qbpapi:min>2228305.0009999275</qbpapi:min><qbpapi:max>5577101.707000017</qbpapi:max><qbpapi:average>3749342.8506999733</qbpapi:average></qbpapi:waitingTime><qbpapi:idleTime><qbpapi:min>8467200</qbpapi:min><qbpapi:max>19468800</qbpapi:max><qbpapi:average>13950720</qbpapi:average></qbpapi:idleTime><qbpapi:costOverThreshold><qbpapi:min>0</qbpapi:min><qbpapi:max>0</qbpapi:max><qbpapi:average>0</qbpapi:average></qbpapi:costOverThreshold><qbpapi:durationOverThreshold><qbpapi:min>0</qbpapi:min><qbpapi:max>0</qbpapi:max><qbpapi:average>0</qbpapi:average></qbpapi:durationOverThreshold><qbpapi:count>10</qbpapi:count></qbpapi:element><qbpapi:element id="Process_1a3qvrs.Event_1s5j0x3" name="Τέλος μετατροπής"><qbpapi:duration><qbpapi:min>0</qbpapi:min><qbpapi:max>0</qbpapi:max><qbpapi:average>0</qbpapi:average></qbpapi:duration><qbpapi:cost><qbpapi:min>0</qbpapi:min><qbpapi:max>0</qbpapi:max><qbpapi:average>0</qbpapi:average></qbpapi:cost><qbpapi:waitingTime><qbpapi:min>0</qbpapi:min><qbpapi:max>0</qbpapi:max><qbpapi:average>0</qbpapi:average></qbpapi:waitingTime><qbpapi:idleTime><qbpapi:min>0</qbpapi:min><qbpapi:max>0</qbpapi:max><qbpapi:average>0</qbpapi:average></qbpapi:idleTime><qbpapi:costOverThreshold><qbpapi:min>0</qbpapi:min><qbpapi:max>0</qbpapi:max><qbpapi:average>0</qbpapi:average></qbpapi:costOverThreshold><qbpapi:durationOverThreshold><qbpapi:min>0</qbpapi:min><qbpapi:max>0</qbpapi:max><qbpapi:average>0</qbpapi:average></qbpapi:durationOverThreshold><qbpapi:count>10</qbpapi:count></qbpapi:element><qbpapi:element id="Process_1a3qvrs.Activity_1apz1th" name="Τροποποίηση έκθεσης εταιρείας Α"><qbpapi:duration><qbpapi:min>7707.845000000001</qbpapi:min><qbpapi:max>26796.891000000003</qbpapi:max><qbpapi:average>18433.325999999997</qbpapi:average></qbpapi:duration><qbpapi:cost><qbpapi:min>19.269612499999997</qbpapi:min><qbpapi:max>66.9922275</qbpapi:max><qbpapi:average>46.083315</qbpapi:average></qbpapi:cost><qbpapi:waitingTime><qbpapi:min>0</qbpapi:min><qbpapi:max>0</qbpapi:max><qbpapi:average>0</qbpapi:average></qbpapi:waitingTime><qbpapi:idleTime><qbpapi:min>47660.904</qbpapi:min><qbpapi:max>230400</qbpapi:max><qbpapi:average>134512.92580000003</qbpapi:average></qbpapi:idleTime><qbpapi:costOverThreshold><qbpapi:min>0</qbpapi:min><qbpapi:max>0</qbpapi:max><qbpapi:average>0</qbpapi:average></qbpapi:costOverThreshold><qbpapi:durationOverThreshold><qbpapi:min>0</qbpapi:min><qbpapi:max>0</qbpapi:max><qbpapi:average>0</qbpapi:average></qbpapi:durationOverThreshold><qbpapi:count>5</qbpapi:count></qbpapi:element><qbpapi:element id="Process_1a3qvrs.Activity_03gq038" name="Τροποποίηση έκθεσης εταιρείας Β"><qbpapi:duration><qbpapi:min>7320.258000000002</qbpapi:min><qbpapi:max>23521.581000000006</qbpapi:max><qbpapi:average>14225.757555555554</qbpapi:average></qbpapi:duration><qbpapi:cost><qbpapi:min>18.300645</qbpapi:min><qbpapi:max>58.8039525</qbpapi:max><qbpapi:average>35.56439388888889</qbpapi:average></qbpapi:cost><qbpapi:waitingTime><qbpapi:min>0</qbpapi:min><qbpapi:max>0</qbpapi:max><qbpapi:average>0</qbpapi:average></qbpapi:waitingTime><qbpapi:idleTime><qbpapi:min>0</qbpapi:min><qbpapi:max>230400</qbpapi:max><qbpapi:average>116996.52433333333</qbpapi:average></qbpapi:idleTime><qbpapi:costOverThreshold><qbpapi:min>0</qbpapi:min><qbpapi:max>0</qbpapi:max><qbpapi:average>0</qbpapi:average></qbpapi:costOverThreshold><qbpapi:durationOverThreshold><qbpapi:min>0</qbpapi:min><qbpapi:max>0</qbpapi:max><qbpapi:average>0</qbpapi:average></qbpapi:durationOverThreshold><qbpapi:count>9</qbpapi:count></qbpapi:element><qbpapi:element id="Process_1a3qvrs.Activity_05o2pw3" name="Τροποποίηση αίτησης"><qbpapi:duration><qbpapi:min>6094.277999999999</qbpapi:min><qbpapi:max>20820.553999999996</qbpapi:max><qbpapi:average>14809.081166666665</qbpapi:average></qbpapi:duration><qbpapi:cost><qbpapi:min>15.235695</qbpapi:min><qbpapi:max>52.051385</qbpapi:max><qbpapi:average>37.02270291666667</qbpapi:average></qbpapi:cost><qbpapi:waitingTime><qbpapi:min>0</qbpapi:min><qbpapi:max>0</qbpapi:max><qbpapi:average>0</qbpapi:average></qbpapi:waitingTime><qbpapi:idleTime><qbpapi:min>0</qbpapi:min><qbpapi:max>33576.936</qbpapi:max><qbpapi:average>15014.914333333334</qbpapi:average></qbpapi:idleTime><qbpapi:costOverThreshold><qbpapi:min>0</qbpapi:min><qbpapi:max>0</qbpapi:max><qbpapi:average>0</qbpapi:average></qbpapi:costOverThreshold><qbpapi:durationOverThreshold><qbpapi:min>0</qbpapi:min><qbpapi:max>0</qbpapi:max><qbpapi:average>0</qbpapi:average></qbpapi:durationOverThreshold><qbpapi:count>6</qbpapi:count></qbpapi:element><qbpapi:element id="Process_1a3qvrs.Activity_02pjofv" name="Τροποποίηση αίτησης"><qbpapi:duration><qbpapi:min>4525.51</qbpapi:min><qbpapi:max>20910.22499999999</qbpapi:max><qbpapi:average>10526.891888888891</qbpapi:average></qbpapi:duration><qbpapi:cost><qbpapi:min>11.313775000000001</qbpapi:min><qbpapi:max>52.2755625</qbpapi:max><qbpapi:average>26.317229722222223</qbpapi:average></qbpapi:cost><qbpapi:waitingTime><qbpapi:min>0</qbpapi:min><qbpapi:max>0</qbpapi:max><qbpapi:average>0</qbpapi:average></qbpapi:waitingTime><qbpapi:idleTime><qbpapi:min>0</qbpapi:min><qbpapi:max>115265.015</qbpapi:max><qbpapi:average>54096.031</qbpapi:average></qbpapi:idleTime><qbpapi:costOverThreshold><qbpapi:min>0</qbpapi:min><qbpapi:max>0</qbpapi:max><qbpapi:average>0</qbpapi:average></qbpapi:costOverThreshold><qbpapi:durationOverThreshold><qbpapi:min>0</qbpapi:min><qbpapi:max>0</qbpapi:max><qbpapi:average>0</qbpapi:average></qbpapi:durationOverThreshold><qbpapi:count>9</qbpapi:count></qbpapi:element><qbpapi:element id="Process_1a3qvrs.Activity_0kmlk37" name="Υποβολή δικαιολογητικών στο ΓΕΜΗ εταιρείας Α"><qbpapi:duration><qbpapi:min>6525.879999999997</qbpapi:min><qbpapi:max>558017.73</qbpapi:max><qbpapi:average>84357.08799999999</qbpapi:average></qbpapi:duration><qbpapi:cost><qbpapi:min>16.3147</qbpapi:min><qbpapi:max>44.731795</qbpapi:max><qbpapi:average>33.697178833333325</qbpapi:average></qbpapi:cost><qbpapi:waitingTime><qbpapi:min>0</qbpapi:min><qbpapi:max>544423.8029999733</qbpapi:max><qbpapi:average>70878.21646666527</qbpapi:average></qbpapi:waitingTime><qbpapi:idleTime><qbpapi:min>0</qbpapi:min><qbpapi:max>1785600</qbpapi:max><qbpapi:average>257280</qbpapi:average></qbpapi:idleTime><qbpapi:costOverThreshold><qbpapi:min>0</qbpapi:min><qbpapi:max>0</qbpapi:max><qbpapi:average>0</qbpapi:average></qbpapi:costOverThreshold><qbpapi:durationOverThreshold><qbpapi:min>0</qbpapi:min><qbpapi:max>0</qbpapi:max><qbpapi:average>0</qbpapi:average></qbpapi:durationOverThreshold><qbpapi:count>15</qbpapi:count></qbpapi:element><qbpapi:element id="Process_1a3qvrs.Activity_11dt137" name="Υποβολή δικαιολογητικών στο ΓΕΜΗ εταιρείας Β"><qbpapi:duration><qbpapi:min>3639.336000000003</qbpapi:min><qbpapi:max>89480.717</qbpapi:max><qbpapi:average>14560.74147368421</qbpapi:average></qbpapi:duration><qbpapi:cost><qbpapi:min>9.098339999999999</qbpapi:min><qbpapi:max>40.997385</qbpapi:max><qbpapi:average>25.477847105263162</qbpapi:average></qbpapi:cost><qbpapi:waitingTime><qbpapi:min>0</qbpapi:min><qbpapi:max>83022.44999980927</qbpapi:max><qbpapi:average>4369.602631568909</qbpapi:average></qbpapi:waitingTime><qbpapi:idleTime><qbpapi:min>0</qbpapi:min><qbpapi:max>345600</qbpapi:max><qbpapi:average>33347.36842105263</qbpapi:average></qbpapi:idleTime><qbpapi:costOverThreshold><qbpapi:min>0</qbpapi:min><qbpapi:max>0</qbpapi:max><qbpapi:average>0</qbpapi:average></qbpapi:costOverThreshold><qbpapi:durationOverThreshold><qbpapi:min>0</qbpapi:min><qbpapi:max>0</qbpapi:max><qbpapi:average>0</qbpapi:average></qbpapi:durationOverThreshold><qbpapi:count>19</qbpapi:count></qbpapi:element></qbpapi:elements><qbpapi:resources><qbpapi:resource id="Lane_0adbbls"><qbpapi:utilization>0.16617707795815767</qbpapi:utilization></qbpapi:resource><qbpapi:resource id="Lane_1yr3pxe"><qbpapi:utilization>0.17358165811846818</qbpapi:utilization></qbpapi:resource><qbpapi:resource id="Lane_0uuncgk"><qbpapi:utilization>0.8435251482835905</qbpapi:utilization></qbpapi:resource></qbpapi:resources></qbpapi:Results><qbpapi:CycleTimesData><qbpapi:min>24619196.336</qbpapi:min><qbpapi:max>49506587.332</qbpapi:max><qbpapi:binWidth>2488740</qbpapi:binWidth><qbpapi:values><qbpapi:value>1</qbpapi:value><qbpapi:value>1</qbpapi:value><qbpapi:value>1</qbpapi:value><qbpapi:value>1</qbpapi:value><qbpapi:value>1</qbpapi:value><qbpapi:value>1</qbpapi:value><qbpapi:value>1</qbpapi:value><qbpapi:value>3</qbpapi:value></qbpapi:values></qbpapi:CycleTimesData><qbpapi:CycleTimesInTimetableData><qbpapi:min>8001365.609000001</qbpapi:min><qbpapi:max>13643175.353</qbpapi:max><qbpapi:binWidth>564181</qbpapi:binWidth><qbpapi:values><qbpapi:value>3</qbpapi:value><qbpapi:value>1</qbpapi:value><qbpapi:value>1</qbpapi:value><qbpapi:value>1</qbpapi:value><qbpapi:value>1</qbpapi:value><qbpapi:value>1</qbpapi:value><qbpapi:value>2</qbpapi:value></qbpapi:values></qbpapi:CycleTimesInTimetableData><qbpapi:WaitingTimesData><qbpapi:min>4781684.658999264</qbpapi:min><qbpapi:max>15384676.879999619</qbpapi:max><qbpapi:binWidth>1060300</qbpapi:binWidth><qbpapi:values><qbpapi:value>3</qbpapi:value><qbpapi:value>1</qbpapi:value><qbpapi:value>1</qbpapi:value><qbpapi:value>3</qbpapi:value><qbpapi:value>1</qbpapi:value><qbpapi:value>1</qbpapi:value></qbpapi:values></qbpapi:WaitingTimesData><qbpapi:CostsData><qbpapi:min>8846.256056388884</qbpapi:min><qbpapi:max>14825.483822777778</qbpapi:max><qbpapi:binWidth>598</qbpapi:binWidth><qbpapi:values><qbpapi:value>1</qbpapi:value><qbpapi:value>2</qbpapi:value><qbpapi:value>1</qbpapi:value><qbpapi:value>3</qbpapi:value><qbpapi:value>1</qbpapi:value><qbpapi:value>1</qbpapi:value><qbpapi:value>1</qbpapi:value></qbpapi:values></qbpapi:CostsData></qbpapi:Results></bpmn:definitions>
